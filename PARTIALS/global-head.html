@@ -1,0 +1,94 @@
+<!-- =========================================================
+ Expiriti - GLOBAL HEAD (BLINDADO v2026.01.04)
+ - Base: meta[name="expiriti-base"] => "/unidaduniversal.github.io/"
+ - Absolutiza OG + favicons SIN romper https:// (usa URL())
+========================================================= -->
+<meta name="expiriti-base" content="/unidaduniversal.github.io/" />
+<script>
+(function(){try{
+  var KEY="expiriti_theme";
+  var saved=localStorage.getItem(KEY);
+  var theme=(saved==="light"||saved==="dark")?saved:"light";
+  var html=document.documentElement;
+  html.setAttribute("data-theme",theme);
+  html.style.background=theme==="dark"?"#0a111b":"#f6f8fc";
+  html.style.colorScheme=theme;
+}catch(e){
+  var html=document.documentElement;
+  html.setAttribute("data-theme","light");
+  html.style.background="#f6f8fc";
+  html.style.colorScheme="light";
+}})();
+</script>
+<style>
+html{background:#f6f8fc}
+html[data-theme="dark"]{background:#0a111b}
+body{background:transparent}
+</style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#f6f8fc">
+<meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+  <!-- OG -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ExpIRI TI | Distribuidor CONTPAQi" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" class="js-abs-meta" data-path="IMG/expiriti_og.webp" content="" />
+
+  <!-- Fonts (solo UNA carga) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+
+  <!-- CSS global base -->
+  <link rel="stylesheet" class="js-abs" data-href="theme.css" />
+
+  <!-- CSS por página (elige UNO según page) -->
+  <!-- INDEX -->
+  <!-- <link rel="stylesheet" class="js-abs" data-href="mainindex.css" /> -->
+
+  <!-- SISTEMAS -->
+  <!-- <link rel="stylesheet" class="js-abs" data-href="main.css" /> -->
+
+  <!-- SERVICIOS -->
+  <!-- <link rel="stylesheet" class="js-abs" data-href="mainservicios.css" /> -->
+
+  <!-- Preload LCP (solo si aplica en ESTA página) -->
+  <!-- <link rel="preload" as="image" class="js-abs" data-href="IMG/primera.webp" fetchpriority="high" /> -->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" class="js-abs" data-href="IMG/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" class="js-abs" data-href="IMG/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" class="js-abs" data-href="IMG/favicon-16x16.png" />
+  <link rel="manifest" class="js-abs" data-href="IMG/site.webmanifest" />
+  <link rel="icon" class="js-abs" data-href="IMG/favicon.ico" />
+
+  <!-- Absolutiza OG + assets (URL() safe) -->
+  <script>
+  (function () {
+    try{
+      var meta = document.querySelector('meta[name="expiriti-base"]');
+      var root = (meta && meta.content) ? meta.content.trim() : "/";
+      if (!root.startsWith("/")) root = "/" + root;
+      if (!root.endsWith("/")) root = root + "/";
+
+      var baseAbs = new URL(root, (location.origin && location.origin !== "null") ? location.origin : location.href).toString();
+
+      function abs(p){
+        p = String(p || "").replace(/^\/+/, "");
+        return new URL(p, baseAbs).toString();
+      }
+
+      document.querySelectorAll('link.js-abs[data-href]').forEach(function (l) {
+        l.href = abs(l.getAttribute("data-href"));
+      });
+
+      document.querySelectorAll('meta.js-abs-meta[data-path]').forEach(function (m) {
+        m.setAttribute("content", abs(m.getAttribute("data-path")));
+      });
+    }catch(e){}
+  })();
+  </script>
+</head>
