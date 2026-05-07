@@ -1,0 +1,134 @@
+<footer class="gf" id="gf-root" role="contentinfo">
+<style>
+#gf-root.gf{position:relative;margin-top:40px;color:var(--gx-text,var(--text));font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:15px;line-height:1.5;border-top:1px solid var(--section-divider,rgba(255,255,255,.06));background:radial-gradient(900px 260px at 12% 0,rgba(45,212,191,.08),transparent 58%),radial-gradient(900px 260px at 88% 8%,rgba(96,165,250,.09),transparent 60%),linear-gradient(180deg,var(--bg) 0,var(--bg-2) 100%);overflow:hidden;isolation:isolate}
+#gf-root.gf:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent 20%),radial-gradient(700px 220px at 50% 100%,rgba(255,255,255,.03),transparent 62%);opacity:.9}
+html[data-theme=light] #gf-root.gf{background:radial-gradient(900px 260px at 12% 0,rgba(21,184,176,.07),transparent 58%),radial-gradient(900px 260px at 88% 8%,rgba(96,165,250,.08),transparent 60%),linear-gradient(180deg,#f7faff 0,#edf3fb 100%)}
+#gf-root *{box-sizing:border-box}
+#gf-root a{color:inherit;text-decoration:none}
+#gf-root a:hover{text-decoration:none}
+#gf-root .gf-container{position:relative;z-index:1;max-width:var(--maxw,1200px);margin:0 auto;padding:26px 18px 18px}
+#gf-root .gf-grid{display:grid;grid-template-columns:1.18fr 1fr .96fr .86fr;gap:18px;align-items:stretch}
+#gf-root .gf-grid>section{position:relative;min-width:0;padding:16px;border-radius:24px;border:1px solid var(--gx-stroke,rgba(255,255,255,.08));background:linear-gradient(180deg,var(--gx-panel,rgba(15,23,42,.62)),var(--gx-panel-2,rgba(15,23,42,.46)));box-shadow:var(--gx-shadow,0 16px 36px rgba(0,0,0,.26));backdrop-filter:blur(var(--gx-blur,10px)) saturate(1.05);-webkit-backdrop-filter:blur(var(--gx-blur,10px)) saturate(1.05);overflow:hidden;min-height:100%}
+#gf-root .gf-grid>section:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+html[data-theme=light] #gf-root .gf-grid>section:before{box-shadow:inset 0 1px 0 rgba(255,255,255,.58)}
+#gf-root .gf-title{margin:0 0 10px;font-size:15px;font-weight:950;line-height:1.15;letter-spacing:.01em;text-align:left}
+#gf-root .gf-hint{margin:0;color:var(--gx-muted,var(--muted));font-size:13px;line-height:1.58}
+#gf-root .gf-contact{display:flex;flex-direction:column;gap:8px}
+#gf-root .gf-row{display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px;align-items:flex-start;font-size:14px;line-height:1.42;color:var(--gx-muted,var(--muted))}
+#gf-root .gf-row b{font-weight:900;color:var(--gx-text,var(--text))}
+#gf-root .gf-row a{font-weight:800;color:var(--gx-text,var(--text));border-bottom:1px solid transparent;transition:border-color .14s ease,color .14s ease}
+#gf-root .gf-row a:hover{color:var(--brand-2,#60a5fa);border-bottom-color:rgba(96,165,250,.35)}
+#gf-root .gf-icon{width:18px;height:18px;display:block;object-fit:contain;margin-top:1px}
+#gf-root .gf-card{position:relative;border-radius:20px;border:1px solid var(--gx-stroke,rgba(255,255,255,.08));background:linear-gradient(180deg,var(--gx-panel,rgba(15,23,42,.62)),var(--gx-panel-2,rgba(15,23,42,.46)));box-shadow:0 10px 26px rgba(15,23,42,.08);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;overflow:hidden;backdrop-filter:blur(var(--gx-blur,10px)) saturate(1.04);-webkit-backdrop-filter:blur(var(--gx-blur,10px)) saturate(1.04)}
+#gf-root .gf-card:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(255,255,255,.56)}
+@media(hover:hover){#gf-root .gf-card:hover{transform:translateY(-2px);border-color:rgba(96,165,250,.32);box-shadow:var(--gx-shadow-md,0 26px 58px rgba(0,0,0,.34))}}
+#gf-root .gf-card:active{transform:translateY(0) scale(.99)}
+#gf-root .gf-card:focus-within{outline:0;box-shadow:var(--gx-shadow,0 16px 36px rgba(0,0,0,.26)),var(--gx-ring,0 0 0 3px rgba(96,165,250,.18))}
+#gf-root .gf-logos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#gf-root .gf-logo-card,#gf-root .gf-ally-card,#gf-root .gf-map-card{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--gx-panel,rgba(15,23,42,.62)),var(--gx-panel-2,rgba(15,23,42,.46)))}
+#gf-root .gf-logo-card{padding:10px 12px;min-height:98px}
+#gf-root .gf-ally-card{padding:10px 12px;min-height:88px}
+#gf-root .gf-map-card{padding:12px;min-height:132px}
+#gf-root img{max-width:100%;display:block}
+#gf-root .gf-logo-card img{width:100%;height:72px;object-fit:contain}
+#gf-root .gf-ally-card img{width:100%;height:58px;object-fit:contain}
+#gf-root .gf-map-card img{width:100%;max-width:230px;height:auto;object-fit:contain}
+#gf-root .gf-card:hover img{transform:scale(1.02)}
+#gf-root .gf-logo-card img[src*="contpaqi"]{height:82px}
+#gf-root .gf-presence,#gf-root .gf-allies{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+#gf-root .gf-presence .gf-hint{max-width:260px}
+#gf-root .gf-ally-card{width:min(260px,100%)}
+#gf-root .gf-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--section-divider,rgba(255,255,255,.06));margin-top:16px;padding-top:14px;gap:12px}
+#gf-root .gf-brandmini{display:flex;gap:12px;align-items:center;min-width:0}
+#gf-root .gf-brandmini img{width:50px;height:50px;border-radius:14px;background:var(--logo-frame-bg,linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03)));border:var(--logo-frame-border,1px solid rgba(148,163,184,.18));box-shadow:var(--logo-frame-ring,0 0 0 1px rgba(96,165,250,.10)),var(--logo-frame-shadow,0 10px 26px rgba(0,0,0,.18));padding:8px;object-fit:contain}
+#gf-root .gf-brandmini b{display:block;color:var(--gx-text,var(--text));font-size:14px;line-height:1.15}
+#gf-root .gf-bottom .gf-hint{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+#gf-root .gf-bottom .gf-hint a{font-weight:800;color:var(--gx-text,var(--text))}
+#gf-root .gf-bottom .gf-hint a:hover{color:var(--brand-2,#60a5fa)}
+@media(max-width:980px){#gf-root .gf-container{padding:24px 16px 16px}#gf-root .gf-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){#gf-root .gf-container{padding:22px 14px 16px}#gf-root .gf-grid{grid-template-columns:1fr}#gf-root .gf-grid>section{padding:14px;border-radius:22px}#gf-root .gf-title{font-size:14px}#gf-root .gf-bottom{flex-direction:column;align-items:flex-start}#gf-root .gf-logo-card{min-height:92px}#gf-root .gf-logo-card img{height:66px}#gf-root .gf-logo-card img[src*="contpaqi"]{height:76px}#gf-root .gf-ally-card{min-height:84px}#gf-root .gf-map-card{min-height:124px}}
+@media(prefers-reduced-motion:reduce){#gf-root .gf-card,#gf-root .gf-card img,#gf-root .gf-row a{transition:none!important}}
+</style>
+
+<div class="gf-container">
+  <div class="gf-grid">
+
+    <section>
+      <h3 class="gf-title">Contacto</h3>
+      <div class="gf-contact">
+        <div class="gf-row">
+          <span>📍</span>
+          <div><b>Ubicación:</b> Insurgentes Sur 1188, CDMX</div>
+        </div>
+<div class="gf-row">
+  <span>🕘</span>
+  <div><b>Horario:</b> Lun a Vie · 9:00 a 18:00</div>
+</div>
+        <div class="gf-row">
+          <span>📞</span>
+          <div><b>Tel:</b> <a href="tel:+525568437917">55 6843 7917</a> · <a href="tel:+525568437918">55 6843 7918</a></div>
+        </div>
+
+        <div class="gf-row">
+          <span>✉️</span>
+          <div><b>Mail:</b> <a href="mailto:andree@expiriti.com.mx">andree@expiriti.com.mx</a></div>
+        </div>
+
+        <div class="gf-row">
+          <img class="gf-icon" src="IMG/whatsapp.svg" alt="WhatsApp">
+          <div><a href="https://wa.me/525568437918" target="_blank" rel="noopener">WhatsApp directo</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="gf-title">Marcas</h3>
+      <div class="gf-logos-grid">
+        <div class="gf-card gf-logo-card"><img src="IMG/contpaqi.webp" alt="CONTPAQi" loading="lazy" decoding="async"></div>
+        <div class="gf-card gf-logo-card"><img src="IMG/microsoft.webp" alt="Microsoft" loading="lazy" decoding="async"></div>
+        <div class="gf-card gf-logo-card"><img src="IMG/hpserver.webp" alt="HP ProLiant" loading="lazy" decoding="async"></div>
+        <div class="gf-card gf-logo-card"><img src="IMG/eset.webp" alt="ESET" loading="lazy" decoding="async"></div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="gf-title">Presencia nacional</h3>
+      <div class="gf-presence">
+        <div class="gf-card gf-map-card">
+          <img src="IMG/mexico.webp" alt="Mapa de México" loading="lazy" decoding="async">
+        </div>
+        <p class="gf-hint">Atención a empresas y usuarios en todo el país</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="gf-title">Aliados</h3>
+      <div class="gf-allies">
+        <div class="gf-card gf-ally-card"><img src="IMG/bni.webp" alt="BNI" loading="lazy" decoding="async"></div>
+        <div class="gf-card gf-ally-card"><img src="IMG/ligo.webp" alt="Ligo" loading="lazy" decoding="async"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="gf-bottom">
+    <div class="gf-brandmini">
+      <img src="IMG/expiritilogo.webp" alt="Expiriti" loading="lazy" decoding="async">
+      <div>
+        <b>ExpIRI Ti</b>
+        <div class="gf-hint">© <span id="gf-year"></span> · Expertos en implementación de procesos</div>
+      </div>
+    </div>
+
+    <div class="gf-hint">
+      <a class="js-link" href="#" data-href="aviso-de-privacidad.html">Aviso de privacidad</a> ·
+      <a class="js-link" href="#" data-href="terminos-y-condiciones.html">Términos</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(()=>{"use strict";if(window.__EXPIRITI_GF_V102__)return;window.__EXPIRITI_GF_V102__=1;const D=document,Q=(s,c=D)=>c.querySelector(s),QA=(s,c=D)=>Array.from(c.querySelectorAll(s));const WRAP=Q("#gf-root")||D;const meta=Q('meta[name="expiriti-base"]');let root=(meta&&meta.content)?meta.content.trim():"/";if(!root.startsWith("/"))root="/"+root;if(!root.endsWith("/"))root=root+"/";let baseAbs;try{const baseForURL=(location.origin&&location.origin!=="null")?location.origin:D.baseURI;baseAbs=new URL(root,baseForURL).toString()}catch(_){baseAbs=root}const isExt=u=>/^(https?:|mailto:|tel:|whatsapp:|wa:|sms:)/i.test(u);const build=raw=>{raw=String(raw||"").trim();if(!raw)return"#";if(isExt(raw))return raw;if(raw.startsWith("#")){try{return new URL("index.html"+raw,baseAbs).toString()}catch(_){return"index.html"+raw}}raw=raw.replace(/^\/+/,"");try{return new URL(raw,baseAbs).toString()}catch(_){return baseAbs.replace(/\/$/,"/")+raw}};const y=Q("#gf-year",WRAP);if(y)y.textContent=String(new Date().getFullYear());QA(".js-link[data-href]",WRAP).forEach(a=>{const r=a.getAttribute("data-href");if(r)a.href=build(r)});QA("img[src]",WRAP).forEach(img=>{const s=img.getAttribute("src");if(s&&!/^(https?:|data:)/i.test(s))img.src=build(s)})})();
+</script>
+</footer>
