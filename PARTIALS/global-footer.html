@@ -76,7 +76,7 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
         </div>
 
         <div class="gf-row">
-          <img class="gf-icon" src="IMG/whatsapp.svg" alt="WhatsApp">
+<img class="gf-icon" src="/IMG/whatsapp.svg" alt="WhatsApp" width="18" height="18" loading="lazy" decoding="async">
           <div><a href="https://wa.me/525568437918" target="_blank" rel="noopener">WhatsApp directo</a></div>
         </div>
       </div>
@@ -85,10 +85,11 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
     <section>
       <h3 class="gf-title">Marcas</h3>
       <div class="gf-logos-grid">
-        <div class="gf-card gf-logo-card"><img src="IMG/contpaqi.webp" alt="CONTPAQi" loading="lazy" decoding="async"></div>
-        <div class="gf-card gf-logo-card"><img src="IMG/microsoft.webp" alt="Microsoft" loading="lazy" decoding="async"></div>
-        <div class="gf-card gf-logo-card"><img src="IMG/hpserver.webp" alt="HP ProLiant" loading="lazy" decoding="async"></div>
-        <div class="gf-card gf-logo-card"><img src="IMG/eset.webp" alt="ESET" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-logo-card"><img src="/IMG/contpaqi.webp" alt="CONTPAQi" width="220" height="82" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-logo-card"><img src="/IMG/microsoft.webp" alt="Microsoft" width="220" height="72" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-logo-card"><img src="/IMG/hpserver.webp" alt="HP ProLiant" width="220" height="72" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-logo-card"><img src="/IMG/eset.webp" alt="ESET" width="220" height="72" loading="lazy" decoding="async"></div>
+        
       </div>
     </section>
 
@@ -96,7 +97,7 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
       <h3 class="gf-title">Presencia nacional</h3>
       <div class="gf-presence">
         <div class="gf-card gf-map-card">
-          <img src="IMG/mexico.webp" alt="Mapa de México" loading="lazy" decoding="async">
+<img src="/IMG/mexico.webp" alt="Mapa de México" width="460" height="300" loading="lazy" decoding="async">
         </div>
         <p class="gf-hint">Atención a empresas y usuarios en todo el país</p>
       </div>
@@ -105,8 +106,9 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
     <section>
       <h3 class="gf-title">Aliados</h3>
       <div class="gf-allies">
-        <div class="gf-card gf-ally-card"><img src="IMG/bni.webp" alt="BNI" loading="lazy" decoding="async"></div>
-        <div class="gf-card gf-ally-card"><img src="IMG/ligo.webp" alt="Ligo" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-ally-card"><img src="/IMG/bni.webp" alt="BNI" width="220" height="58" loading="lazy" decoding="async"></div>
+<div class="gf-card gf-ally-card"><img src="/IMG/ligo.webp" alt="Ligo" width="220" height="58" loading="lazy" decoding="async"></div>
+        
       </div>
     </section>
 
@@ -114,7 +116,7 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
 
   <div class="gf-bottom">
     <div class="gf-brandmini">
-      <img src="IMG/expiritilogo.webp" alt="Expiriti" loading="lazy" decoding="async">
+<img src="/IMG/expiritilogo.webp" alt="ExpIRI Ti" width="50" height="50" loading="lazy" decoding="async">
       <div>
         <b>ExpIRI Ti</b>
         <div class="gf-hint">© <span id="gf-year"></span> · Expertos en implementación de procesos</div>
@@ -122,13 +124,13 @@ html[data-theme=light] #gf-root .gf-card:before{box-shadow:inset 0 1px 0 rgba(25
     </div>
 
     <div class="gf-hint">
-      <a class="js-link" href="#" data-href="aviso-de-privacidad.html">Aviso de privacidad</a> ·
-      <a class="js-link" href="#" data-href="terminos-y-condiciones.html">Términos</a>
+<a href="/aviso-de-privacidad.html">Aviso de privacidad</a> ·
+<a href="/terminos-y-condiciones.html">Términos</a>   
     </div>
   </div>
 </div>
 
 <script>
-(()=>{"use strict";if(window.__EXPIRITI_GF_V102__)return;window.__EXPIRITI_GF_V102__=1;const D=document,Q=(s,c=D)=>c.querySelector(s),QA=(s,c=D)=>Array.from(c.querySelectorAll(s));const WRAP=Q("#gf-root")||D;const meta=Q('meta[name="expiriti-base"]');let root=(meta&&meta.content)?meta.content.trim():"/";if(!root.startsWith("/"))root="/"+root;if(!root.endsWith("/"))root=root+"/";let baseAbs;try{const baseForURL=(location.origin&&location.origin!=="null")?location.origin:D.baseURI;baseAbs=new URL(root,baseForURL).toString()}catch(_){baseAbs=root}const isExt=u=>/^(https?:|mailto:|tel:|whatsapp:|wa:|sms:)/i.test(u);const build=raw=>{raw=String(raw||"").trim();if(!raw)return"#";if(isExt(raw))return raw;if(raw.startsWith("#")){try{return new URL("index.html"+raw,baseAbs).toString()}catch(_){return"index.html"+raw}}raw=raw.replace(/^\/+/,"");try{return new URL(raw,baseAbs).toString()}catch(_){return baseAbs.replace(/\/$/,"/")+raw}};const y=Q("#gf-year",WRAP);if(y)y.textContent=String(new Date().getFullYear());QA(".js-link[data-href]",WRAP).forEach(a=>{const r=a.getAttribute("data-href");if(r)a.href=build(r)});QA("img[src]",WRAP).forEach(img=>{const s=img.getAttribute("src");if(s&&!/^(https?:|data:)/i.test(s))img.src=build(s)})})();
+(()=>{const y=document.getElementById("gf-year");if(y)y.textContent=new Date().getFullYear()})();
 </script>
 </footer>
