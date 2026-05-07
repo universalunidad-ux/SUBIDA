@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- =========================================================
+    Migraciones a CONTPAQi | ExpIRI TI
+    - Compatible 100% con tu mainservicios.js + mainservicFios.css
+    - Parciales: #header-placeholder / #footer-placeholder
+    - ListSlider: .listSlider/.listTrack/.listPage + flechas .arrowCircle
+    - Pills: .pill + .feature-grid .fcard tag-*
+    - FAQ: #faqWrap .faq-item
+    - TOC: #toc + #tocToggle
+    - Reel: usa .ytLite (tu CSS) + script inline mínimo para “play”
+  ========================================================= -->
+  <meta charset="utf-8" />
+  <meta name="expiriti-base" content="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Migraciones a CONTPAQi | ExpIRI Ti</title>
+  <meta name="description" content="Migraciones de datos y sistemas hacia CONTPAQi. Incluye migración de ASPEL COI/NOI, Contafiscal 2000, ContaSIX, migración de sistemas CONTPAQi a otro equipo, restauración y conversiones.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://expiriti.com.mx/SERVICIOS/migraciones.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ExpIRI Ti | Distribuidor CONTPAQi">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Migraciones a CONTPAQi | ExpIRI Ti">
+  <meta property="og:description" content="Migraciones, conversiones, restauraciones y traslado de sistemas CONTPAQi a otro equipo, con respaldo y validación.">
+  <meta property="og:image" content="https://expiriti.com.mx/IMG/expiriti_og.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preconnects (rendimiento) -->
+  <!-- Preconnects (rendimiento) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+
+  <!-- Fuente + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css?v=2026.02">
+<link rel="stylesheet" href="/mainservicios.css?v=2026.02">
+
+  <!-- Favicons (rutas relativas a /SERVICIOS/) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/IMG/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/IMG/favicon-16x16.png">
+  <link rel="manifest" href="/IMG/site.webmanifest">
+  <link rel="icon" href="/IMG/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/IMG/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/IMG/android-chrome-512x512.png">
+</head>
+
+<body id="top" class="page-servicios">
+  <!-- Header dinámico (parcial) -->
+  <div id="header-placeholder"></div>
+
+  <main class="container hero">
+    <!-- Back: deja tu URL (si luego cambias dominio, solo ajustas aquí) -->
+    <a class="hint" href="/index.html#servicios">← Volver a servicios</a>
+
+    <h1>
+      Migraciones, conversiones y restauraciones a CONTPAQi
+      <span class="badge" style="background:rgba(37,99,235,.18);border-color:#3b82f6;color:#bfdbfe;">Servicio</span>
+    </h1>
+
+    <div class="badges" role="list" aria-label="Características clave">
+      <span class="badge" role="listitem">Migración CONTPAQi a otro equipo</span>
+      <span class="badge" role="listitem">Conversión de ASPEL, Contafiscal, ContaSIX y más</span>
+      <span class="badge" role="listitem">Restauración de bases de datos</span>
+      <span class="badge" role="listitem" style="background:rgba(245,158,11,.15);border-color:#f59e0b;color:#fbbf24;">Precio por número de empresas</span>
+    </div>
+    <div class="badges" aria-label="Diferenciadores del servicio"><span class="svc-chip">Respaldos antes de mover</span><span class="svc-chip">Conversión por empresa</span><span class="svc-chip">Validación post-migración</span><span class="svc-chip">Acompañamiento posterior</span></div>
+    
+
+    <!-- ===================== BENEFICIOS (listSlider) + REEL (ytLite) ===================== -->
+    <section id="beneficios" aria-label="Por qué elegir nuestras migraciones">
+      <div class="grid-2 align-center">
+        <!-- Columna izquierda -->
+        <div class="stack">
+          <div>
+            <h2 class="title-gradient">¿Por qué migrar con ExpIRI Ti?</h2>
+            <p class="lead">
+              No solo movemos archivos: diseñamos un <strong>plan de migración y conversión</strong>, cuidamos respaldos,
+              revisamos saldos y dejamos tu información <strong>lista para operar en CONTPAQi</strong>, sin perder historial
+              ni poner en riesgo tu contabilidad o nóminas.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="body">
+              <!-- listSlider (tu JS lo controla) -->
+              <div class="listSlider" aria-label="Beneficios">
+                <button class="arrowCircle prev" type="button" aria-label="Anterior"><span class="chev">‹</span></button>
+
+                <div class="listTrack">
+                  <!-- Página 1 -->
+                  <div class="listPage">
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/008-agenda.webp" alt=""></div>
+                      <div>
+                        <strong>PLAN Y CHECKLIST CLARO</strong>
+                        <div>Te indicamos exactamente qué respaldos y datos necesitamos por sistema.</div>
+                      </div>
+                    </div>
+
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/004-business.webp" alt=""></div>
+                      <div>
+                        <strong>RESPALDOS Y PRUEBAS</strong>
+                        <div>Respaldamos, migramos, probamos acceso y verificamos integridad básica.</div>
+                      </div>
+                    </div>
+
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/013-fecha-limite-del-proyecto.webp" alt=""></div>
+                      <div>
+                        <strong>HISTORIAL CONSERVADO</strong>
+                        <div>Buscamos conservar tus ejercicios históricos según el alcance de cada conversión.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Página 2 -->
+                  <div class="listPage">
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/023-atencion-al-cliente.webp" alt=""></div>
+                      <div>
+                        <strong>VISIÓN TÉCNICA Y CONTABLE</strong>
+                        <div>No solo “abre el sistema”: revisamos catálogos y saldos clave.</div>
+                      </div>
+                    </div>
+
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/013-fecha-limite-del-proyecto.webp" alt=""></div>
+                      <div>
+                        <strong>MENOS TIEMPO FUERA DE OPERACIÓN</strong>
+                        <div>Agendamos ventanas de trabajo para minimizar el impacto en tu operación.</div>
+                      </div>
+                    </div>
+
+                    <div class="listItem">
+                      <div class="listIcon"><img src="/IMG/032-persona-1.webp" alt=""></div>
+                      <div>
+                        <strong>ACOMPAÑAMIENTO POST-MIGRACIÓN</strong>
+                        <div>Te ayudamos con dudas y ajustes tras entrar en producción.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="arrowCircle next" type="button" aria-label="Siguiente"><span class="chev">›</span></button>
+              </div>
+            </div>
+          </div>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;"><a class="btn btn-grad-green hero-btn" href="https://wa.me/5568437918?text=Hola%20ExpIRI%20TI%2C%20necesito%20una%20migraci%C3%B3n%20o%20conversi%C3%B3n%20a%20CONTPAQi." target="_blank" rel="noopener">Cotizar migración<img src="/IMG/whatsapp.svg" alt="" width="18" height="18"></a><a class="btn btn-grad-blue hero-btn" href="tel:+525568437918">Llamada 📞</a><a class="btn btn-ghost hero-btn" href="#comparativa">Migración hecha por uno mismo vs por Distribuidor Certificado</a></div>
+        </div>
+        
+<!-- Columna derecha (Reel) — MIGRACIONES (formato igual a Implementaciones) -->
+<aside class="card body reels-card" aria-label="Reel de Migraciones">
+  <h4 class="title-gradient" style="margin-bottom:8px;">Reel Destacado: Migraciones</h4>
+
+  <!-- Título fijo (1 sola línea, CLS safe) -->
+  <h4 class="reel-title" data-reel-title>De ASPEL a CONTPAQi sin perder historia</h4>
+
+  <div class="reel-embed">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/4QqrKkTPZ6U?rel=0&modestbranding=1&controls=1&fs=1&playsinline=1&enablejsapi=1"
+      title="Testimonio Uriel: Conversión a CONTPAQi"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</aside>
+
+        
+      </div>
+    </section>
+
+    <!-- ===================== NOTAS ===================== -->
+    <section aria-labelledby="notas">
+      <div class="card body svc-panel">
+<div class="warn">
+  <p><strong>El servicio de migración o conversión</strong> se calcula con base en la cantidad de empresas a migrar.</p>
+  <p>El servicio <strong>incluye una empresa</strong>; si tienes más, se cotizan por volumen, con mejor tarifa a mayor número de empresas.</p>
+</div>
+
+        <p class="hint" style="margin-top:8px;">
+          La <strong>restauración de base de datos</strong> también se calcula por empresa a restaurar y por tipo de respaldo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS (pills + feature-grid) ===================== -->
+    <section id="caracteristicas" aria-labelledby="caracteristicas-title">
+      <div class="card body svc-panel">
+        <h3 id="caracteristicas-title" class="title-gradient">Servicios de Migración, Conversiones y Restauraciones</h3>
+        <p class="hint" style="margin:4px 0 10px;">Filtra por tipo de servicio. El detalle fino se revisa en la sesión de levantamiento.</p>
+
+        <div class="pillbar" role="tablist" aria-label="Filtrar servicios">
+          <button class="pill active" type="button" data-filter="migracion">Migraciones</button>
+          <button class="pill" type="button" data-filter="conversiones">Conversiones</button>
+          <button class="pill" type="button" data-filter="restauracion">Restauraciones</button>
+        </div>
+
+        <div class="grid-3 feature-grid">
+          <!-- CONVERSIONES -->
+          <article class="fcard tag-conversiones">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/colaboraicosq.webp" alt="Conversión de datos">
+              <h4>CONVERSIONES A CONTPAQi</h4>
+            </div>
+            <p>Conversión de datos a CONTPAQi <strong>por número de empresas</strong>. Ideal cuando ya tienes información en otro sistema contable.</p>
+            <ul class="imp-list">
+              <li>Conversión por empresa a sistemas CONTPAQi.</li>
+              <li>Respeto a la estructura contable de cada empresa.</li>
+              <li>Revisión básica de saldos posteriores a la conversión.</li>
+            </ul>
+          </article>
+
+          <article class="fcard tag-conversiones">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/coicon.webp" alt="ASPEL COI">
+              <h4>ASPEL COI → CONTPAQi Contabilidad</h4>
+            </div>
+            <p>Migración de empresas desde <strong>ASPEL COI 4, 5, 6, 7, 8</strong> hacia CONTPAQi Contabilidad (costo por empresa).</p>
+            <ul class="imp-list">
+              <li>Respaldo según versión (exportaciones, carpetas, FDB/FBK o BAK).</li>
+              <li>Revisión de catálogo de cuentas y segmentos/centros de costo.</li>
+              <li>Alcance se aclara antes de comenzar.</li>
+            </ul>
+          </article>
+
+          <article class="fcard tag-conversiones">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/noinom.webp" alt="ASPEL NOI">
+              <h4>ASPEL NOI → CONTPAQi Nóminas</h4>
+            </div>
+            <p>Migración desde <strong>NOI 5, 6 y 7</strong> hacia CONTPAQi Nóminas.</p>
+            <ul class="imp-list">
+              <li>Definimos si necesitas catálogo consolidado o solo periodo reciente.</li>
+              <li>Uso de archivos FDB/FBK de la empresa.</li>
+              <li>Validación básica de acumulados y empleados.</li>
+            </ul>
+          </article>
+
+          <article class="fcard tag-conversiones">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/contafiscalcon.webp" alt="Contafiscal 2000">
+              <h4>Contafiscal 2000 → CONTPAQi</h4>
+            </div>
+            <p>Conversión de empresas desde <strong>Contafiscal 2000</strong> hacia CONTPAQi.</p>
+            <ul class="imp-list">
+              <li>Uso de carpeta original de empresa (.DAT, .IDX).</li>
+              <li>Alcances y sistema destino se definen en sesión de levantamiento.</li>
+              <li>Cotización específica según volumen y detalle requerido.</li>
+            </ul>
+          </article>
+
+          <article class="fcard tag-conversiones">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/contasix.webp" alt="ContaSIX">
+              <h4>ContaSIX → CONTPAQi</h4>
+            </div>
+            <p>Conversión de empresas desde <strong>ContaSIX</strong> hacia CONTPAQi.</p>
+            <ul class="imp-list">
+              <li>Carpetas con archivos .DBF y .CDX.</li>
+              <li>Alcance (módulos, detalle) definido caso por caso.</li>
+              <li>Ideal para despachos que quieren consolidar todo en CONTPAQi.</li>
+            </ul>
+          </article>
+
+          <!-- MIGRACIÓN -->
+          <article class="fcard tag-migracion">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/migra.webp" alt="Migración a otro equipo">
+              <h4>Migración de sistema CONTPAQi a otro equipo</h4>
+            </div>
+            <p>Servicio para cambiar tu sistema CONTPAQi a un nuevo equipo sin perder configuración.</p>
+            <ul class="imp-list">
+              <li>Respaldo de empresas en el equipo actual.</li>
+              <li>Instalación y activación en el equipo nuevo.</li>
+              <li>Restauración, validación y revocación en el equipo anterior.</li>
+            </ul>
+          </article>
+
+          <article class="fcard tag-migracion">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/017-data-migration.webp" alt="Migración por empresa">
+              <h4>Migración de empresa(s) CONTPAQi</h4>
+            </div>
+            <p>Migración de empresas entre equipos, instancias o servidores, con <strong>costo por empresa</strong>.</p>
+            <ul class="imp-list">
+              <li>Incluye al menos una empresa; las adicionales se cotizan.</li>
+              <li>Ideal para cambios de servidor, nube o reestructuras internas.</li>
+            </ul>
+          </article>
+
+          <!-- RESTAURACIÓN -->
+          <article class="fcard tag-restauracion">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/017-data-migration.webp" alt="Restauración BD">
+              <h4>Restauración de base de datos</h4>
+            </div>
+            <p>Servicio de restauración de bases de datos de CONTPAQi (por empresa a restaurar).</p>
+            <ul class="imp-list">
+              <li>Aplicable a respaldos FDB, FBK, BAK y formatos soportados.</li>
+              <li>Pruebas de acceso e integridad básica posterior a la restauración.</li>
+              <li>Casos de bases dañadas se diagnostican y cotizan por separado.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPARATIVA (tabla con scroll interno por CSS) ===================== -->
+    <section id="comparativa" aria-labelledby="comparativa-title">
+      <h3 id="comparativa-title" class="title-gradient">¿Partner especializado o hacerlo “a mano”?</h3>
+
+      <div class="card body svc-panel">
+        <p class="hint" style="margin-bottom:10px;">
+          Comparativa entre migrar con un <strong>partner especializado</strong>, hacerlo internamente y usar soporte TI genérico.
+        </p>
+
+        <table class="table-like" aria-label="Comparativa de migraciones">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th class="highlight">ExpIRI Ti (especializado CONTPAQi)</th>
+              <th>Migración interna “a mano”</th>
+              <th>Soporte TI genérico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Plan de trabajo y checklist</td>
+              <td class="highlight">✅ Procedimiento claro, requisitos por sistema y respaldo.</td>
+              <td>⚠️ Depende de la experiencia del usuario.</td>
+              <td>❌ Enfocados en Windows/servidores, no en procesos contables.</td>
+            </tr>
+            <tr>
+              <td>Validación de saldos y catálogos</td>
+              <td class="highlight">✅ Revisamos estructura contable y saldos clave.</td>
+              <td>⚠️ Revisión parcial y manual.</td>
+              <td>❌ Solo verifican que “abra” el sistema.</td>
+            </tr>
+            <tr>
+              <td>Riesgo de pérdida de información</td>
+              <td class="highlight">✅ Respaldos previos y pruebas antes de producción.</td>
+              <td>⚠️ Alto si se sobrescriben bases o se importa mal.</td>
+              <td>⚠️ Pueden mover carpetas/bases sin conocer CONTPAQi.</td>
+            </tr>
+            <tr>
+              <td>Tiempo fuera de operación</td>
+              <td class="highlight">✅ Se agenda ventana para minimizar downtime.</td>
+              <td>⚠️ Se alarga por pruebas y correcciones improvisadas.</td>
+              <td>⚠️ Depende de la carga general de soporte.</td>
+            </tr>
+            <tr>
+              <td>Acompañamiento posterior</td>
+              <td class="highlight">✅ Soporte para dudas y ajustes post-migración.</td>
+              <td>❌ Cada área se adapta como puede.</td>
+              <td>⚠️ Solo corrigen errores técnicos, no procesos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS COMPLEMENTARIOS (li clickable por tu JS) ===================== -->
+    <section id="servicios-complementarios" aria-labelledby="relacionados">
+      <h3 id="relacionados" class="title-gradient">Servicios complementarios</h3>
+      <p class="hint" style="margin-top:4px;margin-bottom:10px;">Haz clic en el servicio que necesites para ver el detalle completo.</p>
+
+            <div class="card body svc-panel">
+        <button class="svc-nav svc-prev" type="button" aria-label="Anterior" hidden>‹</button>
+<button class="svc-nav svc-next" type="button" aria-label="Siguiente" hidden>›</button>
+        <div class="svc-grid">
+          <ul class="svc-list">
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Pólizas de Soporte Técnico Mensual</span>
+                <span class="svc-sub">Soporte y cursos ilimitados, desarrollos y más. Todo firmado por contrato.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Hora de soporte y soporte sin costo</span>
+                <span class="svc-sub">Atención por evento vía AnyDesk.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/cursos.html">
+              <div class="svc-text">
+                <span class="svc-title">Cursos por sistema CONTPAQi</span>
+                <span class="svc-sub">Contabilidad, Bancos, Nóminas, Comercial, nube, etc.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Instalaciones</span>
+                <span class="svc-sub">En otro equipo o nuevas versiones.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/migraciones.html">
+              <div class="svc-text">
+                <span class="svc-title">Migración de equipo</span>
+                <span class="svc-sub">Mueve tu sistema CONTPAQi a otro equipo.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/migraciones.html">
+              <div class="svc-text">
+                <span class="svc-title">Migración y conversión de datos a CONTPAQi</span>
+                <span class="svc-sub">De otros sistemas a CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+          </ul>
+
+          <ul class="svc-list">
+            <li class="svc-link" tabindex="0" role="link" data-url="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informes%20sobre%20reportes%20personalizados%2C%20adecuaci%C3%B3n%20de%20formatos%20PDF%20o%20contabilizaci%C3%B3n%20por%20empresa.">
+              <div class="svc-text">
+                <span class="svc-title">Contabilización por empresa</span>
+                <span class="svc-sub">Procesos contables recurrentes por compañía.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informes%20sobre%20reportes%20personalizados%2C%20adecuaci%C3%B3n%20de%20formatos%20PDF%20o%20contabilizaci%C3%B3n%20por%20empresa.">
+              <div class="svc-text">
+                <span class="svc-title">Adecuación de formatos PDF</span>
+                <span class="svc-sub">Formatos amigables de facturas, cotizaciones, tickets, etc.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informes%20sobre%20reportes%20personalizados%2C%20adecuaci%C3%B3n%20de%20formatos%20PDF%20o%20contabilizaci%C3%B3n%20por%20empresa.">
+              <div class="svc-text">
+                <span class="svc-title">Reportes personalizados</span>
+                <span class="svc-sub">Indicadores y listados hechos a tu medida.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/cursos.html">
+              <div class="svc-text">
+                <span class="svc-title">Capacitaciones por rol</span>
+                <span class="svc-sub">Sesiones por persona o equipo según funciones.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="/SERVICIOS/desarrollos.html">
+              <div class="svc-text">
+                <span class="svc-title">Desarrollos a tu medida</span>
+                <span class="svc-sub">Soluciones específicas sobre el ecosistema CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" tabindex="0" role="link" data-url="https://wa.me/5568437918?text=Hola%21%20Estoy%20buscando%20un%20servicio%20que%20no%20encontr%C3%A9%20en%20su%20p%C3%A1gina.%20Necesito%3A">
+              <div class="svc-text">
+                <span class="svc-title">¿No ves lo que buscas?</span>
+                <span class="svc-sub">Cuéntanos tu caso específico en CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" aria-labelledby="faq-title">
+      <h3 id="faq-title" class="title-gradient">Preguntas frecuentes sobre migraciones</h3>
+
+      <div class="faq-wrap" id="faqWrap">
+        <details class="faq-item" open>
+          <summary>¿Qué necesito preparar antes de una migración o conversión?</summary>
+          <p>Principalmente: respaldos recientes de tus empresas (archivos FDB/FBK/BAK o carpetas completas en sistemas antiguos), saber cuántas empresas vas a migrar y desde qué versión/sistema vienes (ASPEL COI/NOI, Contafiscal, ContaSIX, etc.). Con eso diseñamos el plan de trabajo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Se conserva el historial de años anteriores?</summary>
+          <p>En la mayoría de los casos sí. Las conversiones se cotizan <strong>por empresa</strong>. Si hay restricciones por versión o formato te lo indicamos antes de avanzar para que sepas exactamente qué quedará disponible en CONTPAQi.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿La migración se puede hacer totalmente en remoto?</summary>
+          <p>Sí. La mayoría de migraciones y conversiones las realizamos vía remota usando herramientas seguras. Solo necesitamos acceso a tu servidor o equipo, y los respaldos listos. Si requieres visita en sitio, también se puede cotizar por separado.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Intenté migrar por mi cuenta y ahora la base marca errores, ¿aún se puede rescatar?</summary>
+          <p>Podemos hacer un <strong>diagnóstico de base de datos</strong>. En muchos casos se recupera la información desde respaldos o se reprocesan catálogos y saldos. Si la base está dañada o incompleta, te explicamos claramente las opciones antes de generar cualquier cargo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cómo se cobra: por hora, por empresa o por sistema?</summary>
+          <p>Las <strong>conversiones y migraciones</strong> se cobran principalmente <strong>por empresa</strong> y por tipo de sistema/versión. La <strong>restauración de bases</strong> también se calcula por empresa a restaurar. Si el proyecto incluye pasos adicionales, se cotizan como servicios extra, siempre por escrito y antes de comenzar.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+<section id="sesion-guiada" class="card body svc-panel"><h3 class="title-gradient">¿Necesitas migrar hoy?</h3><p>Cuéntanos desde qué sistema vienes, cuánto historial necesitas convertir y cuántas empresas son. Te indicamos el procedimiento exacto de respaldo y te enviamos una cotización clara.</p><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px;"><a class="btn btn-grad-green hero-btn" href="https://wa.me/5568437918?text=Hola%20ExpIRI%20TI%2C%20necesito%20una%20migraci%C3%B3n%20o%20conversi%C3%B3n%20a%20CONTPAQi%20y%20tengo%20dudas%20sobre%20los%20respaldos." target="_blank" rel="noopener">WhatsApp<img src="/IMG/whatsapp.svg" alt="" width="18" height="18"></a><a class="btn btn-grad-blue hero-btn" href="tel:+525568437918">Llamada 📞</a></div></section>
+    
+
+    <!-- ===================== TOC (Mapa flotante) ===================== -->
+    <aside class="toc collapsed" id="toc" aria-live="polite">
+      <button class="toc-toggle" id="tocToggle" type="button" aria-label="Abrir mapa">🗺️ Mapa</button>
+      <button class="toc-close" type="button" aria-label="Cerrar">×</button>
+      <strong class="toc-title">Mapa del sitio</strong>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#caracteristicas">Servicios</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#servicios-complementarios">Complementarios</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#sesion-guiada">Contacto</a>
+    </aside>
+ 
+    <div id="svc-actions"
+  data-svc-page="migraciones"
+  data-svc-process-label="Proceso de migración"
+  data-svc-audience-label="Ideal para tu operación"
+  data-svc-cases-label="Escenarios frecuentes"
+  data-svc-cta-label="Revisar migración">
+</div>
+  </main>
+
+  <!-- Footer dinámico (parcial) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS global servicios -->
+  <script src="/mainservicios.js" defer></script>
+
+ <script>
+/* ===== ytLite HOTFIX (si mainservicios.js no activa el play) ===== */
+(function(){
+  function mountYTLite(el){
+    if(!el || el.dataset.mounted) return;
+    el.dataset.mounted = "1";
+
+    const id = el.getAttribute("data-ytid");
+    if(!id) return;
+
+    // Thumbnail (nocookie-safe)
+    el.style.backgroundImage = "url('https://i.ytimg.com/vi/" + id + "/hqdefault.jpg')";
+    el.style.backgroundSize = "cover";
+    el.style.backgroundPosition = "center";
+
+    function play(){
+      if(el.classList.contains("is-playing")) return;
+      el.classList.add("is-playing");
+
+      const iframe = document.createElement("iframe");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("title", el.getAttribute("data-title") || "Video");
+      iframe.setAttribute("loading", "lazy");
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      );
+
+      // autoplay al click
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + id +
+        "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+
+      // Limpia overlay y monta iframe
+      el.innerHTML = "";
+      el.appendChild(iframe);
+    }
+
+    el.addEventListener("click", play);
+    el.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); play(); }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll(".ytLite[data-ytid]").forEach(mountYTLite);
+  });
+})();
+</script>
+
+</body>
+</html>
