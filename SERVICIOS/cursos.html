@@ -1,0 +1,635 @@
+<!-- ====== Cursos CONTPAQi | Expiriti (con parciales) ====== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- =========================================================
+    Expiriti — HEAD (SERVICIOS) v2026.01.15 CANON
+    - Requiere: meta[name="expiriti-base"] (para resolver rutas con JS global si lo usas)
+    - Fonts: Inter 400–900 non-blocking (mejora PSI)
+    - CSS: theme.css + mainservicios.css con cache-bust
+    - SEO/UX: robots + theme-color + canonical + OG/Twitter básicos
+    - Preconnect YouTube: SOLO si hay embeds/miniaturas en esta página (deja o quita según aplique)
+  ========================================================= -->
+
+  <meta charset="utf-8" />
+  <meta name="expiriti-base" content="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cursos CONTPAQi | ExpIRI Ti</title>
+  <meta name="description" content="Cursos CONTPAQi por ExpIRI Ti. Capacitación por sistema y por rol, basada en temarios oficiales y programas personalizados. Niveles Básico, Intermedio y Avanzado." />
+
+  <!-- SEO / Indexing -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+
+  <!-- Canonical (ajusta el path EXACTO de esta página) -->
+  <link rel="canonical" href="https://expiriti.com.mx/SERVICIOS/cursos.html" />
+
+  <!-- Open Graph / Twitter (mínimo recomendado) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ExpIRI Ti | Distribuidor CONTPAQi" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:title" content="Cursos CONTPAQi | ExpIRI Ti" />
+  <meta property="og:description" content="Capacitación por sistema y por rol, basada en temarios oficiales y programas personalizados." />
+  <!-- Usa una imagen OG absoluta (ideal 1200x630). Ajusta si tu archivo real es otro -->
+  <meta property="og:image" content="https://expiriti.com.mx/IMG/expiriti_og.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconnects (Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preconnects (YouTube) — deja SOLO si esta página realmente usa embeds/miniaturas -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  </noscript>
+
+  <!-- CSS -->
+<link rel="stylesheet" href="/theme.css?v=2026.02">
+<link rel="stylesheet" href="/mainservicios.css?v=2026.02">
+
+  <!-- Preload LCP (SOLO si aplica en ESTA página: imagen hero arriba del fold) -->
+  <!-- Ejemplo:
+  <link rel="preload" as="image" href="/IMG/servicios-hero.webp" fetchpriority="high">
+  -->
+
+  <!-- Favicons (ruta relativa estable para /SERVICIOS/*) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/IMG/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/IMG/favicon-16x16.png">
+  <link rel="manifest" href="/IMG/site.webmanifest">
+  <link rel="icon" href="/IMG/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/IMG/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/IMG/android-chrome-512x512.png">
+
+  <!-- ================================
+       HOTFIX: ocultar etiqueta visual "Nube"
+       (sin romper filtro por clase tag-nube)
+       ================================ -->
+  <style>
+    .fcard.tag-nube::before,
+    .fcard.tag-nube::after{
+      content:none !important;
+      display:none !important;
+    }
+    .fcard .tag-nube{ display:none !important; }
+  </style>
+
+</head>
+<body id="top" class="page-servicios">  <!-- Header dinámico -->
+  <div id="header-placeholder"></div>
+
+  <main class="container hero">
+
+    <a class="hint" href="/index.html#servicios">← Volver a servicios</a><h1>Cursos CONTPAQi <span class="badge" style="background:rgba(59,130,246,.18);border-color:#3b82f6;color:#bfdbfe;">Servicio</span></h1><div class="badges"><span class="badge">Niveles Básico, Intermedio y Avanzado</span><span class="badge">Cursos por sistema y rol</span><span class="badge" style="background:rgba(34,197,94,.15);border-color:#22c55e;color:#86efac;">10 días para resolver dudas después del curso</span></div><div class="badges" aria-label="Diferenciadores del servicio"><span class="svc-chip">Temarios oficiales</span><span class="svc-chip">Cursos por rol</span><span class="svc-chip">Modalidad remota o presencial</span><span class="svc-chip">Seguimiento posterior</span></div><section id="beneficios" aria-label="Por qué elegir nuestros cursos"><div class="grid-2 align-center"><div class="stack"><div><h2 class="title-gradient">Cursos CONTPAQi a la medida de tu equipo</h2><p class="lead">Partimos de <strong>temarios oficiales de CONTPAQi</strong> y los adaptamos a tu operación: eliges qué temas ver, qué nivel necesitas (Básico, Intermedio o Avanzado) y para qué perfiles (contadores, facturistas, dueños, auxiliares, etc.).</p></div><div class="card"><div class="body"><div class="listSlider"><button class="arrowCircle prev" aria-label="Anterior" type="button"><span class="chev">‹</span></button><div class="listTrack"><div class="listPage"><div class="listItem"><div class="listIcon"><img src="/IMG/005-comercio.webp" alt=""></div><div><strong>TEMARIOS OFICIALES + CASOS REALES</strong><div>Usamos temarios base de CONTPAQi y los aterrizamos a tu giro y procesos.</div></div></div><div class="listItem"><div class="listIcon"><img src="/IMG/024-mapa-del-sitio.webp" alt=""></div><div><strong>NIVELES BÁSICO, INTERMEDIO Y AVANZADO</strong><div>Desde usuarios que apenas inician hasta perfiles que necesitan dominar reportes y cierres.</div></div></div><div class="listItem"><div class="listIcon"><img src="/IMG/030-cazatalentos.webp" alt=""></div><div><strong>CURSOS POR ROL</strong><div>Temas específicos para facturistas, auxiliares, responsables de nómina o dirección.</div></div></div></div><div class="listPage"><div class="listItem"><div class="listIcon"><img src="/IMG/044-carpeta-1.webp" alt=""></div><div><strong>MODALIDAD REMOTA O FÍSICA PARA EQUIPOS</strong><div>Cursos en línea por Zoom/Meet o presenciales para tu equipo de trabajo.</div></div></div><div class="listItem"><div class="listIcon"><img src="/IMG/004-innovacion.webp" alt=""></div><div><strong>MATERIAL, CHECKLISTS Y GRABACIONES*</strong><div>Incluimos material de apoyo y, si lo permites, grabamos la sesión para consulta interna.</div></div></div><div class="listItem"><div class="listIcon"><img src="/IMG/163-trabajo-colaborativo.webp" alt=""></div><div><strong>GRUPOS</strong><div>Trabajamos con grupos reducidos para asegurar atención cercana, seguimiento real y resolución efectiva de dudas según tu operación.</div></div></div></div></div><button class="arrowCircle next" aria-label="Siguiente" type="button"><span class="chev">›</span></button></div></div></div></div><aside class="card body reels-card" aria-label="Reels de Cursos"><h4 class="title-gradient" style="margin-bottom:8px;">Reels Destacados: Cursos</h4><h4 class="reel-title" data-reel-title></h4><div class="carousel" id="carouselReelsCursos" aria-label="Reels Cursos"><button class="arrowCircle prev" aria-label="Anterior" type="button"><span class="chev">‹</span></button><div class="carousel-track"><div class="carousel-slide is-active" data-title="Curso práctico con tus propios datos"><div class="reel-embed"><iframe src="https://www.youtube-nocookie.com/embed/TgAkwNt4YCA?rel=0&modestbranding=1&controls=1&fs=1" title="Testimonio Ana: Curso Contabilidad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" allowfullscreen></iframe></div></div><div class="carousel-slide" data-title="Capacitamos a todo tu equipo, paso a paso"><div class="reel-embed"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_CURSOS_2?rel=0&modestbranding=1&controls=1&fs=1" title="Reel Cursos 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" allowfullscreen></iframe></div></div></div><button class="arrowCircle next" aria-label="Siguiente" type="button"><span class="chev">›</span></button><div class="carousel-nav" aria-label="Paginación de reels"><button class="dot active" aria-label="Ir al reel 1" type="button"></button><button class="dot" aria-label="Ir al reel 2" type="button"></button></div></div></aside></div></section>
+    
+    <!-- ===== Catálogo de cursos ===== -->
+    <section id="caracteristicas" aria-labelledby="caracteristicas-title">
+  
+
+      <div class="card body svc-panel">
+        <h3 id="caracteristicas-title" class="title-gradient">Catálogo de Cursos CONTPAQi</h3>
+        <p class="hint" style="margin:4px 0 10px;">
+          Elige el tipo de curso que buscas. Podemos partir de nuestros temarios
+          oficiales o armar una agenda personalizada con los temas que más te interesen.
+        </p>
+
+        <div class="pillbar" role="tablist" aria-label="Filtrar cursos">
+          <button class="pill active" data-filter="escritorio" type="button">Sistemas de Escritorio</button>
+          <button class="pill" data-filter="nube" type="button">Sistemas en la Nube</button>
+          <button class="pill" data-filter="roles" type="button">Cursos por Rol</button>
+        </div>
+
+        <div class="grid-3 feature-grid" id="cursosGrid">
+          <!-- ===== ESCRITORIO ===== -->
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/contabilidad.webp" alt="Curso Contabilidad">
+            </div>
+            <p>Desde la creación de la empresa y catálogos hasta cierres, pólizas recurrentes y reportes fiscales.</p>
+            <ul class="imp-list">
+              <li>Niveles: Básico, Intermedio y Avanzado.</li>
+              <li>Podemos partir de nuestro temario oficial o enfocarlo en cierres y papeles de trabajo.</li>
+              <li>Usamos tus propios catálogos y XML de ejemplo si lo prefieres.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Contabilidad."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/bancos.webp" alt="Curso Bancos">
+            </div>
+            <p>Diseñado para tesorería y administración: conciliaciones, flujo de efectivo y conexión contable.</p>
+            <ul class="imp-list">
+              <li>Desde lo básico hasta conciliaciones avanzadas.</li>
+              <li>Casos prácticos con tus estados de cuenta reales.</li>
+              <li>Recomendado para responsables de pagos y cobranza.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Bancos."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/nominas.webp" alt="Curso Nóminas">
+            </div>
+            <p>Ideal para responsables de nómina: configuración, cálculo, timbrado y obligaciones ante SAT/IMSS.</p>
+            <ul class="imp-list">
+              <li>Temario por nivel: Básico, Intermedio y Avanzado.</li>
+              <li>Incluye manejo de incidencias, finiquitos y aguinaldos.</li>
+              <li>Podemos enfocarlo a un solo tipo de nómina (semanal, quincenal, etc.).</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20N%C3%B3minas."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/comercialstart.webp" alt="Curso Comercial">
+            </div>
+            <p>Enfoque en ventas, facturación, addendas, inventarios y reportes comerciales.</p>
+            <ul class="imp-list">
+              <li>Niveles: Básico, Intermedio y Avanzado.</li>
+              <li>Temarios separados para facturistas y jefes de área.</li>
+              <li>Incluye mejores prácticas de inventario y flujo de ventas.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Comercial."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/comercialpremium.webp" alt="Curso Comercial Premium">
+            </div>
+            <p>Control de almacenes, costos, traspasos, políticas de inventario y reportes clave.</p>
+            <ul class="imp-list">
+              <li>Temarios separados para almacén, compras y ventas.</li>
+              <li>Incluye flujo completo de entrada/salida y devoluciones.</li>
+              <li>Ideal para empresas con alto volumen de movimientos.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20Comercial%20Premium%20o%20Start."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/comercialpro.webp" alt="Curso Comercial Pro">
+            </div>
+            <p>Curso enfocado en el uso administrativo y operativo de Comercial Pro: catálogos, costos, almacenes y reportes clave.</p>
+            <ul class="imp-list">
+              <li>Niveles: Básico, Intermedio y Avanzado.</li>
+              <li>Configuración de catálogos (clientes, proveedores, agentes, almacenes y listas de precios).</li>
+              <li>Flujos de compras, ventas, existencias y políticas de inventario.</li>
+              <li>Reportes para seguimiento de ventas, clientes y rotación de inventario.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Comercial%20Pro."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-escritorio">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/factura.webp" alt="Curso Factura">
+            </div>
+            <p>Uso correcto del sistema de facturación para ventas simples, servicios y manejo de complementos.</p>
+            <ul class="imp-list">
+              <li>Niveles según experiencia del equipo.</li>
+              <li>Temas opcionales: carta porte, REP, Carta Porte y facturación global.</li>
+              <li>Perfecto para facturistas y auxiliares administrativos.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20Factura%20Electr%C3%B3nica."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <!-- ===== NUBE (filtro funcional, etiqueta visual apagada por CSS) ===== -->
+          <article class="fcard tag-nube">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/personia.webp" alt="Curso Personia">
+              <span class="tag-nube"></span>
+            </div>
+            <p>Todo el flujo de nómina en la nube, desde la configuración inicial hasta el timbrado y reportes.</p>
+            <ul class="imp-list">
+              <li>Niveles por experiencia y tamaño de nómina.</li>
+              <li>Podemos basarnos en nuestro temario oficial o centrarnos en portal de colaboradores.</li>
+              <li>Se puede ligar con un curso de nómina tradicional en escritorio.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Personia."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34,197,94,.15);border-color:#22c55e;color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-nube">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/vende.webp" alt="Curso Vende">
+              <span class="tag-nube"></span>
+            </div>
+            <p>Configuración, ventas en línea, inventarios y timbrado desde la nube.</p>
+            <ul class="imp-list">
+              <li>Enfocado en puntos de venta y comercio electrónico.</li>
+              <li>Flujos de venta, cancelaciones y notas de crédito.</li>
+              <li>Uso de reportes para toma de decisiones rápida.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Vende."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34,197,94,.15);border-color:#22c55e;color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-nube">
+            <div class="fhead">
+              <img class="logo-sistema" src="/IMG/contabiliza.webp" alt="Curso Contabiliza">
+              <span class="tag-nube"></span>
+            </div>
+            <p>Curso para interpretar tableros, indicadores y vistas financieras en la nube.</p>
+            <ul class="imp-list">
+              <li>Ideal para socios, dirección y gerencias financieras.</li>
+              <li>Lectura de indicadores clave y decisiones rápidas.</li>
+              <li>Se puede complementar con sesiones estratégicas.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20CONTPAQi%20Contabiliza."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34,197,94,.15);border-color:#22c55e;color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <!-- ===== ROLES ===== -->
+          <article class="fcard tag-roles">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/026-persona.webp" alt="Curso para dueños">
+              <h4>Curso para Dueños y Dirección</h4>
+            </div>
+            <p>Visión ejecutiva de indicadores, reportes y controles mínimos que debes exigir a tu equipo.</p>
+            <ul class="imp-list">
+              <li>Enfocado en toma de decisiones, no en botones.</li>
+              <li>Seleccionamos módulos clave de Contabiliza, Analiza y Comercial.</li>
+              <li>Ideal para una sesión corta y muy estratégica.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20para%20Due%C3%B1os%20y%20Direcci%C3%B3n."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-roles">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/119-conexion.webp" alt="Curso facturistas">
+              <h4>Curso para Facturistas / Auxiliares</h4>
+            </div>
+            <p>Curso práctico para quien factura, cobra y atiende clientes todos los días.</p>
+            <ul class="imp-list">
+              <li>Temarios recortados para que apliquen rápido.</li>
+              <li>Enfoque en errores comunes y cómo evitarlos.</li>
+              <li>Podemos incluir simulación de casos de tus clientes.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n%20del%20curso%20para%20facturistas."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+          <article class="fcard tag-roles">
+            <div class="fhead">
+              <img class="ficon" src="/IMG/002-pieza-de-puzzle.webp" alt="Curso personalizado">
+              <h4>Curso 100% Personalizado</h4>
+            </div>
+            <p>Nos indicas qué temas de nuestros temarios quieres ver y armamos un programa a la medida.</p>
+            <ul class="imp-list">
+              <li>Puedes mezclar temas de varios sistemas.</li>
+              <li>Definimos duración y nivel ideal (Básico, Intermedio o Avanzado) en una llamada breve.</li>
+              <li>Recomendado para empresas con procesos muy particulares.</li>
+            </ul>
+            <a href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20un%20curso%20personalizado%20con%20sus%20temarios."
+               target="_blank" rel="noopener">
+              <span class="badge" style="background:rgba(34, 197, 94, 0.15); border-color:#22c55e; color:#86efac;">
+                Pedir info por WhatsApp
+              </span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ===== Modalidades y precios (MISMA ESTRUCTURA que Planes y Precios) ===== -->
+<section id="modalidades" aria-labelledby="modalidades-title"><h3 id="modalidades-title" class="title-gradient">Modalidades y formas de contratación</h3><div class="card body svc-panel"><table class="pricing-table-nube svc-pricing" aria-describedby="modalidades-title"><thead><tr><th>Modalidad</th><th>Descripción</th><th style="text-align:right">Inversión</th></tr></thead><tbody><tr><td class="plan-name">Curso por sistema (empresa)</td><td>Curso privado para tu empresa, por sistema y nivel (Básico, Intermedio o Avanzado).</td><td class="price price-link">Desde $3,200 +IVA</td></tr><tr class="row-alt"><td class="plan-name">Programa por rol</td><td>Serie de sesiones para un rol específico (facturistas, nómina, dirección, etc.).</td><td class="price">Precio especial según número de sesiones</td></tr><tr><td class="plan-name">Curso intensivo de arranque</td><td>Curso para equipos que acaban de comprar el sistema y necesitan arrancar operación.</td><td class="price">Paquete especial + implementación</td></tr><tr class="row-alt"><td class="plan-name">Programa anual de capacitación</td><td>Plan de cursos recurrentes durante el año, modalidad incluida con póliza de soporte.</td><td class="price">Pago bi o trimestral</td></tr></tbody><tfoot><tr><td class="note" colspan="3" style="text-align:center;"><div style="margin-bottom:6px;">¿Quieres un estimado rápido?</div><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px;"><a class="btn btn-grad-blue hero-btn" href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20curso%20CONTPAQi.%20Tengo%20X%20personas%20y%20uso%20estos%20sistemas:" target="_blank" rel="noopener">WhatsApp<img src="/IMG/whatsapp.svg" alt="" width="18" height="18" style="display:block"></a></div></td></tr></tfoot></table><p class="hint" style="text-align:center;margin-top:15px;">Todos nuestros cursos incluyen videograbación para su consulta, y 10 días hábiles después del curso para resolución de dudas.</p></div></section>
+
+
+    <!-- ===== Comparativa ===== -->
+    <section id="comparativa" aria-labelledby="comparativa-title">
+  
+      <h3 id="comparativa-title" class="title-gradient">¿Curso profesional o aprender “a prueba y error”?</h3>
+      <div class="card body svc-panel">
+        <h4 style="margin-bottom:15px;">Expiriti vs videos sueltos vs cursos genéricos</h4>
+        <table class="table-like" aria-label="Comparativa de cursos">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th class="highlight">Curso con Expiriti</th>
+              <th>Videos sueltos / autodidacta</th>
+              <th>Cursos genéricos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Temario adecuado a tu operación</td>
+              <td class="highlight">✅ Sí, contenido útil para tus procesos.</td>
+              <td>❌ No, contenido general.</td>
+              <td>⚠️ Parcialmente adaptable.</td>
+            </tr>
+            <tr>
+              <td>Niveles claros (Básico / Intermedio / Avanzado)</td>
+              <td class="highlight">✅ Sí, definidos antes del curso.</td>
+              <td>❌ Cada quien aprende lo que puede.</td>
+              <td>⚠️ Depende del proveedor.</td>
+            </tr>
+            <tr>
+              <td>Resolución de dudas en tiempo real</td>
+              <td class="highlight">✅ Sí, en vivo con tu equipo.</td>
+              <td>❌ No, solo comentarios o foros.</td>
+              <td>⚠️ Limitado por el grupo.</td>
+            </tr>
+            <tr>
+              <td>Enfoque en cumplimiento fiscal</td>
+              <td class="highlight">✅ Alto (somos distribuidores certificados).</td>
+              <td>❌ Riesgo de malas prácticas.</td>
+              <td>⚠️ Varía según el instructor.</td>
+            </tr>
+            <tr>
+              <td>Seguimiento posterior</td>
+              <td class="highlight">✅ Opcional con soporte y pólizas.</td>
+              <td>❌ Ninguno.</td>
+              <td>⚠️ Limitado a nuevas inscripciones.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Servicios Complementarios (reutilizable) ===== -->
+    <section id="servicios-complementarios" aria-labelledby="relacionados">
+      <h3 id="relacionados" class="title-gradient">Servicios complementarios</h3>
+      <p class="hint" style="margin-top:4px;margin-bottom:10px;">
+        Haz clic en el servicio que necesites para ver el detalle completo.
+      </p>
+
+      <div class="card body svc-panel">
+        <button class="svc-nav svc-prev" type="button" aria-label="Anterior" hidden>‹</button>
+<button class="svc-nav svc-next" type="button" aria-label="Siguiente" hidden>›</button>
+        <div class="svc-grid">
+          <!-- Columna 1 -->
+          <ul class="svc-list">
+            <li class="svc-link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Pólizas de Soporte Técnico Mensual</span>
+                <span class="svc-sub">Soporte y cursos ilimitados, desarrollos y más. Todo firmado por contrato.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Hora de soporte y soporte sin costo</span>
+                <span class="svc-sub">Atención por evento vía AnyDesk.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/cursos.html">
+              <div class="svc-text">
+                <span class="svc-title">Cursos por sistema CONTPAQi</span>
+                <span class="svc-sub">Contabilidad, Bancos, Nóminas, Comercial, nube, etc.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/soporte.html">
+              <div class="svc-text">
+                <span class="svc-title">Instalaciones</span>
+                <span class="svc-sub">En otro equipo o nuevas versiones.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/migraciones.html">
+              <div class="svc-text">
+                <span class="svc-title">Migración de equipo</span>
+                <span class="svc-sub">Mueve tu sistema CONTPAQi a otro equipo.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/migraciones.html">
+              <div class="svc-text">
+                <span class="svc-title">Migración y conversión de datos a CONTPAQi</span>
+                <span class="svc-sub">De otros sistemas a CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+          </ul>
+
+          <!-- Columna 2 -->
+          <ul class="svc-list">
+            <li class="svc-link" data-url="/SERVICIOS/reportesyformatos.html">
+              <div class="svc-text">
+                <span class="svc-title">Contabilización por empresa</span>
+                <span class="svc-sub">Procesos contables recurrentes por compañía.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/reportesyformatos.html">
+              <div class="svc-text">
+                <span class="svc-title">Adecuación de formatos PDF</span>
+                <span class="svc-sub">Formatos amigables de facturas, cotizaciones, tickets, etc.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/reportesyformatos.html">
+              <div class="svc-text">
+                <span class="svc-title">Reportes personalizados</span>
+                <span class="svc-sub">Indicadores y listados hechos a tu medida.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/cursos.html">
+              <div class="svc-text">
+                <span class="svc-title">Capacitaciones por rol</span>
+                <span class="svc-sub">Sesiones por persona o equipo según funciones.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="/SERVICIOS/desarrollos.html">
+              <div class="svc-text">
+                <span class="svc-title">Desarrollos a tu medida</span>
+                <span class="svc-sub">Soluciones específicas sobre el ecosistema CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+
+            <li class="svc-link" data-url="https://wa.me/5568437918?text=Hola%21%20Estoy%20buscando%20un%20servicio%20que%20no%20encontr%C3%A9%20en%20su%20p%C3%A1gina.%20Necesito%3A">
+              <div class="svc-text">
+                <span class="svc-title">¿No ves lo que buscas?</span>
+                <span class="svc-sub">Cuéntanos tu caso específico en CONTPAQi.</span>
+              </div>
+              <span class="svc-pill">Ver más →</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" aria-labelledby="faq-title">
+  
+      <h3 id="faq-title" class="title-gradient">Preguntas frecuentes sobre cursos</h3>
+
+      <div class="faq-wrap" id="faqWrap">
+        <details class="faq-item" open>
+          <summary>¿Cómo definen el temario de mi curso?</summary>
+          <p>
+            Partimos de nuestros <strong>temarios oficiales por sistema y nivel</strong> y en una llamada breve
+            nos dices qué temas son prioridad, qué ya dominan y qué no han visto. Con eso armamos o ajustamos el
+            temario para que el tiempo se use en lo que realmente necesitan.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Los cursos son remotos o presenciales?</summary>
+          <p>
+            La mayoría de los cursos se imparten <strong>en línea</strong> (Zoom/Meet) para que puedan conectarse
+            desde diferentes sucursales. También podemos cotizar cursos presenciales según tu ubicación y número
+            de participantes.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Manejan niveles Básico, Intermedio y Avanzado?</summary>
+          <p>
+            Sí. Cada sistema tiene temarios por nivel. Puedes tomar un nivel completo o pedir que
+            armemos un curso mixto (por ejemplo, repaso rápido de básico y énfasis en temas intermedios).
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Pueden utilizar mis propias bases de datos o ejemplos?</summary>
+          <p>
+            Siempre que la información no sea sensible, podemos usar <strong>copias de tus empresas</strong>
+            o ejemplos muy parecidos, para que el curso sea 100% aterrizado a tu realidad. También podemos
+            trabajar con bases de ejemplo si prefieres no usar tus datos.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Incluyen grabación del curso?</summary>
+          <p>
+            Si lo autorizas, podemos grabar la sesión y compartir el enlace para que tu equipo la repase
+            después. El uso de esa grabación es <strong>solo interno</strong> para tu empresa.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+<section id="sesion-guiada" class="card body svc-panel">
+
+<h3 class="title-gradient">¿Listo para agendar tu curso CONTPAQi?</h3>
+
+<p>
+Cuéntanos qué sistemas usas, qué nivel buscas y para cuántas personas.
+Te proponemos el temario ideal.
+</p>
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px;">
+
+<a class="btn btn-grad-green hero-btn"
+href="https://wa.me/5568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20programar%20un%20curso%20CONTPAQi.%20Estos%20son%20los%20sistemas%20que%20uso%20y%20los%20temas%20que%20me%20interesan:"
+target="_blank" rel="noopener">
+WhatsApp<img src="/IMG/whatsapp.svg" alt="" width="18" height="18"></a>
+
+<a class="btn btn-grad-blue hero-btn"href="tel:+525568437918">Llamada 📞</a>
+
+</div>
+
+</section>
+    
+    <!-- TOC -->
+    <aside class="toc collapsed" id="toc" aria-live="polite">
+      <button class="toc-toggle" id="tocToggle" aria-label="Abrir mapa">🗺️ Mapa</button>
+      <button class="toc-close" aria-label="Cerrar">×</button>
+      <strong class="toc-title">Mapa del sitio</strong>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#caracteristicas">Catálogo de cursos</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#sesion-guiada">Contacto</a>
+    </aside>
+
+    <div id="svc-actions"
+  data-svc-page="cursos"
+  data-svc-process-label="Cómo armamos el curso"
+  data-svc-audience-label="Ideal para tu equipo"
+  data-svc-cases-label="Escenarios comunes"
+  data-svc-cta-label="Agendar curso">
+</div>
+    
+
+  </main>
+
+  <!-- Footer dinámico -->
+  <div id="footer-placeholder"></div>
+
+  <script src="/mainservicios.js" defer></script>
+</body>
+</html>
