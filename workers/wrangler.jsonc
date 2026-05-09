@@ -1,0 +1,14 @@
+{
+  "name": "sat-monitor-expiriti",
+  "main": "workers/sat-monitor-worker.js",
+  "compatibility_date": "2025-12-01",
+  "triggers": {
+    "crons": ["0 * * * *"]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SAT_MONITOR",
+      "id": "PON_AQUI_TU_NAMESPACE_ID"
+    }
+  ]
+}
