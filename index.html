@@ -432,21 +432,95 @@
         <label for="telefono">Teléfono / WhatsApp (opcional)</label>
         <input id="telefono" name="telefono" placeholder="55 0000 0000">
 
-        <label for="interes">Estoy interesado en</label>
-        <select id="interes" name="interes" required>
-          <option value="" selected disabled>Selecciona</option>
-          <option>Nóminas</option>
-          <option>Comercial Pro/Premium</option>
-          <option>Comercial Start</option>
-          <option>XML en Línea</option>
-          <option>Contabilidad</option>
-          <option>Bancos</option>
-          <option>Factura electrónica</option>
-          <option>Analiza (Nube)</option>
-          <option>Implementación / Póliza de soporte</option>
-          <option>Desarrollo</option>
-          <option>Cursos / Soporte</option>
-        </select>
+<label for="interes">Estoy interesado en</label>
+<select id="interes" name="interes" required hidden>
+  <option value="" selected disabled>Selecciona</option>
+  <option>Contabilidad</option>
+  <option>Nóminas</option>
+  <option>Bancos</option>
+  <option>XML en Línea</option>
+  <option>Comercial Start</option>
+  <option>Comercial Pro/Premium</option>
+  <option>Factura electrónica</option>
+  <option>Contabiliza</option>
+  <option>Personia</option>
+  <option>Vende</option>
+  <option>Colabora</option>
+  <option>Analiza</option>
+  <option>Evalúa</option>
+  <option>Optimiza</option>
+  <option>Anticipa</option>
+  <option>Póliza de soporte</option>
+  <option>Implementación</option>
+  <option>Desarrollo</option>
+  <option>Cursos / Soporte</option>
+</select>
+
+<div class="interest-ui" id="interestUi" data-mode="sistemas" data-syscat="contables">
+  <div class="interest-switch" role="tablist" aria-label="Tipo de interés">
+    <button class="interest-mode is-active" type="button" data-mode="sistemas" aria-selected="true">Sistemas</button>
+    <button class="interest-mode" type="button" data-mode="servicios" aria-selected="false">Servicios</button>
+  </div>
+
+  <div class="interest-panel" data-mode-panel="sistemas">
+    <div class="interest-cats" role="tablist" aria-label="Categorías de sistemas">
+      <button class="interest-cat is-active" type="button" data-syscat="contables" aria-selected="true">Contables</button>
+      <button class="interest-cat" type="button" data-syscat="comerciales" aria-selected="false">Comerciales</button>
+      <button class="interest-cat" type="button" data-syscat="nube" aria-selected="false">Nube</button>
+      <button class="interest-cat" type="button" data-syscat="productividad" aria-selected="false">Productividad</button>
+    </div>
+
+    <div class="interest-sysgroup is-active" data-sysgroup="contables">
+      <button class="interest-system" type="button" data-value="Contabilidad" aria-label="Contabilidad" title="Contabilidad"><img src="/IMG/contabilidad.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Nóminas" aria-label="Nóminas" title="Nóminas"><img src="/IMG/nominas.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Bancos" aria-label="Bancos" title="Bancos"><img src="/IMG/bancos.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="XML en Línea" aria-label="XML en Línea" title="XML en Línea"><img src="/IMG/xml.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+    </div>
+
+    <div class="interest-sysgroup" data-sysgroup="comerciales" hidden>
+      <button class="interest-system" type="button" data-value="Comercial Start" aria-label="Comercial Start" title="Comercial Start"><img src="/IMG/comercialstart.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Comercial Pro/Premium" aria-label="Comercial Pro/Premium" title="Comercial Pro/Premium"><img src="/IMG/comercialpro.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Factura electrónica" aria-label="Factura electrónica" title="Factura electrónica"><img src="/IMG/factura.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+    </div>
+
+    <div class="interest-sysgroup" data-sysgroup="nube" hidden>
+      <button class="interest-system" type="button" data-value="Contabiliza" aria-label="Contabiliza" title="Contabiliza"><img src="/IMG/contabiliza.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Personia" aria-label="Personia" title="Personia"><img src="/IMG/personia.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Vende" aria-label="Vende" title="Vende"><img src="/IMG/vende.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Colabora" aria-label="Colabora" title="Colabora"><img src="/IMG/colabora.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+    </div>
+
+    <div class="interest-sysgroup" data-sysgroup="productividad" hidden>
+      <button class="interest-system" type="button" data-value="Analiza" aria-label="Analiza" title="Analiza"><img src="/IMG/analiza.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Evalúa" aria-label="Evalúa" title="Evalúa"><img src="/IMG/evalua.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Optimiza" aria-label="Optimiza" title="Optimiza"><img src="/IMG/optimiza.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+      <button class="interest-system" type="button" data-value="Anticipa" aria-label="Anticipa" title="Anticipa"><img src="/IMG/anticipa.webp" alt="" width="96" height="40" loading="lazy" decoding="async"></button>
+    </div>
+  </div>
+
+  <div class="interest-panel" data-mode-panel="servicios" hidden>
+    <div class="interest-services">
+      <button class="interest-service" type="button" data-value="Póliza de soporte" aria-label="Póliza de soporte">
+        <img src="/IMG/021-maintenance.webp" alt="" width="44" height="44" loading="lazy" decoding="async">
+        <span>Póliza de soporte</span>
+      </button>
+      <button class="interest-service" type="button" data-value="Implementación" aria-label="Implementación">
+        <img src="/IMG/025-meeting.webp" alt="" width="44" height="44" loading="lazy" decoding="async">
+        <span>Implementación</span>
+      </button>
+      <button class="interest-service" type="button" data-value="Desarrollo" aria-label="Desarrollo">
+        <img src="/IMG/020-code.webp" alt="" width="44" height="44" loading="lazy" decoding="async">
+        <span>Desarrollo</span>
+      </button>
+      <button class="interest-service" type="button" data-value="Cursos / Soporte" aria-label="Cursos / Soporte">
+        <img src="/IMG/024-education.webp" alt="" width="44" height="44" loading="lazy" decoding="async">
+        <span>Cursos / Soporte</span>
+      </button>
+    </div>
+  </div>
+
+  <p class="interest-current hint" id="interestCurrent">Selecciona un sistema o servicio.</p>
+</div>
 
         <label for="detalle">Cuéntanos más</label>
         <textarea id="detalle" name="detalle" rows="4" placeholder="Ej. Migración desde Excel, capacitación, timbrado, licencias, etc." required></textarea>
