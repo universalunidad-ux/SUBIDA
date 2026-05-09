@@ -1,4 +1,4 @@
-     /* Expiriti — main.css (SISTEMAS ONLY) v2026.01.09-dedupe-min */
+     /* ExpIRI Ti — main.css (SISTEMAS ONLY) v2026.01.09-dedupe-min */
 .page-sistemas{scroll-padding-top:84px;max-width:100%;overflow-x:hidden;--sys-calc-min:560px;--sys-calc-max:760px;--sys-panel-min:380px;--sys-panel-max:560px;--sys-narrow:min(1120px,70vw);--calc-card-h:560px;--calc-card-h-md:540px;--calc-card-bg:rgba(17,23,35,.58);--calc-card-bg2:rgba(15,23,42,.40);--calc-card-br:rgba(148,163,184,.18);--calc-soft:rgba(148,163,184,.10);--calc-shadow:0 18px 50px rgba(0,0,0,.22);--calc-tx:rgba(232,238,246,.92);--calc-tx2:rgba(232,238,246,.78);--calc-ac:#38bdf8;--calc-ac2:#22c55e;--calc-warn:#e9aa19;--calc-pill:rgba(56,189,248,.14);--calc-pill-b:rgba(56,189,248,.28);--calc-grid-gap:14px;--ex-cta-yellow:#e9aa19;--ex-cta-green:#149997;--ex-cta-pink:#fa5262;--ex-cta-tx:#fff;--ex-ghost-bg:transparent;--ex-ghost-bd:rgba(148,163,184,.28);--ex-ghost-tx:rgba(232,238,246,.92);--int-gap:14px;--int-pad:54px;--int-tile:clamp(190px,18vw,240px);--int-logo:86px;--int-chip-bg:rgba(56,189,248,.16);--int-chip-bd:rgba(56,189,248,.38);--int-chip-tx:rgba(11,18,32,.86)}@media(max-width:768px){.page-sistemas{scroll-padding-top:68px}}html[data-theme=light] .page-sistemas{--calc-card-bg:#fff;--calc-card-bg2:#fff;--calc-card-br:rgba(2,6,23,.10);--calc-soft:rgba(2,6,23,.06);--calc-shadow:0 18px 45px rgba(2,6,23,.10);--calc-tx:rgba(11,18,32,.92);--calc-tx2:rgba(11,18,32,.66);--ex-ghost-bd:rgba(2,6,23,.16);--ex-ghost-tx:rgba(11,18,32,.92)}html:not([data-theme=light]) .page-sistemas{--int-chip-tx:#e6f6ff}.page-sistemas .container,main.page-sistemas .container{max-width:100%;overflow-x:hidden}
 
 /* HERO + PDF */
@@ -122,7 +122,7 @@ html[data-theme=light] .page-sistemas .calc-container :is(#tot1,#tot2,#tot3) str
 .pricing-table-note{margin:14px 0 0;text-align:center;font-size:13px;line-height:1.55;color:#526178;font-weight:800}.pricing-table-note strong{color:#233048}html[data-theme=dark] .pricing-table-note{color:#cbd5e1}html[data-theme=dark] .pricing-table-note strong{color:#f8fafc}.pricing-table-nube tfoot{display:none}
 
 /* LIGHT anti-gris real */
-html[data-theme=light] .page-sistemas{--calc-card-bg:#fff;--calc-card-bg2:#fff;--calc-card-br:rgba(2,6,23,.10);--calc-soft:rgba(2,6,23,.06);--calc-shadow:0 18px 45px rgba(2,6,23,.10);--calc-tx:rgba(11,18,32,.92);--calc-tx2:rgba(11,18,32,.66)}
+
 
 html[data-theme=light] .page-sistemas .calc-container select,html[data-theme=light] .page-sistemas .calc-container input[type=number],html[data-theme=light] .page-sistemas .calc-container input[type=text]{background:#fff;border-color:rgba(2,6,23,.14)}
 html[data-theme=light] .page-sistemas .calc-container table{background:#fff;border-color:rgba(2,6,23,.10)}
