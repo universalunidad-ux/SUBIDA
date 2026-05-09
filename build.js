@@ -114,9 +114,10 @@ try{
     html = html.replace(/<div id="header-placeholder"><\/div>/g,header);
     html = html.replace(/<div id="footer-placeholder"><\/div>/g,footer);
 
-    // Quita loader viejo de parciales
-    html = html.replace(/<script>[\s\S]*?loadPartials[\s\S]*?<\/script>/s,"");
-
+    // Quita loaders viejos de parciales/rutas
+    html=html.replace(/<script>\s*\(?async\s*\(\)\s*=>\s*\{[\s\S]*?header-placeholder[\s\S]*?footer-placeholder[\s\S]*?<\/script>/g,"");
+    html=html.replace(/<script>[\s\S]*?(loadPartials|PARTIALS LOAD|NORMALIZADOR DE RUTAS|Normalización de rutas|Loader ÚNICO|Cargador ÚNICO)[\s\S]*?<\/script>/g,"");
+     
     // Lazy / preload
     html = html
       .replace(/<iframe(?!.*loading="lazy")/g,'<iframe loading="lazy"')
