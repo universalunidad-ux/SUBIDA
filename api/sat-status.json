@@ -1,0 +1,11 @@
+{
+  "overall": "warn",
+  "checked_at": "2026-03-10 20:45",
+  "services": [
+    { "key": "auth", "label": "SAT Auth", "status": "ok", "detail": "OK" },
+    { "key": "timbrado", "label": "Timbrado PAC", "status": "ok", "detail": "OK" },
+    { "key": "descarga", "label": "Descarga XML", "status": "warn", "detail": "Lento" },
+    { "key": "portal", "label": "Portal SAT", "status": "down", "detail": "Caído" }
+  ],
+  "source": "manual"
+}
