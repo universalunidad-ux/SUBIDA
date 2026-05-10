@@ -5,12 +5,15 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "start": "npx serve dist"
   },
   "dependencies": {
     "glob": "^10.4.1",
     "cssnano": "^7.0.1",
     "postcss": "^8.4.38",
-    "terser": "^5.31.0"
+    "terser": "^5.31.0",
+    "html-minifier-terser": "^7.2.0",
+    "serve": "^14.2.4"
   }
 }
