@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "node build.js",
-    "start": "npx serve dist"
+    "start": "npx serve dist",
+    "audit:img": "node audit-img.js",
+    "move:unused-img": "node audit-img.js --move-unused"
   },
   "dependencies": {
     "glob": "^10.4.1",
