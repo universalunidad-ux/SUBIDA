@@ -361,26 +361,34 @@
 <section id="promociones">
   <div class="container">
     <div class="section-title"><h2 style="margin:0">Promociones</h2></div>
+
     <div class="promo-filters" aria-label="Filtro de promociones">
       <button class="promo-btn active" data-filter="nuevos" type="button">Futuro usuario</button>
       <button class="promo-btn" data-filter="usuarios" type="button">Para usuarios</button>
-      <button class="promo-btn" data-filter="msi" type="button" style="background:rgba(34,197,94,.15);border:1px solid #22c55e;color:#86efac;">6 y 12 Meses sin intereses</button>
-      <button class="promo-btn" data-filter="nube" type="button">Nube</button>
+      <button class="promo-btn" data-filter="msi" type="button" style="background:rgba(34,197,94,.15);border:1px solid #22c55e;color:#86efac;">6 y 12 meses sin intereses</button>
     </div>
 
     <div class="promo-grid" id="promoGrid">
-      <img src="/IMG/40marz.webp" alt="Promo 40% cambio de sistema a CONTPAQi" data-type="nuevos" loading="lazy" decoding="async" width="600" height="600" onerror="this.style.display='none'">
-      <img src="/IMG/nubemarzo.webp" alt="Promo Nube marzo" data-type="nube" loading="lazy" decoding="async" width="600" height="600" onerror="this.style.display='none'">
-      <img src="/IMG/a15s.webp" alt="Promo Nube marzo" data-type="nube" loading="lazy" decoding="async" width="600" height="600" onerror="this.style.display='none'">
-      <img src="/IMG/o15%20(1).webp" alt="Promo Nube marzo" data-type="nube" loading="lazy" decoding="async" width="600" height="600" onerror="this.style.display='none'">
-      <img src="/IMG/20marzo.webp" alt="Promo para usuarios marzo" data-type="usuarios" loading="lazy" decoding="async" width="600" height="600" onerror="this.style.display='none'">
+      <figure class="promo-item" data-type="nuevos">
+        <img src="/IMG/compe.webp" alt="Promoción para futuro usuario CONTPAQi" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
+      </figure>
+
+      <figure class="promo-item" data-type="usuarios">
+        <img src="/IMG/suite.webp" alt="Promoción para usuarios CONTPAQi Suite" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
+      </figure>
+
+      <figure class="promo-item" data-type="usuarios">
+        <img src="/IMG/tradanual.webp" alt="Promoción para usuarios CONTPAQi tradicional anual" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
+      </figure>
 
       <figure class="promo-item" data-type="msi">
         <img src="/IMG/msi1.webp" alt="6 y 12 meses sin intereses" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
       </figure>
+
       <figure class="promo-item" data-type="msi">
         <img src="/IMG/msi2.webp" alt="6 y 12 meses sin intereses" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
       </figure>
+
       <figure class="promo-item" data-type="msi">
         <img src="/IMG/msi3.webp" alt="6 y 12 meses sin intereses" loading="lazy" decoding="async" width="600" height="600" onerror="this.closest('.promo-item').style.display='none'">
       </figure>
