@@ -324,14 +324,11 @@ html:not([data-theme=light]) .page-sistemas #integra .group-dots .dot,html:not([
 html:not([data-theme=light]) .page-sistemas #integra .group-dots .active,html:not([data-theme=light]) .page-sistemas #integra .group-dots button[aria-current=true]{background:linear-gradient(180deg,#f6cb42,#f59e0b)!important}
 
 
+
+/* PERFORMANCE VISUAL — blur/sombra ligera sin duplicados */
 .page-sistemas .cta-map-toggle{backdrop-filter:blur(8px)!important;-webkit-backdrop-filter:blur(8px)!important;box-shadow:0 12px 26px rgba(2,6,23,.10)!important;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease!important}
 .page-sistemas .cta-map-menu{backdrop-filter:blur(10px) saturate(1.02)!important;-webkit-backdrop-filter:blur(10px) saturate(1.02)!important;box-shadow:0 20px 48px rgba(2,6,23,.14)!important}
-.page-sistemas .icons-carousel .arrowCircle{backdrop-filter:blur(6px)!important;-webkit-backdrop-filter:blur(6px)!important}
-
-
-.page-sistemas .cta-map-toggle{backdrop-filter:blur(8px)!important;-webkit-backdrop-filter:blur(8px)!important;box-shadow:0 12px 26px rgba(2,6,23,.10)!important;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease!important}
-.page-sistemas .cta-map-menu{backdrop-filter:blur(10px) saturate(1.02)!important;-webkit-backdrop-filter:blur(10px) saturate(1.02)!important;box-shadow:0 20px 48px rgba(2,6,23,.14)!important}
-.page-sistemas .icons-carousel .arrowCircle{backdrop-filter:blur(6px)!important;-webkit-backdrop-filter:blur(6px)!important}
+.page-sistemas .icons-carousel .arrowCircle,.page-sistemas .arrowCircle,.page-sistemas .pill,.page-sistemas .badge{backdrop-filter:blur(6px)!important;-webkit-backdrop-filter:blur(6px)!important}
 .page-sistemas .arrowCircle:hover,.page-sistemas .listSlider .arrowCircle:hover,.page-sistemas .carousel .arrowCircle:hover{transform:none!important}
 .page-sistemas .card,.page-sistemas .fcard,.page-sistemas .carousel,.page-sistemas .listSlider,.page-sistemas .pricing-table-nube,.page-sistemas .pricing-nube-extra{box-shadow:0 8px 20px rgba(15,23,42,.08)!important}
-.page-sistemas .arrowCircle,.page-sistemas .pill,.page-sistemas .badge{backdrop-filter:blur(6px)!important;-webkit-backdrop-filter:blur(6px)!important}
+
