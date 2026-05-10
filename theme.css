@@ -113,3 +113,12 @@ html[data-theme="dark"] .hero-group-tab.active,html[data-theme="dark"] #heroGall
 html[data-theme="dark"] .reel-tab,html[data-theme="dark"] .reel-sys-tabs button{color:#fff!important}
 html[data-theme="dark"] .reel-tab span,html[data-theme="dark"] .reel-sys-tabs button span{color:#fff!important}
 html[data-theme="dark"] .reel-tab.active,html[data-theme="dark"] .reel-sys-tabs button.active{color:#fff!important}
+
+
+/* EXPIRITI — MOTION OFF FLECHAS GLOBAL v2026.03 */
+.arrowCircle,.carousel>.arrowCircle,.listSlider .arrowCircle,.hero-carousel .arrowCircle,.icons-carousel .arrowCircle,.carouselX .arrowCircle{transition:box-shadow .16s ease,border-color .16s ease,background .16s ease,opacity .16s ease!important}.arrowCircle:hover,.carousel>.arrowCircle:hover,.listSlider .arrowCircle:hover,.hero-carousel .arrowCircle:hover,.icons-carousel .arrowCircle:hover,.carouselX .arrowCircle:hover{transform:none!important}.arrowCircle:active,.carousel>.arrowCircle:active,.listSlider .arrowCircle:active,.hero-carousel .arrowCircle:active,.icons-carousel .arrowCircle:active,.carouselX .arrowCircle:active{transform:none!important}
+
+/* EXPIRITI — TABLAS SWIPE MOBILE GLOBAL v2026.03 */
+.cmp-scroll,.table-scroll,.pricing-scroll{display:block;width:100%;max-width:100%;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior-x:contain!important;touch-action:auto!important;border-radius:18px}.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{width:max-content;min-width:680px;max-width:none}
+@media(max-width:860px){.cmp-scroll,.table-scroll,.pricing-scroll{scrollbar-width:none}.cmp-scroll::-webkit-scrollbar,.table-scroll::-webkit-scrollbar,.pricing-scroll::-webkit-scrollbar{display:none}.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{min-width:680px}}
+@media(max-width:420px){.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{min-width:640px}}
