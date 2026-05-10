@@ -4,9 +4,12 @@
 (()=>{try{let k="expiriti_theme",s=localStorage.getItem(k),t=(s==="light"||s==="dark")?s:"light",h=document.documentElement;h.setAttribute("data-theme",t);h.style.background=t==="dark"?"#0a111b":"#f6f8fc";h.style.colorScheme=t}catch(e){let h=document.documentElement;h.setAttribute("data-theme","light");h.style.background="#f6f8fc";h.style.colorScheme="light"}})();
 </script>
 <style>
-html{background:#f6f8fc}
-html[data-theme="dark"]{background:#0a111b}
-body{background:transparent}
+html{background:#f6f8fc;color-scheme:light}
+html[data-theme="dark"]{background:#0a111b;color-scheme:dark}
+html[data-theme="light"]{background:#f6f8fc;color-scheme:light}
+body{background:#f6f8fc}
+html[data-theme="dark"] body{background:#0a111b}
+html[data-theme="light"] body{background:#f6f8fc}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index, follow" />
