@@ -967,3 +967,12 @@ html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servici
 .page-index #heroGalleryCarousel .arrowCircle{display:grid!important;place-items:center!important;transform:translateY(-50%)!important}
 .page-index #heroGalleryCarousel .arrowCircle:hover,.page-index #heroGalleryCarousel .arrowCircle:active{transform:translateY(-50%)!important}
 @media(max-width:980px){.page-index #heroGalleryCarousel .arrowCircle{width:40px!important;height:40px!important;opacity:.96!important;pointer-events:auto!important}.page-index #heroGalleryCarousel .arrowCircle.prev{left:8px!important}.page-index #heroGalleryCarousel .arrowCircle.next{right:8px!important}}
+
+/* EXPIRITI FAB/MAPA FIX INDEX */
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions){right:12px!important;bottom:82px!important;z-index:10031!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel{right:60px!important;bottom:-2px!important;width:min(420px,calc(100vw - 92px))!important;min-width:min(420px,calc(100vw - 92px))!important;max-width:min(420px,calc(100vw - 92px))!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;padding:16px!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel>*{min-width:0!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel a{min-width:0!important;word-break:normal!important;overflow-wrap:break-word!important;hyphens:none!important;white-space:normal!important}
+body:not(.page-sistemas):not(.page-servicios) #toc:not(.collapsed){right:92px!important;bottom:12px!important;width:286px!important;max-width:calc(100vw - 104px)!important}
+body:not(.page-sistemas):not(.page-servicios) #sat-fab,body:not(.page-sistemas):not(.page-servicios) #sat-global-panel,body:not(.page-sistemas):not(.page-servicios) #sat-fab-trigger,body:not(.page-sistemas):not(.page-servicios) .sat-fab-trigger{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+@media(max-width:680px){body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
