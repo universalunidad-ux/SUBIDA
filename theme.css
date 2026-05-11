@@ -126,3 +126,6 @@ html[data-theme="dark"] .reel-tab.active,html[data-theme="dark"] .reel-sys-tabs 
 .cmp-scroll,.table-scroll,.pricing-scroll{display:block;width:100%;max-width:100%;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior-x:contain!important;touch-action:auto!important;border-radius:18px}.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{width:max-content;min-width:680px;max-width:none}
 @media(max-width:860px){.cmp-scroll,.table-scroll,.pricing-scroll{scrollbar-width:none}.cmp-scroll::-webkit-scrollbar,.table-scroll::-webkit-scrollbar,.pricing-scroll::-webkit-scrollbar{display:none}.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{min-width:680px}}
 @media(max-width:420px){.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{min-width:640px}}
+
+
+html::before{content:"CSS OK";position:fixed;left:10px;bottom:10px;z-index:2147483647;background:red;color:#fff;padding:8px 10px;border-radius:999px;font:900 12px/1 Inter,system-ui}
