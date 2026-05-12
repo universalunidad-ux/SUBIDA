@@ -359,3 +359,22 @@ html:not([data-theme=light]) .page-sistemas #integra .group-dots .active,html:no
 .page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{width:100%!important;min-width:900px!important;table-layout:fixed!important}
 .page-sistemas #comparativa .cmp-logo{display:inline-block!important;width:auto!important;height:38px!important;max-width:150px!important;padding:6px 8px!important;border-radius:12px!important;vertical-align:middle!important;object-fit:contain!important}
 @media(max-width:640px){.page-sistemas #comparativa .table-like{font-size:14px!important}.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{padding:12px 14px!important}.page-sistemas #comparativa .cmp-scroll>.table-like{min-width:720px!important}.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{min-width:820px!important}}
+
+/* EXPIRITI COMPARATIVAS LEGIBILIDAD v2026.05.12 */
+.page-sistemas #comparativa .table-like{font-size:15px!important;line-height:1.38!important}
+.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{padding:14px 16px!important;vertical-align:middle!important}
+.page-sistemas #comparativa .table-like th:first-child,.page-sistemas #comparativa .table-like td:first-child{text-align:left!important}
+.page-sistemas #comparativa .table-like th:not(:first-child),.page-sistemas #comparativa .table-like td:not(:first-child){text-align:center!important}
+.page-sistemas #comparativa .cmp-logo{display:block!important;margin:0 auto!important;width:auto!important;height:58px!important;max-width:190px!important;object-fit:contain!important;padding:4px 6px!important;border-radius:12px!important}
+@media(max-width:640px){.page-sistemas #comparativa .table-like{font-size:14px!important}.page-sistemas #comparativa .cmp-logo{height:48px!important;max-width:160px!important}}
+
+/* EXPIRITI FIX FACTURA/BADGES/CMP PREMIUM v2026.05.12-u4 */
+.page-sistemas main.hero h1 img[src*="factura.webp"]{width:230px!important;max-width:60vw!important;height:auto!important;padding:8px!important;border-radius:18px!important;background:linear-gradient(180deg,#fde68a,#fbbf24)!important;border:2px solid #f59e0b!important;box-shadow:0 6px 14px rgba(2,6,23,.12)!important;object-fit:contain!important}
+html[data-theme=light] .page-sistemas .badge:not([style]){font-weight:650!important}
+html[data-theme=light] .page-sistemas .badge[style=""]{font-weight:650!important}
+.page-sistemas #comparativa .table-like{font-size:15px!important;line-height:1.38!important}
+.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{padding:14px 16px!important;vertical-align:middle!important}
+.page-sistemas #comparativa .table-like th:first-child,.page-sistemas #comparativa .table-like td:first-child{text-align:left!important}
+.page-sistemas #comparativa .table-like th:not(:first-child),.page-sistemas #comparativa .table-like td:not(:first-child){text-align:center!important}
+.page-sistemas #comparativa .cmp-logo{display:block!important;margin:0 auto!important;width:auto!important;height:58px!important;max-width:190px!important;object-fit:contain!important;padding:6px 8px!important;border-radius:12px!important}
+@media(max-width:640px){.page-sistemas main.hero h1 img[src*="factura.webp"]{width:210px!important;max-width:72vw!important}.page-sistemas #comparativa .table-like{font-size:14px!important}.page-sistemas #comparativa .cmp-logo{height:48px!important;max-width:160px!important}}
