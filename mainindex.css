@@ -1038,3 +1038,6 @@ html:not([data-theme="light"]) .page-index #contacto #contactForm>label{color:rg
 
 /* EXPIRITI CONTACT FACTURA YELLOW FIX */
 .page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
+
+/* EXPIRITI CONTACT FACTURA YELLOW FIX */
+.page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
