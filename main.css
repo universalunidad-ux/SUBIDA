@@ -332,6 +332,10 @@ html:not([data-theme=light]) .page-sistemas #integra .group-dots .active,html:no
 .page-sistemas .arrowCircle:hover,.page-sistemas .listSlider .arrowCircle:hover,.page-sistemas .carousel .arrowCircle:hover{transform:none!important}
 .page-sistemas .card,.page-sistemas .fcard,.page-sistemas .carousel,.page-sistemas .listSlider,.page-sistemas .pricing-table-nube,.page-sistemas .pricing-nube-extra{box-shadow:0 8px 20px rgba(15,23,42,.08)!important}
 
+
+/* RESUELTO: bloque remoto + local conservados */
+
+/* EXPIRITI FAB/MAPA FIX LOCAL */
 :is(#svc-actions,#toc-actions){right:12px!important;bottom:82px!important;z-index:10031!important}
 :is(#svc-actions,#toc-actions) .toc-panel{right:60px!important;bottom:-2px!important;width:min(420px,calc(100vw - 92px))!important;min-width:min(420px,calc(100vw - 92px))!important;max-width:min(420px,calc(100vw - 92px))!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;padding:16px!important}
 :is(#svc-actions,#toc-actions) .toc-panel>*{min-width:0!important}
@@ -339,3 +343,17 @@ html:not([data-theme=light]) .page-sistemas #integra .group-dots .active,html:no
 #toc:not(.collapsed){right:92px!important;bottom:12px!important;width:286px!important;max-width:calc(100vw - 104px)!important}
 #sat-fab,#sat-global-panel,#sat-fab-trigger,.sat-fab-trigger{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 @media(max-width:680px){:is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* RESUELTO: bloque remoto + local conservados */
+
+/* EXPIRITI FAB/MAPA FIX LOCAL */
+:is(#svc-actions,#toc-actions){right:12px!important;bottom:82px!important;z-index:10031!important}
+:is(#svc-actions,#toc-actions) .toc-panel{right:60px!important;bottom:-2px!important;width:min(420px,calc(100vw - 92px))!important;min-width:min(420px,calc(100vw - 92px))!important;max-width:min(420px,calc(100vw - 92px))!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;padding:16px!important}
+:is(#svc-actions,#toc-actions) .toc-panel>*{min-width:0!important}
+:is(#svc-actions,#toc-actions) .toc-panel a{min-width:0!important;word-break:normal!important;overflow-wrap:break-word!important;hyphens:none!important;white-space:normal!important}
+#toc:not(.collapsed){right:92px!important;bottom:12px!important;width:286px!important;max-width:calc(100vw - 104px)!important}
+#sat-fab,#sat-global-panel,#sat-fab-trigger,.sat-fab-trigger{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+@media(max-width:680px){:is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* EXPIRITI FORCE HIDDEN SISTEMAS */
+:is(#svc-actions,#toc-actions) .toc-panel[hidden]{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
