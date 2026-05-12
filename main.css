@@ -378,3 +378,11 @@ html[data-theme=light] .page-sistemas .badge[style=""]{font-weight:650!important
 .page-sistemas #comparativa .table-like th:not(:first-child),.page-sistemas #comparativa .table-like td:not(:first-child){text-align:center!important}
 .page-sistemas #comparativa .cmp-logo{display:block!important;margin:0 auto!important;width:auto!important;height:58px!important;max-width:190px!important;object-fit:contain!important;padding:6px 8px!important;border-radius:12px!important}
 @media(max-width:640px){.page-sistemas main.hero h1 img[src*="factura.webp"]{width:210px!important;max-width:72vw!important}.page-sistemas #comparativa .table-like{font-size:14px!important}.page-sistemas #comparativa .cmp-logo{height:48px!important;max-width:160px!important}}
+
+/* EXPIRITI BADGES FINAL SISTEMAS v2026.05.12 */
+.page-sistemas .badges{mask-image:none!important;-webkit-mask-image:none!important}
+.page-sistemas .badges>.badge:not([style]){font-weight:350!important}
+.page-sistemas .badges>.badge:not([style]) *{font-weight:350!important}
+.page-sistemas .badges>.badge[style]{font-weight:850!important}
+.page-sistemas .badges>.badge[style] *{font-weight:850!important}
+@media(max-width:860px){.page-sistemas .badges{mask-image:none!important;-webkit-mask-image:none!important;padding-left:0!important;padding-right:0!important}}
