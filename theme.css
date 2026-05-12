@@ -141,3 +141,19 @@ html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="60a5
 /* EXPIRITI HEADER NO DOUBLE SPACE */
 body.has-gh.page-index main,body.has-gh.page-sistemas main,body.has-gh.page-servicios main{padding-top:0!important}
 body.has-gh.page-index .hero,body.has-gh.page-sistemas .hero,body.has-gh.page-servicios .hero{margin-top:0!important}
+
+/* EXPIRITI THEME DEFAULT LIGHT + NO FLASH */
+html:not([data-theme]){background:#fff!important;color-scheme:light}
+html[data-theme="light"],html[data-theme="light"] body{background:#fff!important;color-scheme:light}
+html[data-theme="dark"],html[data-theme="dark"] body{background:#070b12!important;color-scheme:dark}
+
+/* EXPIRITI DARK TEXT FIX REELS + CONTACT SERVICES */
+html:not([data-theme="light"]) .page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab span,
+html:not([data-theme="light"]) .page-index #contacto .interest-service,
+html:not([data-theme="light"]) .page-index #contacto .interest-service span{color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important}
+
+/* EXPIRITI CONTACT COMMERCIAL/NUBE YELLOW BG FIX */
+.page-index #contacto .interest-system:has(img[src*="comercialstart"]),
+.page-index #contacto .interest-system:has(img[src*="comercialpro"]),
+.page-index #contacto .interest-system:has(img[src*="comercialpremium"]),
+.page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
