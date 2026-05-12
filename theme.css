@@ -128,7 +128,7 @@ html[data-theme="dark"] .reel-tab.active,html[data-theme="dark"] .reel-sys-tabs 
 @media(max-width:420px){.cmp-scroll>table,.table-scroll>table,.pricing-scroll>table{min-width:640px}}
 
 
-html::before{content:"CSS OK";position:fixed;left:10px;bottom:10px;z-index:2147483647;background:red;color:#fff;padding:8px 10px;border-radius:999px;font:900 12px/1 Inter,system-ui}
+
 
 /* EXPIRITI BADGES LIGHT CONTRAST */
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge{font-weight:950!important;text-shadow:0 0 .01px currentColor}
@@ -137,3 +137,9 @@ html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="f59e
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="ef4444"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="239,68,68"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="red"]{color:#b91c1c!important;-webkit-text-fill-color:#b91c1c!important;border-color:rgba(185,28,28,.42)!important;background:rgba(239,68,68,.08)!important}
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="14b8a6"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="20,184,166"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="teal"]{color:#0f766e!important;-webkit-text-fill-color:#0f766e!important;border-color:rgba(15,118,110,.42)!important;background:rgba(20,184,166,.08)!important}
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="60a5fa"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="96,165,250"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="blue"]{color:#1d4ed8!important;-webkit-text-fill-color:#1d4ed8!important;border-color:rgba(29,78,216,.38)!important;background:rgba(96,165,250,.09)!important}
+
+/* EXPIRITI HEADER FLOW FIX ROOT HOSTING */
+:root{--ex-header-space:var(--gh-height,68px)}
+body.page-index main,body.page-sistemas main,body.page-servicios main{padding-top:var(--ex-header-space)!important}
+body.page-index #contacto,body.page-sistemas section:first-of-type,body.page-servicios section:first-of-type{scroll-margin-top:calc(var(--ex-header-space) + 16px)!important}
+@media(max-width:768px){:root{--ex-header-space:62px}}
