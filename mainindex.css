@@ -978,6 +978,7 @@ body:not(.page-sistemas):not(.page-servicios) #sat-fab,body:not(.page-sistemas):
 @media(max-width:680px){body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 
 
+/* RESUELTO MAININDEX: remoto + local conservados */
 /* RESUELTO: bloque remoto + local conservados */
 
 /* EXPIRITI FORCE HIDDEN INDEX */
@@ -1041,3 +1042,4 @@ html:not([data-theme="light"]) .page-index #contacto #contactForm>label{color:rg
 
 /* EXPIRITI CONTACT FACTURA YELLOW FIX */
 .page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
+
