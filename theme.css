@@ -195,3 +195,10 @@ body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],body.page-sistemas
 #gf-root .gf-map-card img{max-width:230px!important;height:auto!important;object-fit:contain!important}
 #gf-root .gf-grid>section{min-height:100%!important}
 @media(max-width:640px){#gf-root .gf-logo-card{min-height:92px!important}#gf-root .gf-logo-card img{height:66px!important}#gf-root .gf-logo-card img[src*="contpaqi"]{height:76px!important}#gf-root .gf-ally-card{min-height:84px!important}#gf-root .gf-map-card{min-height:124px!important}}
+
+/* EXPIRITI FIX FACTURA HERO + FOOTER COMPACT v2026.05.12 */
+body.page-sistemas main.hero h1 img[src*="factura.webp"]{background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border:1px solid rgba(196,150,21,.35)!important;padding:10px!important;border-radius:22px!important;box-shadow:0 18px 42px rgba(154,117,0,.16)!important}
+#gf-root .gf-card{min-height:auto!important}
+#gf-root .gf-logo-card{min-height:98px!important}
+#gf-root .gf-ally-card{min-height:88px!important}
+#gf-root .gf-map-card{min-height:132px!important}
