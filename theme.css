@@ -138,8 +138,6 @@ html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="ef44
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="14b8a6"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="20,184,166"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="teal"]{color:#0f766e!important;-webkit-text-fill-color:#0f766e!important;border-color:rgba(15,118,110,.42)!important;background:rgba(20,184,166,.08)!important}
 html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="60a5fa"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="96,165,250"],html[data-theme="light"] :is(.page-sistemas,.page-servicios) .badge[style*="blue"]{color:#1d4ed8!important;-webkit-text-fill-color:#1d4ed8!important;border-color:rgba(29,78,216,.38)!important;background:rgba(96,165,250,.09)!important}
 
-/* EXPIRITI HEADER FLOW FIX ROOT HOSTING */
-:root{--ex-header-space:var(--gh-height,68px)}
-body.page-index main,body.page-sistemas main,body.page-servicios main{padding-top:var(--ex-header-space)!important}
-body.page-index #contacto,body.page-sistemas section:first-of-type,body.page-servicios section:first-of-type{scroll-margin-top:calc(var(--ex-header-space) + 16px)!important}
-@media(max-width:768px){:root{--ex-header-space:62px}}
+/* EXPIRITI HEADER NO DOUBLE SPACE */
+body.has-gh.page-index main,body.has-gh.page-sistemas main,body.has-gh.page-servicios main{padding-top:0!important}
+body.has-gh.page-index .hero,body.has-gh.page-sistemas .hero,body.has-gh.page-servicios .hero{margin-top:0!important}
