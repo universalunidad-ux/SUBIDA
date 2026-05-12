@@ -158,24 +158,21 @@ html:not([data-theme="light"]) .page-index #contacto .interest-service span{colo
 .page-index #contacto .interest-system:has(img[src*="comercialpremium"]),
 .page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
 /* footer más compacto / menos alto */
-footer .card,footer .footer-card,footer [class*="card"]{min-height:unset!important}
-footer .container,footer .footer-grid,footer [class*="footer"]{align-items:start!important}
-footer .card.body,footer .footer-card,footer .gf-card,footer .footer-panel{padding-top:22px!important;padding-bottom:22px!important;border-radius:24px!important}
+
+
+
 footer img{object-fit:contain!important}
-footer .brand-card,footer .logo-card,footer .partner-card,footer .gf-logo-card,footer .footer-logo-card{min-height:108px!important;padding:16px!important}
-footer .brand-card img,footer .logo-card img,footer .partner-card img,footer .gf-logo-card img,footer .footer-logo-card img{max-height:78px!important;width:auto!important;max-width:82%!important}
+
+
 footer .map-card img,footer .gf-map img,footer img[src*="mexico"],footer img[src*="mapa"]{max-height:210px!important;width:auto!important;max-width:100%!important}
 footer h2,footer h3,footer h4{margin-top:0!important;margin-bottom:16px!important;line-height:1.12!important}
 footer p,footer li{line-height:1.35!important}
-@media(min-width:981px){footer .card.body,footer .footer-card,footer .gf-card,footer .footer-panel{height:auto!important;min-height:340px!important}footer .footer-grid,footer .gf-grid,footer [class*="footer-grid"]{gap:22px!important}}
-@media(max-width:720px){body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],body.page-sistemas main.hero h1 img[src*="factura.webp"]{width:min(330px,86vw)!important;padding:14px 18px!important;border-radius:18px!important}footer .card.body,footer .footer-card,footer .gf-card,footer .footer-panel{padding:18px!important;min-height:unset!important}}
+@media(min-width:981px){footer .footer-grid,footer .gf-grid,footer [class*="footer-grid"]{gap:22px!important}}
+@media(max-width:720px){body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],body.page-sistemas main.hero h1 img[src*="factura.webp"]{width:min(330px,86vw)!important;padding:14px 18px!important;border-radius:18px!important}}
 
-/* EXPIRITI FIX FACTURA HERO ONLY */
+/* EXPIRITI FACTURA HERO + FOOTER SAFE FIX */
 body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],body.page-sistemas main.hero h1 img[src*="factura.webp"]{background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border:1px solid rgba(202,138,4,.28)!important;box-shadow:0 14px 30px rgba(234,179,8,.18)!important;border-radius:20px!important;padding:18px 24px!important;width:min(420px,70vw)!important;max-width:70vw!important;object-fit:contain!important}
-html[data-theme="light"] body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],html[data-theme="light"] body.page-sistemas main.hero h1 img[src*="factura.webp"]{background:linear-gradient(180deg,#f8e27a,#efc93d)!important}
-
-/* EXPIRITI FOOTER COMPACT RESTORE */
-#gf-root .gf-card{min-height:unset!important;height:auto!important}
+#gf-root .gf-card{height:auto!important;min-height:unset!important}
 #gf-root .gf-logo-card{min-height:98px!important;padding:10px 12px!important}
 #gf-root .gf-ally-card{min-height:88px!important;padding:10px 12px!important}
 #gf-root .gf-map-card{min-height:132px!important;padding:12px!important}
@@ -184,5 +181,17 @@ html[data-theme="light"] body.page-sistemas main.hero h1 img[src*="/IMG/factura.
 #gf-root .gf-ally-card img{height:58px!important;width:100%!important;max-width:100%!important;object-fit:contain!important}
 #gf-root .gf-map-card img{max-width:230px!important;height:auto!important;object-fit:contain!important}
 #gf-root .gf-grid>section{min-height:100%!important}
-@media(min-width:981px){#gf-root .gf-container{padding:26px 18px 18px!important}#gf-root .gf-grid{align-items:stretch!important;gap:18px!important}#gf-root .gf-grid>section{padding:16px!important;border-radius:24px!important}}
+@media(max-width:640px){#gf-root .gf-logo-card{min-height:92px!important}#gf-root .gf-logo-card img{height:66px!important}#gf-root .gf-logo-card img[src*="contpaqi"]{height:76px!important}#gf-root .gf-ally-card{min-height:84px!important}#gf-root .gf-map-card{min-height:124px!important}}
+
+/* EXPIRITI FACTURA HERO + FOOTER SAFE FIX */
+body.page-sistemas main.hero h1 img[src*="/IMG/factura.webp"],body.page-sistemas main.hero h1 img[src*="factura.webp"]{background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border:1px solid rgba(202,138,4,.28)!important;box-shadow:0 14px 30px rgba(234,179,8,.18)!important;border-radius:20px!important;padding:18px 24px!important;width:min(420px,70vw)!important;max-width:70vw!important;object-fit:contain!important}
+#gf-root .gf-card{height:auto!important;min-height:unset!important}
+#gf-root .gf-logo-card{min-height:98px!important;padding:10px 12px!important}
+#gf-root .gf-ally-card{min-height:88px!important;padding:10px 12px!important}
+#gf-root .gf-map-card{min-height:132px!important;padding:12px!important}
+#gf-root .gf-logo-card img{height:72px!important;width:100%!important;max-width:100%!important;object-fit:contain!important}
+#gf-root .gf-logo-card img[src*="contpaqi"]{height:82px!important}
+#gf-root .gf-ally-card img{height:58px!important;width:100%!important;max-width:100%!important;object-fit:contain!important}
+#gf-root .gf-map-card img{max-width:230px!important;height:auto!important;object-fit:contain!important}
+#gf-root .gf-grid>section{min-height:100%!important}
 @media(max-width:640px){#gf-root .gf-logo-card{min-height:92px!important}#gf-root .gf-logo-card img{height:66px!important}#gf-root .gf-logo-card img[src*="contpaqi"]{height:76px!important}#gf-root .gf-ally-card{min-height:84px!important}#gf-root .gf-map-card{min-height:124px!important}}
