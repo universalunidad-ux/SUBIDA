@@ -339,3 +339,23 @@ html:not([data-theme=light]) .page-sistemas #integra .group-dots .active,html:no
 #toc:not(.collapsed){right:92px!important;bottom:12px!important;width:286px!important;max-width:calc(100vw - 104px)!important}
 #sat-fab,#sat-global-panel,#sat-fab-trigger,.sat-fab-trigger{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 @media(max-width:680px){:is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* EXPIRITI FIX COMPARATIVAS SISTEMAS v2026.05.12 */
+.page-sistemas #comparativa .cmp-scroll{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+.page-sistemas #comparativa .cmp-scroll>.table-like{width:100%!important;min-width:760px!important;table-layout:fixed!important}
+.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{width:100%!important;min-width:900px!important;table-layout:fixed!important}
+.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{vertical-align:middle!important}
+@media(max-width:980px){.page-sistemas #comparativa .cmp-scroll>.table-like{min-width:760px!important}.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{min-width:860px!important}}
+@media(max-width:640px){.page-sistemas #comparativa .cmp-scroll>.table-like{min-width:720px!important}.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{min-width:820px!important}}
+
+/* EXPIRITI FIX COMPARATIVAS SISTEMAS v2026.05.12-u2 */
+.page-sistemas #comparativa .card.body{overflow:hidden!important}
+.page-sistemas #comparativa .cmp-scroll{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+.page-sistemas #comparativa .table-like{font-size:clamp(14px,1.05vw,16px)!important;line-height:1.38!important}
+.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{padding:14px 16px!important;vertical-align:middle!important}
+.page-sistemas #comparativa .table-like th:first-child,.page-sistemas #comparativa .table-like td:first-child{text-align:left!important}
+.page-sistemas #comparativa .table-like th:not(:first-child),.page-sistemas #comparativa .table-like td:not(:first-child){text-align:center!important}
+.page-sistemas #comparativa .cmp-scroll>.table-like{width:100%!important;min-width:760px!important;table-layout:fixed!important}
+.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{width:100%!important;min-width:900px!important;table-layout:fixed!important}
+.page-sistemas #comparativa .cmp-logo{display:inline-block!important;width:auto!important;height:38px!important;max-width:150px!important;padding:6px 8px!important;border-radius:12px!important;vertical-align:middle!important;object-fit:contain!important}
+@media(max-width:640px){.page-sistemas #comparativa .table-like{font-size:14px!important}.page-sistemas #comparativa .table-like th,.page-sistemas #comparativa .table-like td{padding:12px 14px!important}.page-sistemas #comparativa .cmp-scroll>.table-like{min-width:720px!important}.page-sistemas #comparativa .cmp-scroll>.table-like.cmp-icons{min-width:820px!important}}
