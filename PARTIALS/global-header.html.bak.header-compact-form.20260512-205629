@@ -1,0 +1,415 @@
+
+<style>
+
+:root{--gh-bg:rgba(7,10,16,.95);--gh-border:rgba(255,255,255,.08);--gh-panel:#0a0e17;--gh-text:#e8eef6;--gh-muted:#94a3b8;--gh-brand:#2dd4bf;--gh-brand2:#60a5fa;--gh-pink:#f14d5e;--gh-maxw:1200px;--gh-height:68px;--gh-offset:68px;--gh-radius:18px;--gh-shadow:0 18px 45px rgba(0,0,0,.28);--gh-card-shadow:0 10px 24px rgba(0,0,0,.16);--gh-card-border:rgba(255,255,255,.10);--gh-card-bg:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));--gh-yellow:#e9aa19;--gh-yellow-br:#d6940f;--gh-green:#149997;--gh-green-br:#0f7f7d;--title-grad:linear-gradient(135deg,#f8fbff 0%,#cfe0ff 34%,#7eb0ff 68%,#4f86db 100%)}html[data-theme=light]{--gh-bg:rgba(255,255,255,.92);--gh-border:rgba(2,6,23,.10);--gh-panel:#fff;--gh-text:#0f172a;--gh-muted:#64748b;--gh-brand:#0d9488;--gh-brand2:#2563eb;--gh-shadow:0 18px 45px rgba(2,6,23,.10);--gh-card-shadow:0 10px 24px rgba(2,6,23,.08);--gh-card-border:rgba(2,6,23,.10);--gh-card-bg:linear-gradient(180deg,rgba(255,255,255,.98),rgba(246,248,251,.92));--title-grad:linear-gradient(135deg,#13213f 0%,#244a86 34%,#4f84d6 68%,#76a7ef 100%)}html{scroll-padding-top:var(--gh-offset)}body{padding-top:0}body.has-gh{padding-top:var(--gh-offset)}html.gh-open,html.gh-open body,body.gh-open{overflow:hidden}#gh-header{position:fixed;top:0;left:0;right:0;z-index:2147483000;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;isolation:isolate}#gh-header *{box-sizing:border-box}#gh-header img,#gh-header svg{mix-blend-mode:normal;opacity:1}#gh-header .gh-bar{height:var(--gh-height);background:var(--gh-bg);border-bottom:1px solid var(--gh-border);box-shadow:var(--gh-shadow);position:relative;transition:transform .25s ease,opacity .2s ease,visibility .2s ease}#gh-header .gh-bar::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,rgba(45,212,191,0),rgba(45,212,191,.85),rgba(96,165,250,.85),rgba(96,165,250,0));pointer-events:none}#gh-header .gh-bar.is-hidden{transform:translateY(-100%)}#gh-header .gh-container{max-width:var(--gh-maxw);margin:0 auto;padding:0 20px;height:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;column-gap:24px}#gh-header .gh-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--gh-text);min-width:0;padding:0}#gh-header .gh-brand img{width:56px;height:56px;border-radius:14px;object-fit:contain;display:block}#gh-header .gh-brand-txt{display:flex;flex-direction:column;min-width:0}#gh-header .gh-brand-txt .n{font-weight:800;font-size:16px;line-height:1.02;color:var(--gh-text);white-space:nowrap}#gh-header .gh-brand-txt .s{font-size:11px;line-height:1.05;color:var(--gh-muted);white-space:nowrap}#gh-header .gh-nav{display:none;min-width:0}@media(min-width:1024px){#gh-header .gh-nav{display:flex;align-items:center;width:100%}}#gh-header .gh-nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;width:100%;align-items:center}#gh-header .gh-nav li{display:flex;justify-content:center;min-width:0}#gh-header .gh-nav a{width:100%;text-align:center;color:var(--gh-text);text-decoration:none;font-size:17px;font-weight:800;line-height:1;padding:10px 12px;border-radius:14px;border:1px solid transparent;transition:background .16s ease,border-color .16s ease,color .16s ease;white-space:nowrap}#gh-header .gh-nav a:visited{color:var(--gh-text)}#gh-header .gh-nav a:hover,#gh-header .gh-nav a:focus-visible{background:rgba(45,212,191,.14);border-color:rgba(45,212,191,.28)}html[data-theme=light] #gh-header .gh-nav a:hover,html[data-theme=light] #gh-header .gh-nav a:focus-visible{background:rgba(37,99,235,.10);border-color:rgba(37,99,235,.18)}#gh-header .gh-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:auto}#gh-header .gh-btn-wa{display:none;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:6px 14px;border-radius:999px;text-decoration:none;font-weight:900;color:#fff;background:linear-gradient(90deg,var(--gh-brand),var(--gh-brand2));border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 30px rgba(0,0,0,.18)}@media(min-width:600px){#gh-header .gh-btn-wa{display:inline-flex}}#gh-header .gh-wa-ico{width:16px;height:16px;object-fit:contain}#gh-header .gh-wa-num{font-size:12.5px;line-height:1;color:#fff;font-weight:900}#gh-header .gh-theme,#gh-header .gh-burger{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border-radius:14px;border:1px solid rgba(255,255,255,.20);background:rgba(15,23,42,.90);color:var(--gh-text)}html[data-theme=light] #gh-header .gh-theme,html[data-theme=light] #gh-header .gh-burger{background:rgba(255,255,255,.9);border-color:rgba(2,6,23,.14);color:#0f172a}#gh-header .gh-theme{width:40px;height:40px;padding:0}#gh-header .gh-theme-ico{width:22px;height:22px;object-fit:contain;display:block}#gh-header .gh-burger{width:40px;height:40px;font-size:22px;line-height:1}@media(min-width:1024px){#gh-header .gh-burger{display:none}}#gh-header .gh-dd-wrap{position:relative}#gh-header .gh-dd-wrap::after{content:"";position:absolute;left:0;right:0;top:100%;height:18px}#gh-header .gh-dd-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,12px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility .18s ease,transform .18s ease}#gh-header .gh-dd-wrap.gh-open .gh-dd-menu,#gh-header .gh-dd-wrap:hover .gh-dd-menu,#gh-header .gh-dd-wrap:focus-within .gh-dd-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}@media(min-width:1024px){#gh-header .gh-dd-menu.mega{width:min(980px,calc(100vw - 24px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:18px;border-radius:24px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(10,14,22,.985),rgba(13,18,29,.965));box-shadow:0 30px 90px rgba(0,0,0,.58);backdrop-filter:blur(14px) saturate(1.04);-webkit-backdrop-filter:blur(14px) saturate(1.04);overflow:hidden}html[data-theme=light] #gh-header .gh-dd-menu.mega{background:linear-gradient(180deg,rgba(255,255,255,.985),rgba(246,249,252,.97));border-color:rgba(2,6,23,.10);box-shadow:0 26px 80px rgba(2,6,23,.14)}}@media(min-width:1024px) and (max-width:1199px){#gh-header .gh-dd-menu.mega{grid-template-columns:repeat(2,minmax(0,1fr));width:min(860px,calc(100vw - 24px))}}@media(min-width:1200px) and (max-width:1399px){#gh-header .gh-dd-menu.mega{grid-template-columns:repeat(3,minmax(0,1fr));width:min(940px,calc(100vw - 24px))}}@media(min-width:1400px){#gh-header .gh-dd-menu.mega{grid-template-columns:repeat(4,minmax(0,1fr));width:min(1000px,calc(100vw - 24px))}}#gh-header .gh-col{min-width:0;padding:12px;border-radius:20px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018))}html[data-theme=light] #gh-header .gh-col{border-color:rgba(2,6,23,.08);background:linear-gradient(180deg,rgba(2,6,23,.025),rgba(2,6,23,.008))}#gh-header .gh-subbar{display:flex;align-items:center;gap:10px;margin:0 0 12px;padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);font-weight:850;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--gh-text)}html[data-theme=light] #gh-header .gh-subbar{background:rgba(2,6,23,.03);border-color:rgba(2,6,23,.12);color:#0b1220}#gh-header .gh-subbar svg{width:18px;height:18px;flex:0 0 auto;color:var(--gh-brand)}#gh-header .gh-col h4{margin:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gh-muted);opacity:.8}#gh-header .gh-item{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;padding:12px;border-radius:16px;text-decoration:none;color:var(--gh-text);border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease,background .14s ease}#gh-header .gh-item:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.16);box-shadow:0 14px 32px rgba(0,0,0,.18)}html[data-theme=light] #gh-header .gh-item{border-color:rgba(2,6,23,.08);background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(246,248,251,.92))}html[data-theme=light] #gh-header .gh-item:hover{border-color:rgba(2,6,23,.12);box-shadow:0 14px 32px rgba(2,6,23,.08)}#gh-header .gh-item div{display:flex;flex-direction:column;gap:4px;min-width:0}#gh-header .gh-item b{font-size:13px;font-weight:800;line-height:1.15;color:var(--gh-text)}#gh-header .gh-item span{font-size:11px;line-height:1.35;color:var(--gh-muted)}#gh-header .gh-item.is-featured{border-color:rgba(45,212,191,.26)}#gh-header .gh-badge{display:inline-flex;align-items:center;gap:6px;width:max-content;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.02em;color:#fff;background:linear-gradient(90deg,rgb(29,147,143),rgba(241,77,94,1))}#gh-header .gh-dd-menu[aria-label=Sistemas] .gh-item img{width:min(150px,100%);height:auto;aspect-ratio:20/7;object-fit:contain;display:block;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;filter:none}#gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(2) .gh-item img{padding:10px 12px;border-radius:16px;background:linear-gradient(135deg,var(--gh-yellow),#d79a1c);border:1px solid var(--gh-yellow-br);box-shadow:0 10px 22px rgba(233,170,25,.24)}#gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(3) .gh-item img{padding:10px 12px;border-radius:16px;background:linear-gradient(135deg,#53b6a9,#2f8f87);border:1px solid #2f8f87;box-shadow:0 10px 22px rgba(47,143,135,.22)}html[data-theme=light] #gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(2) .gh-item img{box-shadow:0 10px 22px rgba(233,170,25,.20)}html[data-theme=light] #gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(3) .gh-item img{box-shadow:0 10px 22px rgba(47,143,135,.18)}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item{min-height:132px;justify-content:flex-start}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item img{width:clamp(62px,5.2vw,84px);height:clamp(62px,5.2vw,84px);object-fit:contain;display:block;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;filter:none}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item.is-featured img{width:clamp(72px,5.8vw,96px);height:clamp(72px,5.8vw,96px)}#gh-header .gh-dim{position:fixed;inset:0;background:rgba(2,6,23,.55);backdrop-filter:saturate(140%) blur(6px);-webkit-backdrop-filter:saturate(140%) blur(6px);z-index:2147483998}html[data-theme=light] #gh-header .gh-dim{background:rgba(2,6,23,.35)}#gh-header .gh-dim[hidden]{display:none!important}#gh-header .gh-drawer{position:fixed;top:0;right:0;width:min(96vw,430px);height:100dvh;background:var(--gh-panel);border-left:1px solid rgba(255,255,255,.12);box-shadow:-28px 0 80px rgba(0,0,0,.55);z-index:2147483999;transform:translateX(104%);transition:transform .22s ease;display:flex;flex-direction:column}html[data-theme=light] #gh-header .gh-drawer{border-left-color:rgba(2,6,23,.10);box-shadow:-28px 0 80px rgba(2,6,23,.18)}html.gh-open #gh-header .gh-drawer{transform:translateX(0)}#gh-header .gh-drawer[hidden]{display:none!important}#gh-header .gh-drawer-head{position:sticky;top:0;z-index:20;padding:10px 12px 8px;border-bottom:1px solid rgba(255,255,255,.10);background:var(--gh-panel)}html[data-theme=light] #gh-header .gh-drawer-head{background:#fff;border-bottom-color:rgba(2,6,23,.10)}#gh-header .gh-dhead-top{display:flex;align-items:center;justify-content:space-between;gap:10px}#gh-header .gh-dtitle-row{display:flex;align-items:center;gap:10px;min-width:0;flex:1 1 auto;text-decoration:none;color:inherit;pointer-events:auto}#gh-header .gh-dtitle-logo{width:56px;height:56px;flex:0 0 56px;border-radius:16px;object-fit:contain;display:block}#gh-header .gh-dtitle-txt{display:flex;flex-direction:column;justify-content:center;min-width:0}#gh-header .gh-dtitle-name{font-size:16px;font-weight:900;line-height:.98;color:var(--gh-text);white-space:nowrap}#gh-header .gh-dtitle-sub{font-size:10px;line-height:1;color:var(--gh-muted);white-space:nowrap;margin-top:1px}#gh-header .gh-dhead-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex:0 0 auto}#gh-header .gh-headbtn{width:38px;height:38px;min-width:38px;padding:0;border:0;background:transparent;box-shadow:none;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;pointer-events:auto}#gh-header .gh-headico{width:31px;height:31px;display:block;object-fit:contain}#gh-header .gh-close{width:50px;height:50px;padding:0;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;line-height:1;cursor:pointer;border:1px solid rgba(148,163,184,.18);color:#e8eef6;background:linear-gradient(180deg,rgba(30,41,59,.96),rgba(15,23,42,.92));box-shadow:0 10px 22px rgba(0,0,0,.22)}html[data-theme=light] #gh-header .gh-close{background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(245,247,250,.72));border-color:rgba(2,6,23,.10);color:#111827;box-shadow:0 10px 22px rgba(2,6,23,.10)}#gh-header .gh-drawer-body{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:8px 8px 10px;display:flex;flex-direction:column;gap:10px}#gh-header .gh-acc,#gh-header .gh-promos{border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:8px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012))}html[data-theme=light] #gh-header .gh-acc,html[data-theme=light] #gh-header .gh-promos{border-color:rgba(2,6,23,.10);background:linear-gradient(180deg,rgba(2,6,23,.02),rgba(2,6,23,.01))}#gh-header .gh-msys-head{display:flex;flex-direction:column;gap:6px;margin:0 0 8px}#gh-header .gh-msys-title{display:inline-block;width:fit-content;max-width:100%;font-weight:950;font-size:18px;line-height:1;background:var(--title-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}#gh-header .gh-msys-sub{font-size:12px;line-height:1;color:var(--gh-muted)}#gh-header .gh-catbar{display:flex;gap:8px;overflow-x:auto;flex-wrap:nowrap;margin:0 0 4px;padding-bottom:2px}#gh-header .gh-cat{appearance:none;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));color:var(--gh-text);padding:8px 12px 10px;border-radius:999px;font-weight:850;font-size:13px;cursor:pointer;white-space:nowrap}#gh-header .gh-cat.is-active{border-color:rgba(96,165,250,.24);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));box-shadow:0 8px 18px rgba(0,0,0,.14)}html[data-theme=light] #gh-header .gh-cat{background:rgba(2,6,23,.03);border-color:rgba(2,6,23,.10);color:#0b1220}html[data-theme=light] #gh-header .gh-cat.is-active{border-color:rgba(37,99,235,.18);background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(246,249,252,.88));box-shadow:0 8px 18px rgba(2,6,23,.06)}#gh-header .gh-sysswipe,#gh-header .gh-svctrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none}#gh-header .gh-sysswipe::-webkit-scrollbar,#gh-header .gh-svctrack::-webkit-scrollbar{display:none}#gh-header .gh-syspage,#gh-header .gh-svcpage{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}#gh-header .gh-mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#gh-header .gh-mcard{position:relative;display:flex;align-items:center;gap:10px;min-height:96px;padding:9px;border-radius:16px;text-decoration:none;color:var(--gh-text);border:1px solid var(--gh-card-border);background:var(--gh-card-bg);box-shadow:var(--gh-card-shadow);overflow:hidden}#gh-header .gh-mcard:hover{border-color:rgba(255,255,255,.16)}html[data-theme=light] #gh-header .gh-mcard{color:#0b1220}#gh-header .gh-mcard.gh-star{border-color:rgba(45,212,191,.22)}#gh-header .gh-mcard-ghost{background:transparent!important;border-color:transparent!important;box-shadow:none!important}#gh-header .gh-mimg{width:auto;height:32px;max-width:46px;object-fit:contain;flex:0 0 auto;padding:8px;border-radius:14px;background:linear-gradient(180deg,rgba(17,23,35,.24),rgba(17,23,35,.10));border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 18px rgba(0,0,0,.12)}html[data-theme=light] #gh-header .gh-mimg{background:linear-gradient(180deg,rgba(226,232,240,.74),rgba(241,245,249,.54));border-color:rgba(2,6,23,.08);box-shadow:0 8px 18px rgba(2,6,23,.06)}#gh-header #gh-msys [data-panel=comerciales] .gh-mimg{background:var(--gh-yellow);border-color:var(--gh-yellow-br);box-shadow:0 10px 22px rgba(233,170,25,.24)}#gh-header #gh-msys [data-panel=nube] .gh-mimg{background:var(--gh-green);border-color:var(--gh-green-br);box-shadow:0 10px 22px rgba(20,153,151,.22)}#gh-header .gh-mmeta{display:flex;flex-direction:column;gap:3px;min-width:0}#gh-header .gh-mmeta strong{font-weight:950;font-size:12px;line-height:1.12;color:var(--gh-text)}html[data-theme=light] #gh-header .gh-mmeta strong{color:#0b1220}#gh-header .gh-mmeta span{font-size:10.5px;line-height:1.15;color:var(--gh-muted)}#gh-header .gh-sysdots,#gh-header .gh-svcdots{display:flex;align-items:center;justify-content:center;gap:8px}#gh-header .gh-sysdots{margin-top:6px}#gh-header .gh-sysdots::before{content:"Desliza";font-size:11px;font-weight:800;color:var(--gh-muted);margin-right:4px}#gh-header .gh-svcdots{margin-top:8px}#gh-header .dot{width:10px;height:10px;border-radius:999px;border:1px solid rgba(148,163,184,.28);background:rgba(148,163,184,.20);cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease}#gh-header .dot.is-active{background:var(--gh-pink);border-color:rgba(255,255,255,.18);transform:scale(1.18);box-shadow:0 0 0 4px rgba(241,77,94,.16)}#gh-header .gh-svcwrap{position:relative}#gh-header .gh-svcarrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(7,10,16,.70);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;cursor:pointer}#gh-header .gh-svcarrow.prev{left:8px}#gh-header .gh-svcarrow.next{right:8px}#gh-header .gh-svcarrow:disabled{opacity:.35;cursor:default}html[data-theme=light] #gh-header .gh-svcarrow{background:rgba(255,255,255,.85);border-color:rgba(2,6,23,.12);color:#0b1220}#gh-header .gh-promobtn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:950;color:#fff!important;border:1px solid rgba(255,255,255,.26)!important;background:var(--gh-pink)!important;box-shadow:0 12px 28px rgba(241,77,94,.26)}#gh-header .gh-promoico{width:18px;height:18px;object-fit:contain;flex:0 0 auto}#gh-header .gh-promobtn span{font-size:14px;line-height:1.1}@media(max-width:1023px){html{scroll-padding-top:62px}body.has-gh{padding-top:62px}#gh-header .gh-bar{height:62px}#gh-header .gh-container{grid-template-columns:minmax(0,1fr) auto;column-gap:8px;padding:0 10px}#gh-header .gh-brand{gap:8px;min-width:0;max-width:calc(100% - 108px)}#gh-header .gh-brand img{width:58px;height:58px;min-width:58px;min-height:58px;border-radius:14px}#gh-header .gh-brand-txt .n{font-size:16px;line-height:.98}#gh-header .gh-brand-txt .s{font-size:10px;line-height:1;overflow:hidden;text-overflow:ellipsis}#gh-header .gh-nav,#gh-header .gh-btn-wa{display:none!important}#gh-header .gh-theme{width:50px;height:50px;flex:0 0 50px;border-radius:18px}#gh-header .gh-theme-ico{width:27px;height:27px}#gh-header .gh-burger{width:50px;height:50px;flex:0 0 50px;border-radius:18px;font-size:29px}html.gh-open #gh-header .gh-bar{opacity:0;visibility:hidden;pointer-events:none}}@media(min-width:1024px){#gh-header .gh-dim,#gh-header .gh-drawer{display:none!important}}@media(min-width:1024px) and (max-width:1360px){#gh-header .gh-container{max-width:calc(100vw - 40px);padding:0 14px;column-gap:18px}#gh-header .gh-nav ul{gap:4px}#gh-header .gh-nav a{padding:10px 11px;font-size:15px}#gh-header .gh-brand img{width:52px;height:52px}#gh-header .gh-brand-txt .n{font-size:15px}#gh-header .gh-brand-txt .s{font-size:10px}}@media(min-width:1361px){#gh-header .gh-container{max-width:min(1500px,calc(100vw - 72px));column-gap:30px}#gh-header .gh-nav ul{gap:10px}#gh-header .gh-nav a{padding:10px 15px}}@media(prefers-reduced-motion:reduce){#gh-header .gh-bar,#gh-header .gh-dd-menu,#gh-header .gh-sysswipe,#gh-header .gh-svctrack{transition:none!important;scroll-behavior:auto!important}}
+
+   /* NO BORRAR, EXLCUYE COLOR AMARILLO EN LOGOS  */
+   #gh-header .gh-brand img,#gh-header .gh-dtitle-logo,#gh-header .gh-theme-ico,#gh-header .gh-wa-ico,#gh-header .gh-headico,#gh-header .gh-dd-menu[aria-label="Sistemas"] .gh-item img,#gh-header #gh-msys .gh-mimg{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;filter:none!important}
+
+/* PATCH preciso */
+#gh-header .gh-catbar{-ms-overflow-style:none;scrollbar-width:none}#gh-header .gh-catbar::-webkit-scrollbar{display:none}
+#gh-header .gh-svcdots::before{content:"Desliza";font-size:11px;font-weight:800;color:var(--gh-muted);margin-right:4px}
+#gh-header #gh-msvc .gh-svcarrow{display:none!important}
+#gh-header #gh-msvc .gh-msys-head{margin:0 0 4px!important;gap:2px!important}
+#gh-header #gh-msvc .gh-msys-sub{display:none!important}
+#gh-header #gh-msys .gh-mcard,#gh-header #gh-msvc .gh-mcard{border-radius:16px}
+#gh-header #gh-msys .gh-mimg,#gh-header #gh-msvc .gh-mimg{height:38px;max-width:58px;padding:6px;border-radius:12px}
+#gh-header #gh-msys [data-panel=comerciales] .gh-mimg,#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="comercial"],#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="factura"]{background:linear-gradient(135deg,var(--gh-yellow),#d79a1c)!important;border:1px solid var(--gh-yellow-br)!important;box-shadow:0 10px 22px rgba(233,170,25,.24)!important}
+#gh-header #gh-msys [data-panel=nube] .gh-mimg,#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="contabiliza"],#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="personia"],#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="vende"],#gh-header .gh-dd-menu[aria-label=Sistemas] img[data-src*="colabora"]{background:linear-gradient(135deg,#53b6a9,#2f8f87)!important;border:1px solid #2f8f87!important;box-shadow:0 10px 22px rgba(47,143,135,.22)!important}
+@media(max-width:1023px){#gh-header .gh-drawer{width:min(88vw,390px);height:100dvh}#gh-header .gh-drawer-head{padding:8px 10px 6px}#gh-header .gh-drawer-body{gap:8px;padding:6px 8px 8px}#gh-header .gh-acc,#gh-header .gh-promos{padding:6px;border-radius:16px}#gh-header .gh-promobtn{min-height:42px;padding:8px 12px}#gh-header .gh-msys-head{gap:4px;margin:0 0 6px}#gh-header .gh-mgrid{gap:8px}#gh-header #gh-msys .gh-mcard{flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px;min-height:96px;padding:10px 8px}#gh-header #gh-msys .gh-mmeta{align-items:center;text-align:center}#gh-header #gh-msys .gh-mmeta span{font-size:11px;line-height:1.18;text-align:center}#gh-header #gh-msvc .gh-mcard{min-height:86px;padding:8px 9px;gap:9px}#gh-header #gh-msvc .gh-mmeta strong{font-size:11px;line-height:1.08}#gh-header #gh-msvc .gh-mmeta span{font-size:10px;line-height:1.12}#gh-header .gh-sysdots{margin-top:4px}#gh-header .gh-svcdots{margin-top:6px}}
+@media(min-width:1024px){#gh-header .gh-bar{background:#070b12!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}html[data-theme=light] #gh-header .gh-bar{background:#fff!important}#gh-header .gh-drawer{display:none!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col{display:flex;flex-direction:column}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col:nth-child(1),#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col:nth-child(3),#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col:nth-child(4){justify-content:center}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col:nth-child(2){justify-content:flex-start}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item{min-height:146px;align-items:center;justify-content:center;text-align:center}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item div{align-items:center}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item img{width:84px;height:84px}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item.is-featured img{width:96px;height:96px}}
+
+   /* PATCH FINAL AJUSTE LOGOS + SERVICIOS DESKTOP */
+#gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(2) .gh-item img,#gh-header .gh-dd-menu[aria-label=Sistemas] .gh-col:nth-child(3) .gh-item img{border-radius:10px!important}
+@media(max-width:1023px){#gh-header #gh-msys .gh-mimg{width:auto!important;height:56px!important;max-width:84px!important;padding:0!important;border-radius:10px!important}#gh-header #gh-msys [data-panel=comerciales] .gh-mimg,#gh-header #gh-msys [data-panel=nube] .gh-mimg{border-radius:10px!important}#gh-header #gh-msys .gh-mcard{gap:10px!important}}
+@media(min-width:1024px){#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col{display:flex!important;flex-direction:column!important;justify-content:flex-start!important;min-height:100%!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-subbar,#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col h4{flex:0 0 auto!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col>.gh-item:first-of-type{margin-top:auto!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-col>.gh-item:last-of-type{margin-bottom:auto!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item{align-items:center!important;justify-content:center!important;text-align:center!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item div{align-items:center!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item img{width:84px!important;height:84px!important}#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item.is-featured img{width:96px!important;height:96px!important}}
+
+
+   html{color-scheme:dark}html[data-theme=light]{color-scheme:light}html,body{background:#070b12}html[data-theme=light] body,html[data-theme=light]{background:#ffffff}
+/* ===== PATCH: textos dentro de cards de SERVICIOS desktop ===== */
+#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item,#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item div{min-width:0!important}
+#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item b,#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item span,#gh-header .gh-dd-menu[aria-label=Servicios] .gh-badge{white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item b{display:block!important;max-width:100%!important;text-align:center!important;line-height:1.12!important}
+#gh-header .gh-dd-menu[aria-label=Servicios] .gh-item span{display:block!important;max-width:100%!important;text-align:center!important;line-height:1.24!important}
+#gh-header .gh-dd-menu[aria-label=Servicios] .gh-badge{display:inline-flex!important;justify-content:center!important;align-items:center!important;max-width:100%!important;text-align:center!important;font-weight:900!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:linear-gradient(90deg,rgb(29,147,143),rgba(241,77,94,1))!important}
+
+@media(min-width:1024px){#gh-header .gh-dd-menu.mega{backdrop-filter:blur(8px) saturate(1.02)!important;-webkit-backdrop-filter:blur(8px) saturate(1.02)!important;box-shadow:0 22px 56px rgba(0,0,0,.42)!important}#gh-header .gh-item{transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease!important}#gh-header .gh-item:hover{box-shadow:0 10px 22px rgba(0,0,0,.14)!important}}
+
+
+</style> 
+<header class="gh" id="gh-header" role="banner">
+
+<!-- ===================== TOP BAR ===================== -->
+<div class="gh-bar" id="gh-bar">
+  <div class="gh-container">
+    <!-- Brand -->
+    <a class="gh-brand js-link" href="#" data-href="/index.html" aria-label="Inicio ExpIRI Ti">
+      <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/expiritilogo.webp" alt="Logo" width="42" height="42">
+      <div class="gh-brand-txt">
+        <span class="n">ExpIRI Ti</span>
+        <span class="s">Expertos CONTPAQi</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="gh-nav" aria-label="Principal">
+      <ul>
+        <li><a class="js-link" href="#" data-href="/index.html">Inicio</a></li>
+
+        <!-- ===================== SISTEMAS (MEGA) ===================== -->
+        <li class="gh-dd-wrap">
+          <a class="js-link" href="#" data-href="/index.html#productos-con" aria-haspopup="true">Sistemas ▾</a>
+          <div class="gh-dd-menu mega" role="dialog" aria-label="Sistemas">
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="12" rx="2"/>
+                  <path d="M9 19h6"/>
+                </svg>
+                Escritorio
+              </div>
+              <h4>Contables</h4>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/contabilidad.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/contabilidad.webp" alt="">
+                <div><span>Pólizas y XML</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/nominas.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/nominas.webp" alt="">
+                <div><span>Cálculo exacto</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/bancos.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/bancos.webp" alt="">
+                <div><span>Tesorería</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/xmlenlinea.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/xml.webp" alt="">
+                <div><span>CFDI del SAT</span></div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="12" rx="2"/>
+                  <path d="M9 19h6"/>
+                </svg>
+                Escritorio
+              </div>
+              <h4>Comerciales</h4>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/comercialpremium.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialpremium.webp" alt="">
+                <div><span>Gestión total</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/comercialpro.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialpro.webp" alt="">
+                <div><span>Multisucursal</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/comercialstart.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialstart.webp" alt="">
+                <div><span>Inventario básico</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/facturaelectronica.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/factura.webp" alt="">
+                <div><span>CFDI 4.0</span></div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 14a5 5 0 0 1 9.7-1.5A4 4 0 1 1 17 19H8a4 4 0 0 1-1-7.85"/>
+                </svg>
+                Nube
+              </div>
+              <h4>Nube</h4>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/contabiliza.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/contabiliza.webp" alt="">
+                <div><span>Contabilidad en la nube</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/personia.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/personia.webp" alt="">
+                <div><span>Gestión de personal</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/vende.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/vende.webp" alt="">
+                <div><span>Punto de venta web</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/colabora.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/colabora.webp" alt="">
+                <div><span>Gratis con Nóminas y Personia</span></div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 14a5 5 0 0 1 9.7-1.5A4 4 0 1 1 17 19H8a4 4 0 0 1-1-7.85"/>
+                </svg>
+                Nube
+              </div>
+              <h4>Productividad</h4>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/evalua.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/evalua.webp" alt="">
+                <div><span>NOM-035 y clima laboral</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/analiza.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/analiza.webp" alt="">
+                <div><span>Dashboards y BI</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/anticipa.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/anticipa.webp" alt="">
+                <div><span>Blindaje fiscal preventivo</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SISTEMAS/optimiza.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/optimiza.webp" alt="">
+                <div><span>Procesos y productividad</span></div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- ===================== SERVICIOS (MEGA) ===================== -->
+        <li class="gh-dd-wrap">
+          <a class="js-link" href="#" data-href="/index.html#servicios" aria-haspopup="true">Servicios ▾</a>
+          <div class="gh-dd-menu mega" role="menu" aria-label="Servicios">
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+                Pólizas
+              </div>
+              <h4>Todo en uno</h4>
+              <a class="gh-item js-link is-featured" href="#" data-href="/SERVICIOS/polizas.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/021-maintenance.webp" alt="">
+                <div>
+                  <span class="gh-badge">Servicio 360°</span>
+                  <b>Póliza anual</b>
+                  <span>Acompañamiento integral para tu operación</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v6"/>
+                  <path d="M8 8l4 4 4-4"/>
+                  <path d="M5 22h14"/>
+                </svg>
+                POR CASO
+              </div>
+              <h4>PROCESOS CLAROS</h4>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/implementaciones.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/025-meeting.webp" alt="">
+                <div><b>Implement.</b><span>Instalación y puesta en marcha</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/soporte.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/021-maintenance.webp" alt="">
+                <div><b>Soporte técnico</b><span>Atención remota + WhatsApp</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/migraciones.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/018-transfer.webp" alt="">
+                <div><b>Migraciones</b><span>Datos limpios y validados</span></div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19V5"/>
+                  <path d="M4 19h16"/>
+                  <path d="M8 15l3-3 3 2 5-6"/>
+                </svg>
+                CRECIMIENTO
+              </div>
+              <h4>PARA EL DÍA A DÍA</h4>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/cursos.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/024-education.webp" alt="">
+                <div><b>Cursos</b><span>Capacitación para tu equipo</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/desarrollos.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/020-code.webp" alt="">
+                <div><b>Desarrollos</b><span>Integraciones y automatización</span></div>
+              </a>
+            </div>
+
+            <div class="gh-col">
+              <div class="gh-subbar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="6" rx="2"/>
+                  <rect x="3" y="14" width="18" height="6" rx="2"/>
+                  <path d="M7 7h.01M7 17h.01"/>
+                </svg>
+                OPERACIÓN
+              </div>
+              <h4>SOLUCIONES DE TRABAJO</h4>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/servidoresvirtuales.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/023-stairs.webp" alt="">
+                <div><b>Servidores virtuales</b><span>Acceso remoto seguro</span></div>
+              </a>
+              <a class="gh-item js-link" href="#" data-href="/SERVICIOS/desarrollos.html">
+                <img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/020-code.webp" alt="">
+                <div><b>Automatización</b><span>Flujos y reportes</span></div>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li><a class="js-link" href="#" data-href="/index.html#promociones">Promociones</a></li>
+        <li><a class="js-link" href="#" data-href="/index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Actions -->
+<div class="gh-actions">
+  <a class="gh-btn-wa" href="https://wa.me/525568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">
+    <img class="gh-wa-ico js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/whatsapp.svg" alt="WhatsApp">
+    <span class="gh-wa-num">55 6843 7918</span>
+  </a>
+  <button class="gh-theme" id="gh-theme" type="button" aria-label="Cambiar modo claro/oscuro" aria-pressed="false" title="Modo claro">
+<img class="gh-theme-ico js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/dia-y-noche.webp" alt="" width="18" height="18">
+     
+  </button>
+  <button class="gh-burger" id="gh-burger" aria-label="Abrir menú" aria-controls="gh-drawer" aria-expanded="false">≡</button>
+</div>
+     
+  </div>
+</div>
+   
+<!-- ===================== OVERLAY + DRAWER (MOBILE V5) ===================== -->
+<div class="gh-dim" id="gh-dim" hidden></div>
+
+<aside class="gh-drawer" id="gh-drawer" aria-hidden="true" hidden>
+<div class="gh-drawer-head">
+  <!-- fila superior: marca + acciones en la misma franja -->
+  <div class="gh-dhead-top">
+<a class="gh-dtitle-row js-link" href="#" data-href="/index.html" aria-label="Inicio ExpIRI Ti">
+  <img class="gh-dtitle-logo js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/expiritilogo.webp" alt="ExpIRI Ti" width="26" height="26">
+  <div class="gh-dtitle-txt">
+    <div class="gh-dtitle-name">ExpIRI Ti</div>
+    <div class="gh-dtitle-sub">Expertos CONTPAQi</div>
+  </div>
+</a>
+
+     <div class="gh-dhead-actions" aria-label="Contacto rápido">
+ 
+
+  <a class="gh-headbtn" href="https://wa.me/525568437918?text=Hola%20ExpIRI%20Ti%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img class="gh-headico js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/whatsapp.svg" alt="" width="16" height="16">
+  </a>
+
+  <a class="gh-headbtn" href="tel:+525568437918" aria-label="Llamar">
+    <img class="gh-headico js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/telefono.webp" alt="" width="16" height="16">
+  </a>
+ <button class="gh-close" id="gh-close" aria-label="Cerrar menú">✕</button>
+     </div>
+  </div>
+</div>
+
+  <div class="gh-drawer-body">
+    <!-- ===================== SISTEMAS (MÓVIL: TABS) ===================== -->
+<section class="gh-acc gh-msys" id="gh-msys" aria-label="Sistemas (móvil)">
+
+<div class="gh-msys-head">
+  <div class="gh-msys-title">Sistemas</div>
+  <div class="gh-catbar" role="tablist" aria-label="Categorías de sistemas">
+    <button class="gh-cat is-active" type="button" data-cat="contables" role="tab" aria-selected="true">Contables</button>
+    <button class="gh-cat" type="button" data-cat="comerciales" role="tab" aria-selected="false">Comerciales</button>
+    <button class="gh-cat" type="button" data-cat="nube" role="tab" aria-selected="false">Nube</button>
+    <button class="gh-cat" type="button" data-cat="prod" role="tab" aria-selected="false">Productividad</button>
+  </div>
+</div>
+
+  <div class="gh-sysswipe" id="gh-sysswipe" role="region" aria-label="Carrusel de sistemas" tabindex="0">
+    <div class="gh-syspage" data-panel="contables" role="tabpanel" aria-label="Contables">
+      <div class="gh-mgrid">
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/contabilidad.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/contabilidad.webp" alt=""><div class="gh-mmeta"><span>Pólizas y contabilidad electrónica</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/nominas.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/nominas.webp" alt=""><div class="gh-mmeta"><span>Cálculo y timbrado</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/bancos.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/bancos.webp" alt=""><div class="gh-mmeta"><span>Conciliación y tesorería</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/xmlenlinea.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/xml.webp" alt=""><div class="gh-mmeta"><span>CFDI del SAT a contabilidad</span></div></a>
+      </div>
+    </div>
+
+    <div class="gh-syspage" data-panel="comerciales" role="tabpanel" aria-label="Comerciales">
+      <div class="gh-mgrid">
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/comercialstart.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialstart.webp" alt=""><div class="gh-mmeta"><span>Ventas e inventario básico</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/comercialpro.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialpro.webp" alt=""><div class="gh-mmeta"><span>Alto volumen y sucursales</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/comercialpremium.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/comercialpremium.webp" alt=""><div class="gh-mmeta"><span>Control y reportes</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/facturaelectronica.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/factura.webp" alt=""><div class="gh-mmeta"><span>Timbrado y CFDI 4.0</span></div></a>
+      </div>
+    </div>
+
+    <div class="gh-syspage" data-panel="nube" role="tabpanel" aria-label="Nube">
+      <div class="gh-mgrid">
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/contabiliza.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/contabiliza.webp" alt=""><div class="gh-mmeta"><span>Contabilidad en la nube</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/personia.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/personia.webp" alt=""><div class="gh-mmeta"><span>Gestión de personal</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/vende.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/vende.webp" alt=""><div class="gh-mmeta"><span>Punto de venta nube</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/colabora.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/colabora.webp" alt=""><div class="gh-mmeta"><span>Gratis con Nóminas y Personia</span></div></a>
+      </div>
+    </div>
+
+    <div class="gh-syspage" data-panel="prod" role="tabpanel" aria-label="Productividad">
+      <div class="gh-mgrid">
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/evalua.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/evalua.webp" alt=""><div class="gh-mmeta"><span>Clima laboral y NOM-035</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/analiza.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/analiza.webp" alt=""><div class="gh-mmeta"><span>Dashboards y BI</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/anticipa.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/anticipa.webp" alt=""><div class="gh-mmeta"><span>Blindaje fiscal preventivo</span></div></a>
+        <a class="gh-mcard js-link" href="#" data-href="/SISTEMAS/optimiza.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/optimiza.webp" alt=""><div class="gh-mmeta"><span>Procesos y productividad</span></div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gh-sysdots" aria-label="Paginación de sistemas">
+    <button class="dot is-active" type="button" aria-label="Ir a Contables"></button>
+    <button class="dot" type="button" aria-label="Ir a Comerciales"></button>
+    <button class="dot" type="button" aria-label="Ir a Nube"></button>
+    <button class="dot" type="button" aria-label="Ir a Productividad"></button>
+  </div>
+</section>
+     
+     
+<section class="gh-promos" aria-label="Promociones">
+  <a class="gh-promobtn js-link" href="#" data-href="/index.html#promociones">
+    <img class="gh-promoico js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/etiqueta-de-precio.webp" alt="">
+    <span>Promociones</span>
+  </a>
+</section>
+
+    <!-- ===================== SERVICIOS (MÓVIL: CAROUSEL 2x2) ===================== -->
+    <section class="gh-acc gh-msvc" id="gh-msvc" aria-label="Servicios (móvil)">
+      <div class="gh-msys-head"><div class="gh-msys-title">Servicios</div><div class="gh-msys-sub" aria-hidden="true"></div></div>
+      <div class="gh-svcwrap" aria-roledescription="carousel">
+        <button class="gh-svcarrow prev" type="button" aria-label="Servicios anteriores">‹</button>
+        <div class="gh-svctrack" id="gh-svctrack" role="region" aria-label="Carrusel de servicios" tabindex="0">
+          <div class="gh-svcpage" aria-label="Servicios página 1"><div class="gh-mgrid">
+            <a class="gh-mcard gh-star js-link" href="#" data-href="/SERVICIOS/polizas.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/021-maintenance.webp" alt=""><div class="gh-mmeta"><strong>Pólizas anuales</strong><span>Soporte continuo y preventivo</span></div></a>
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/implementaciones.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/025-meeting.webp" alt=""><div class="gh-mmeta"><strong>Implementaciones</strong><span>Instalación y puesta en marcha</span></div></a>
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/migraciones.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/018-transfer.webp" alt=""><div class="gh-mmeta"><strong>Migraciones</strong><span>Datos limpios y validados</span></div></a>
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/desarrollos.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/020-code.webp" alt=""><div class="gh-mmeta"><strong>Desarrollos</strong><span>Integraciones y automatización</span></div></a>
+          </div></div>
+          <div class="gh-svcpage" aria-label="Servicios página 2"><div class="gh-mgrid">
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/servidoresvirtuales.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/023-stairs.webp" alt=""><div class="gh-mmeta"><strong>Servidores virtuales</strong><span>Acceso remoto seguro</span></div></a>
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/cursos.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/024-education.webp" alt=""><div class="gh-mmeta"><strong>Cursos</strong><span>Capacitación para tu equipo</span></div></a>
+            <a class="gh-mcard js-link" href="#" data-href="/SERVICIOS/soporte.html"><img class="gh-mimg js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/021-maintenance.webp" alt=""><div class="gh-mmeta"><strong>Soporte técnico</strong><span>Remoto + WhatsApp</span></div></a>
+            <div class="gh-mcard gh-mcard-ghost" aria-hidden="true"></div>
+          </div></div>
+        </div>
+        <button class="gh-svcarrow next" type="button" aria-label="Servicios siguientes">›</button>
+      </div>
+      <div class="gh-svcdots" aria-label="Paginación de servicios">
+        <button class="dot is-active" type="button" aria-label="Ir a página 1"></button>
+        <button class="dot" type="button" aria-label="Ir a página 2"></button>
+      </div>
+    </section>
+  </div>
+</aside>
+   <!-- FUTURO MÓDULO SAT / CLOUDFLARE WORKER --><div id="sat-fab"><button id="sat-fab-trigger" class="sat-fab-trigger" type="button" aria-expanded="false" aria-controls="sat-global-panel"><span id="sat-fab-halo" class="sat-fab-halo sat-off" aria-hidden="true"></span><img class="js-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="/IMG/sat2.webp" alt="SAT" width="42" height="42" loading="lazy" decoding="async"></button></div><div id="sat-global-panel" hidden aria-hidden="true"><div class="sat-global-card"><div class="sat-global-head">Estado de Servicios del SAT</div><div class="sat-global-row"><span>SAT Auth</span><strong id="sat-auth">⏳ Consultando</strong></div><div class="sat-global-row"><span>Timbrado PAC</span><strong id="sat-pac">⏳ Consultando</strong></div><div class="sat-global-row"><span>Descarga XML</span><strong id="sat-descarga">⏳ Consultando</strong></div><div class="sat-global-row"><span>Portal SAT</span><strong id="sat-portal">⏳ Consultando</strong></div><div class="sat-global-row"><span>Consulta CFDI</span><strong id="sat-qr">⏳ Consultando</strong></div><div class="sat-global-meta">Última consulta: <span id="sat-lastcheck">—</span></div><div class="sat-global-source">Fuente: monitor automático vía Cloudflare Worker.</div><button class="sat-global-refresh" id="sat-refresh" type="button">Actualizar panel</button></div></div><!-- FIN FUTURO MÓDULO SAT -->
+
+</header>
+<script>
+/* Expiriti Header JS (V7.1 + Mobile V5) — BLINDADO HARDENED FINAL | minificado por bloques */
+(function(){"use strict";if(window.__EXPIRITI_GH_CANON__)return;window.__EXPIRITI_GH_CANON__=!0;const D=document,W=window,Q=(s,c=D)=>c.querySelector(s),QA=(s,c=D)=>Array.from(c.querySelectorAll(s)),BLANK="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E",storage={get(k){try{return localStorage.getItem(k)}catch(_){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(_){}}};function getRootFromMeta(){const m=Q('meta[name="expiriti-base"]');if(!m||!m.content)return null;let r=String(m.content).trim();return r?(r.startsWith("/")||(r="/"+r),r.endsWith("/")||(r+="/"),r):null}function getMasterRoot(){const metaRoot=getRootFromMeta();if(metaRoot)return metaRoot;const host=(location.hostname||"").toLowerCase(),seg=(location.pathname||"/").split("/").filter(Boolean),first=(seg[0]||"").toLowerCase(),RESERVED=new Set(["sistemas","servicios","migraciones","implementaciones","desarrollos","img","images","css","js","assets"]);return host.includes("github.io")?seg.length>0&&!RESERVED.has(first)?"/"+seg[0]+"/":"/":"/"}const ROOT=getMasterRoot();function baseAbs(){try{const origin=location.origin&&"null"!==location.origin?location.origin:location.href;return new URL(ROOT,origin).toString()}catch(_){return ROOT}}function buildPath(raw){if(raw=String(raw||"").trim(),!raw)return"#";if(/^(https?:|mailto:|tel:|whatsapp:|sms:)/i.test(raw))return raw;if(raw.startsWith("#"))try{return new URL("index.html"+raw,baseAbs()).toString()}catch(_){return ROOT.replace(/\/$/,"")+"/index.html"+raw}raw=raw.replace(/^\/+/,"");try{return new URL(raw,baseAbs()).toString()}catch(_){return ROOT.replace(/\/$/,"")+"/"+raw}}function applySafePaths(container){container=container||D,QA("a.js-link[data-href]",container).forEach(a=>{const raw=a.getAttribute("data-href");if(!raw)return;const want=buildPath(raw);a.getAttribute("href")!==want&&a.setAttribute("href",want)}),QA("img.js-img[data-src]",container).forEach(img=>{const raw=img.getAttribute("data-src");if(!raw)return;const want=buildPath(raw);img.dataset.ghSrcApplied!==want&&(img.dataset.ghSrcApplied=want,img.removeAttribute("srcset"),img.setAttribute("src",want)),img.decoding="async",img.hasAttribute("loading")||(img.loading="eager"),"1"!==img.dataset.ghErrBound&&(img.dataset.ghErrBound="1",img.addEventListener("error",function(){"1"!==this.dataset.ghRetried?(this.dataset.ghRetried="1",this.src=buildPath(this.getAttribute("data-src")||"")+(buildPath(this.getAttribute("data-src")||"").includes("?")?"&":"?")+"v="+Date.now()):this.src=BLANK}))})}function syncOffset(){const bar=Q("#gh-bar"),h=bar?bar.offsetHeight:68;D.documentElement.style.setProperty("--gh-offset",h+"px")}function ensureBodyOffset(){D.body.classList.contains("no-gh-offset")||D.body.classList.add("has-gh")}function setTheme(next){const root=D.documentElement,t=next==="light"?"light":"dark";root.dataset.theme=t;root.style.colorScheme=t;root.style.background=t==="dark"?"#0a111b":"#f6f8fc";D.body&&(D.body.style.background=t==="dark"?"#0a111b":"#f6f8fc");storage.set("expiriti_theme",t);syncThemeButton()}function syncThemeButton(){const btn=Q("#gh-theme");if(!btn)return;const isLight="light"===D.documentElement.dataset.theme;btn.setAttribute("aria-pressed",isLight?"true":"false"),btn.title=isLight?"Modo oscuro":"Modo claro"}function initTheme(){const saved=storage.get("expiriti_theme");("light"===saved||"dark"===saved)&&(D.documentElement.dataset.theme=saved),syncThemeButton();const btn=Q("#gh-theme");btn&&!btn.__ghBound&&(btn.__ghBound=1,btn.addEventListener("click",function(e){e.preventDefault(),e.stopPropagation(),setTheme("light"===D.documentElement.dataset.theme?"dark":"light")}))}function isMobile(){return W.matchMedia("(max-width:1023px)").matches}function toggleDrawer(open){const drawer=Q("#gh-drawer"),dim=Q("#gh-dim"),burger=Q("#gh-burger"),satPanel=Q("#sat-global-panel"),satBtn=Q("#sat-fab-trigger");drawer&&dim&&burger&&(open?(satPanel&&(satPanel.hidden=!0,satPanel.setAttribute("aria-hidden","true")),satBtn&&satBtn.setAttribute("aria-expanded","false"),drawer.hidden=!1,dim.hidden=!1,requestAnimationFrame(()=>{D.documentElement.classList.add("gh-open"),D.body.classList.add("gh-open"),drawer.setAttribute("aria-hidden","false"),burger.setAttribute("aria-expanded","true"),D.body.style.overflow="hidden"}),applySafePaths(drawer),applySafePaths(Q("#gh-header")),initMobileSystems(),initMobileServices()):(D.documentElement.classList.remove("gh-open"),D.body.classList.remove("gh-open"),drawer.setAttribute("aria-hidden","true"),burger.setAttribute("aria-expanded","false"),D.body.style.overflow="",setTimeout(()=>{D.documentElement.classList.contains("gh-open")||(drawer.hidden=!0,dim.hidden=!0)},220)))}function initDrawerControls(){const burger=Q("#gh-burger"),close=Q("#gh-close"),dim=Q("#gh-dim");burger&&!burger.__ghBound&&(burger.__ghBound=1,burger.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),toggleDrawer(!D.documentElement.classList.contains("gh-open"))})),close&&!close.__ghBound&&(close.__ghBound=1,close.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),toggleDrawer(!1)})),dim&&!dim.__ghBound&&(dim.__ghBound=1,dim.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),toggleDrawer(!1)})),D.addEventListener("keydown",e=>{"Escape"===e.key&&(closeDesktopMegas(),D.documentElement.classList.contains("gh-open")&&toggleDrawer(!1))})}function closeDesktopMegas(){QA("#gh-header .gh-dd-wrap.gh-open").forEach(w=>w.classList.remove("gh-open"))}function initDesktopHoverMenus(){if(D.__ghDesktopHoverBound)return;D.__ghDesktopHoverBound=!0;const wraps=QA("#gh-header .gh-dd-wrap");wraps.forEach(w=>{let t=0;function open(){isMobile()||(clearTimeout(t),wraps.forEach(x=>{x!==w&&x.classList.remove("gh-open")}),w.classList.add("gh-open"))}function close(){clearTimeout(t),t=setTimeout(()=>w.classList.remove("gh-open"),180)}w.addEventListener("mouseenter",open),w.addEventListener("mouseleave",close);const menu=Q(".gh-dd-menu",w);menu&&(menu.addEventListener("mouseenter",open),menu.addEventListener("mouseleave",close))}),D.addEventListener("click",e=>{isMobile()||e.target.closest("#gh-header .gh-dd-wrap")||closeDesktopMegas()})}function initScrollHide(){const bar=Q("#gh-bar");if(!bar||bar.__ghScrollBound)return;bar.__ghScrollBound=1;let last=W.scrollY||0;function onScroll(){if(!isMobile())return void bar.classList.remove("is-hidden");if(!D.documentElement.classList.contains("gh-open")){const y=W.scrollY||0;y>24&&y>last?bar.classList.add("is-hidden"):bar.classList.remove("is-hidden"),last=y}}W.addEventListener("scroll",onScroll,{passive:!0}),onScroll()}function initBlindLinks(){D.__ghLinksBound||(D.__ghLinksBound=!0,D.addEventListener("click",function(e){const link=e.target.closest("a.js-link[data-href]");if(!link)return;const raw=link.getAttribute("data-href");if(!raw)return;const want=buildPath(raw);link.getAttribute("href")!==want&&link.setAttribute("href",want);const isNewTab="_blank"===link.target||e.metaKey||e.ctrlKey||1===e.button,insideDrawer=!!link.closest("#gh-drawer"),insideTopMega=!!link.closest("#gh-header .gh-nav .gh-dd-wrap");e.preventDefault(),e.stopPropagation(),insideTopMega&&closeDesktopMegas(),insideDrawer&&toggleDrawer(!1),isNewTab?W.open(want,"_blank","noopener"):location.href=want},!0))}function initMobileSystems(){const root=Q("#gh-msys"),track=Q("#gh-sysswipe");if(!root||!track||root.__ghInited)return;root.__ghInited=1;const cats=QA(".gh-cat",root),dots=QA(".gh-sysdots .dot",root),bar=Q(".gh-catbar",root),order=["contables","comerciales","nube","prod"],KEY="expiriti_mobile_sys_cat";function indexFromScroll(){const w=track.clientWidth||1;return Math.max(0,Math.min(order.length-1,Math.round(track.scrollLeft/w)))}function centerCat(btn){if(!btn||!bar)return;const left=btn.offsetLeft-(bar.clientWidth-btn.clientWidth)/2;bar.scrollTo({left:Math.max(0,left),behavior:"smooth"})}function syncUI(cat){const i=Math.max(0,order.indexOf(cat));cats.forEach(btn=>{const on=btn.dataset.cat===cat;btn.classList.toggle("is-active",on),btn.setAttribute("aria-selected",on?"true":"false"),on&&centerCat(btn)}),dots.forEach((d,k)=>d.classList.toggle("is-active",k===i)),storage.set(KEY,cat)}function goTo(cat,smooth){const i=Math.max(0,order.indexOf(cat)),w=track.clientWidth||1;track.scrollTo({left:i*w,behavior:smooth?"smooth":"auto"}),syncUI(cat)}cats.forEach(btn=>{btn.addEventListener("click",()=>goTo(btn.dataset.cat,!0))}),dots.forEach((dot,i)=>{dot.addEventListener("click",e=>{e.preventDefault(),goTo(order[i],!0)})});let ticking=0;track.addEventListener("scroll",()=>{ticking||(ticking=1,requestAnimationFrame(()=>{ticking=0,syncUI(order[indexFromScroll()]||"contables")}))},{passive:!0}),W.addEventListener("resize",()=>goTo(storage.get(KEY)||"contables",!1),{passive:!0}),goTo(storage.get(KEY)||"contables",!1)}function initMobileServices(){const root=Q("#gh-msvc"),track=Q("#gh-svctrack");if(!root||!track||root.__ghInited)return;root.__ghInited=1;const pages=QA(".gh-svcpage",track),prev=Q(".gh-svcarrow.prev",root),next=Q(".gh-svcarrow.next",root),dots=QA(".gh-svcdots .dot",root);function indexFromScroll(){const w=track.clientWidth||1;return Math.max(0,Math.min(pages.length-1,Math.round(track.scrollLeft/w)))}function sync(){const i=indexFromScroll();dots.forEach((d,k)=>d.classList.toggle("is-active",k===i)),prev&&(prev.disabled=0===i),next&&(next.disabled=i===pages.length-1)}function goTo(i,smooth){const w=track.clientWidth||1,n=Math.max(0,Math.min(i,pages.length-1));track.scrollTo({left:n*w,behavior:smooth?"smooth":"auto"}),sync()}prev&&prev.addEventListener("click",e=>{e.preventDefault(),goTo(indexFromScroll()-1,!0)}),next&&next.addEventListener("click",e=>{e.preventDefault(),goTo(indexFromScroll()+1,!0)}),dots.forEach((dot,i)=>{dot.addEventListener("click",e=>{e.preventDefault(),goTo(i,!0)})});let ticking=0;track.addEventListener("scroll",()=>{ticking||(ticking=1,requestAnimationFrame(()=>{ticking=0,sync()}))},{passive:!0}),W.addEventListener("resize",()=>goTo(indexFromScroll(),!1),{passive:!0}),sync()}function preloadHeaderAssets(){const urls=new Set;QA("img.js-img[data-src]",Q("#gh-header")||D).forEach(img=>{const raw=img.getAttribute("data-src");raw&&urls.add(buildPath(raw))});urls.forEach(u=>{const i=new Image;i.decoding="async";i.src=u})}function observeHeader(){const header=Q("#gh-header");if(!header||header.__ghObserved)return;header.__ghObserved=1;let raf=0;new MutationObserver(()=>{raf||(raf=requestAnimationFrame(()=>{raf=0,applySafePaths(header),syncOffset()}))}).observe(header,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["src","data-src","href","class"]})}function initSatUi(){const fab=Q("#sat-fab"),btn=Q("#sat-fab-trigger"),panel=Q("#sat-global-panel"),refresh=Q("#sat-refresh");if(!fab||!btn||!panel||btn.__satBound)return;btn.__satBound=1;applySafePaths(fab);applySafePaths(panel);function openSat(){panel.hidden=!1;panel.setAttribute("aria-hidden","false");btn.setAttribute("aria-expanded","true")}function closeSat(){panel.hidden=!0;panel.setAttribute("aria-hidden","true");btn.setAttribute("aria-expanded","false")}function toggleSat(force){const open=typeof force==="boolean"?force:panel.hidden;open?openSat():closeSat()}btn.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();toggleSat()});refresh&&refresh.addEventListener("click",e=>{e.preventDefault();e.stopPropagation()});D.addEventListener("click",e=>{e.target.closest("#sat-fab")||e.target.closest("#sat-global-panel")||closeSat()});D.addEventListener("keydown",e=>{"Escape"===e.key&&closeSat()})}function boot(){const header=Q("#gh-header");header&&!header.__ghBooted&&(header.__ghBooted=1,applySafePaths(header),preloadHeaderAssets(),initTheme(),initDrawerControls(),initDesktopHoverMenus(),initBlindLinks(),initScrollHide(),initMobileSystems(),initMobileServices(),syncOffset(),ensureBodyOffset(),observeHeader(),toggleDrawer(!1))}"loading"===D.readyState?D.addEventListener("DOMContentLoaded",boot,{once:!0}):boot(),W.addEventListener("resize",syncOffset,{passive:!0}),W.addEventListener("pageshow",()=>{closeDesktopMegas(),toggleDrawer(!1),applySafePaths(Q("#gh-header")),syncOffset()})})();
+</script>
+   <!-- FUTURO BACKEND SAT -->
+<!-- <script src="PARTIALS/sat-ui.js"></script> -->

@@ -1,0 +1,1122 @@
+ /* =========================================================
+   Expiriti — mainindex.canon.css (INDEX FINAL) v2026.01.20
+   REQ: theme.css | SCOPE: body.page-index | CI: sin :has()
+   - Single Source of Truth: width 80% + gradients + hero gallery + dots + reels + servicios
+   - Sin medias anidados | Hero gallery HTML-aware (arrows overlay, nav abajo)
+========================================================= */
+
+/* ========== 0) SCOPE + TOKENS LOCALES ========== */
+.page-index{scroll-padding-top:84px;--ghh:var(--gh-height,68px);--tap:var(--tap,44px);--ix-maxw:1200px;--gap:var(--gap,14px);--radius:var(--radius,14px);--radius-lg:var(--radius-lg,18px);--shadow:var(--shadow,0 10px 30px rgba(0,0,0,.25));--border:var(--border,1px solid rgba(255,255,255,.085));--card:var(--card,#111723);--text:var(--text,#e8eef6);--muted:var(--muted,#95a2b3);--brand:var(--brand,#2dd4bf);--brand-2:var(--brand-2,#60a5fa);--grad-exp:linear-gradient(90deg,rgba(30,156,152,1) 0%,rgba(250,85,102,1) 100%);--grad-blue:linear-gradient(90deg,#25c7b8 0%,#3b82f6 55%,#60a5fa 100%);--reel-scale:.85;--reel-h-min:calc(240px * var(--reel-scale));--reel-h-mid:calc(42svh * var(--reel-scale));--reel-h-max:calc(520px * var(--reel-scale))}
+@media(max-width:768px){.page-index{scroll-padding-top:68px}}
+@media(max-width:380px){.page-index{--reel-h-mid:calc(36svh * var(--reel-scale));--reel-h-max:calc(420px * var(--reel-scale))}}
+@media(min-width:980px){.page-index{--reel-h-mid:calc(52vh * var(--reel-scale));--reel-h-max:calc(640px * var(--reel-scale))}}
+
+/* ========== 1) WIDTH GLOBAL (80vw/92vw/100%) ========== */
+.page-index .container,.page-index .ix-wrap{width:min(80vw,var(--ix-maxw));margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:none}
+@media(max-width:1100px){.page-index .container,.page-index .ix-wrap{width:min(92vw,var(--ix-maxw))}}
+@media(max-width:720px){.page-index .container,.page-index .ix-wrap{width:100%;max-width:var(--ix-maxw);padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}}
+
+/* ========== 2) LAYOUT UTILS + CLS PLACEHOLDERS ========== */
+.page-index .section-full{padding:34px 0}
+.page-index .grid-2{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+.page-index .grid-2>*{min-width:0}
+@media(min-width:980px){.page-index .grid-2{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.page-index .section-full{padding:26px 0}}
+
+
+/* ========== 3) TYPO + BUTTONS ========== */
+.page-index .kicker{display:inline-flex;gap:8px;align-items:center;color:rgba(232,238,246,.92);font-weight:850;letter-spacing:.2px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:var(--border);border-radius:999px;padding:8px 12px;margin-bottom:10px;box-shadow:0 8px 20px rgba(0,0,0,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.page-index .lead{color:rgba(232,238,246,.86);margin:10px 0 0}
+.page-index .hint{color:rgba(149,162,179,.95);font-size:.94rem}
+.page-index .badge{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;border:1px solid rgba(255,255,255,.12)!important;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03))!important;color:rgba(232,238,246,.92)!important;font-size:.92rem}
+.page-index .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.page-index .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 14px;border:var(--border);background:rgba(255,255,255,.04);color:rgba(232,238,246,.96);cursor:pointer;transition:transform .12s ease,background .12s ease,border-color .12s ease;min-height:var(--tap)}
+.page-index .btn:active{transform:translateY(1px)}
+.page-index .btn-sm{padding:10px 12px;border-radius:11px;min-height:40px}
+.page-index .btn-grad-green{border-color:rgba(45,212,191,.35);background:linear-gradient(180deg,rgba(45,212,191,.20),rgba(255,255,255,.03))}
+.page-index .btn-grad-blue{border-color:rgba(96,165,250,.35);background:linear-gradient(180deg,rgba(96,165,250,.20),rgba(255,255,255,.03))}
+.page-index .hero-btn{font-weight:900}
+.page-index #contacto .lead,.page-index #contacto .badges,.page-index #contacto .badge,.page-index #contacto .badge a{color:rgba(232,238,246,.92)!important}
+html[data-theme="light"] .page-index #contacto .lead,html[data-theme="light"] .page-index #contacto .badges,html[data-theme="light"] .page-index #contacto .badge,html[data-theme="light"] .page-index #contacto .badge a{color:rgba(71,85,105,.96)!important}
+ /* ========== 4) CARD BASE ========== */
+.page-index .card .body,.page-index .card.body{padding:16px}
+.page-index .card .body{min-height:0}
+
+/* ========== 5) GRADIENT TEXT (SOLO TEXTO, NO “RECTÁNGULOS”) ========== */
+.page-index .text-grad,.page-index .expiriti-gradient,.page-index .title-gradient,.page-index .gradient-word,.page-index .section-title h2,.page-index #productos-con .prod-title,.page-index #servicios .section-title h2,.page-index #promociones .section-title h2,.page-index #faq .section-title h2,.page-index #contacto h2,.page-index .map-card .section-title h3,.page-index .hero-gallery-header h2{display:inline-block;background-repeat:no-repeat;background-size:100% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.page-index .gradient-word{background-image:var(--grad-blue)!important}
+.page-index .expiriti-gradient,.page-index .title-gradient,.page-index .section-title h2,.page-index #productos-con .prod-title,.page-index #servicios .section-title h2,.page-index #promociones .section-title h2,.page-index #faq .section-title h2,.page-index #contacto h2,.page-index .map-card .section-title h3,.page-index .hero-gallery-header h2{background-image:var(--grad-exp)!important}
+@supports not (-webkit-background-clip:text){.page-index .text-grad,.page-index .expiriti-gradient,.page-index .title-gradient,.page-index .gradient-word,.page-index .section-title h2,.page-index #productos-con .prod-title,.page-index #servicios .section-title h2,.page-index #promociones .section-title h2,.page-index #faq .section-title h2,.page-index #contacto h2,.page-index .map-card .section-title h3,.page-index .hero-gallery-header h2{background:none!important;-webkit-text-fill-color:initial;color:inherit}}
+
+/* ========== 6) TITLES CANON (HOMOLOGACIÓN) ========== */
+.page-index{--ttl-fs:clamp(1.25rem,1.05rem + .9vw,1.85rem);--ttl-lh:1.14;--ttl-fw:950}
+.page-index .section-title h2,.page-index .prod-title,.page-index h2.title-gradient,.page-index h3.title-gradient{margin:0 0 10px;font-size:var(--ttl-fs);line-height:var(--ttl-lh);font-weight:var(--ttl-fw);letter-spacing:.1px}
+.page-index .hero-gallery-header h2{font-size:clamp(18px,1.6vw,26px)!important;line-height:1.12!important;letter-spacing:-.01em!important;margin:0!important}
+
+/* ========== 7) HERO GALLERY (HTML-AWARE OWNER) ========== */
+.page-index .hero-gallery-card{display:flex;flex-direction:column;min-height:0}
+.page-index .hero-gallery-card .body{display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+.page-index .hero-gallery-header{flex:0 0 auto;padding:14px 16px 6px!important;border-bottom:0!important}
+
+.page-index .hero-gallery-groups::-webkit-scrollbar{height:0}
+.page-index .hero-gallery-groups>*{flex:0 0 auto!important;white-space:nowrap}
+.page-index .hero-group-tab{min-height:44px;padding:10px 18px!important;border-radius:999px;flex:0 0 auto!important}
+.page-index .hero-gallery-tabs{flex:0 0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:8px 12px 8px}
+.page-index .hero-tab{display:flex;align-items:center;justify-content:center;min-height:86px;padding:14px;border-radius:14px;border:1px solid rgba(45,212,191,.20)!important;background:linear-gradient(180deg,rgba(13,148,136,.18),rgba(37,99,235,.10))!important;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 10px 22px rgba(2,6,23,.10)!important}
+.page-index .hero-tab.active,.page-index .hero-tab[aria-selected="true"]{border-color:rgba(45,212,191,.34)!important;background:linear-gradient(180deg,rgba(13,148,136,.88),rgba(37,99,235,.72))!important;box-shadow:0 0 0 2px rgba(45,212,191,.12),inset 0 1px 0 rgba(255,255,255,.14),0 12px 26px rgba(2,6,23,.10)!important}
+.page-index .hero-tab span{display:none}
+.page-index .hero-tab img{width:auto;height:52px;max-width:180px;object-fit:contain;background:transparent;border:0;border-radius:0;margin:0 auto;display:block}
+@media(max-width:420px){.page-index .hero-tab{min-height:82px;padding:12px}.page-index .hero-tab img{height:46px;max-width:165px}}
+/* carousel container: NO flex-column aquí (tu HTML tiene arrows+track+nav como hermanos) */
+.page-index #heroGalleryCarousel{position:relative;display:block;min-height:0;touch-action:pan-y pinch-zoom}
+/* arrows overlay */
+.page-index #heroGalleryCarousel .arrowCircle{position:absolute;top:50%;transform:translateY(-50%);z-index:5}
+.page-index #heroGalleryCarousel .arrowCircle.prev{left:10px}
+.page-index #heroGalleryCarousel .arrowCircle.next{right:10px}
+/* track (swipe real) */
+.page-index #heroGalleryCarousel .carousel-track{min-height:300px;display:flex;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pinch-zoom}
+.page-index #heroGalleryCarousel .carousel-track::-webkit-scrollbar{height:0}
+@media(min-width:980px){.page-index #heroGalleryCarousel .carousel-track{min-height:400px}}
+.page-index #heroGalleryCarousel .carousel-slide{flex:0 0 100%;scroll-snap-align:start;min-height:0;display:flex;align-items:center;justify-content:center;padding:0}
+.page-index #heroGalleryCarousel .hero-slide img{width:100%;height:100%;display:block;object-fit:contain;object-position:center}
+@media(max-width:980px){.page-index .hero-gallery-card{height:calc(100svh - var(--ghh) - env(safe-area-inset-top,0px) - 14px);overflow:hidden}.page-index #heroGalleryCarousel .carousel-track{min-height:160px}.page-index .hero-gallery-groups{display:flex!important;flex-wrap:nowrap!important;padding:2px 12px 2px!important;margin:0 0 6px!important;gap:10px!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;overscroll-behavior-y:auto;touch-action:auto!important}.page-index .hero-gallery-tabs{padding:6px 10px 6px!important;gap:10px!important}}
+
+@media(max-width:520px){.page-index #heroGalleryCarousel .carousel-track{min-height:160px}.page-index .hero-group-tab{min-height:42px;padding:9px 12px}}
+@media(min-width:980px){.page-index .hero-gallery-card{height:calc(100dvh - var(--ghh) - env(safe-area-inset-top,0px) - 14px);overflow:hidden}}
+
+/* ========== 8) PRODUCTOS: TABS + GRID + CTA ========== */
+.page-index .panel-productos.hidden{display:none!important}
+.page-index .productos-inline-bar{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:6px 0 14px}
+.page-index .prod-title span{margin-left:6px;color:rgba(232,238,246,.75)}
+.page-index .prod-tabs-shell{flex:1 1 auto;min-width:0;overflow:visible}
+.page-index .prod-tabs{min-width:0;max-width:100%;display:flex;gap:10px;align-items:center;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;padding:8px 12px;margin:0;scrollbar-width:none;touch-action:pan-x;overscroll-behavior-x:contain;scroll-padding-left:12px;scroll-padding-right:12px}
+.page-index .prod-tabs::-webkit-scrollbar{height:0}
+.page-index .prod-tabs>*{flex:0 0 auto;white-space:nowrap}
+.page-index .prod-tabs .tab{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;min-height:40px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(7,10,18,.35);color:rgba(232,238,246,.92);font-weight:900;letter-spacing:.1px;line-height:1;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 8px 18px rgba(0,0,0,.20);transition:transform .12s ease,background .12s ease,border-color .12s ease,box-shadow .12s ease}
+.page-index .prod-tabs .tab:active{transform:translateY(1px)}
+@media(hover:hover){.page-index .prod-tabs .tab:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.16)}}
+.page-index .prod-tabs .tab.active{border-color:rgba(96,165,250,.55);background:rgba(96,165,250,.12);box-shadow:0 0 0 2px rgba(96,165,250,.45),inset 0 1px 0 rgba(255,255,255,.08),0 10px 22px rgba(0,0,0,.22)}
+.page-index .cards{display:grid;gap:12px}
+.page-index .cards-products{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:420px){.page-index .cards-products{grid-template-columns:1fr}}
+@media(max-width:520px){.page-index .cards-products{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}}
+@media(max-width:360px){.page-index .cards-products{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px}.page-index .product-card .body,.page-index .card.body{padding:14px}}
+.page-index .product-card{cursor:pointer;transition:transform .12s ease,border-color .12s ease,background .12s ease}
+@media(hover:hover){.page-index .product-card:hover{transform:translateY(-2px)}}
+.page-index .product-card:active{transform:translateY(1px)}
+.page-index .logo-sistema{width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);object-fit:contain}
+.page-index .section-cq{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
+@media(min-width:980px){.page-index .section-cq{grid-template-columns:1fr 1fr;align-items:stretch}}
+.page-index .prod-cta-bottom{margin-top:12px}
+.page-index .prod-cta-bottom .cta-big{width:100%;min-height:96px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:16px;border-radius:14px;border:1px solid rgba(45,212,191,.28)!important;background:radial-gradient(900px 420px at 0% 0%,rgba(45,212,191,.16),transparent 60%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.14),transparent 60%),linear-gradient(180deg,rgba(17,23,35,.96),rgba(10,17,27,.92))!important;color:rgba(232,238,246,.98)!important;text-align:left;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .12s ease,border-color .12s ease,background .12s ease}html[data-theme="light"] .page-index .prod-cta-bottom .cta-big{background:radial-gradient(900px 420px at 0% 0%,rgba(45,212,191,.10),transparent 60%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.09),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.94),rgba(248,250,252,.86));color:rgba(11,18,32,.92);border:1px solid rgba(96,165,250,.22);box-shadow:0 10px 24px rgba(2,6,23,.07)}html[data-theme="light"] .page-index .prod-cta-bottom .cta-big{background:radial-gradient(900px 420px at 0% 0%,rgba(45,212,191,.10),transparent 60%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.09),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.94),rgba(248,250,252,.86));color:rgba(11,18,32,.92);border:1px solid rgba(96,165,250,.22);box-shadow:0 10px 24px rgba(2,6,23,.07)}html[data-theme="light"] .page-index .prod-cta-bottom .cta-big{background:radial-gradient(900px 420px at 0% 0%,rgba(45,212,191,.10),transparent 60%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.09),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.94),rgba(248,250,252,.86));color:rgba(11,18,32,.92);border:1px solid rgba(96,165,250,.22);box-shadow:0 10px 24px rgba(2,6,23,.07)}
+.page-index .prod-cta-bottom .cta-big:active{transform:translateY(1px)}
+.page-index .prod-cta-bottom .cta-big .cta-sub{display:block;font-size:.95rem;color:rgba(232,238,246,.80)!important;line-height:1.25}
+
+/* ========== 9) DOTS/NAV (UN SOLO OWNER, PILL, NO ABSOLUTE) ========== */
+.page-index .carousel .carousel-nav,.page-index #heroGalleryCarousel .carousel-nav{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;width:max-content!important;max-width:calc(100% - 24px)!important;margin:10px auto 12px!important;padding:6px 10px!important;border-radius:999px!important;background:rgba(7,10,18,.12)!important;border:1px solid rgba(255,255,255,.10)!important;position:static!important;inset:auto!important;transform:none!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:3;pointer-events:auto!important}
+.page-index .carousel .carousel-nav .dot,.page-index #heroGalleryCarousel .carousel-nav .dot{width:11px!important;height:11px!important;border-radius:999px!important;margin:0!important;border:1px solid rgba(255,255,255,.22)!important;background:rgba(255,255,255,.10)!important;cursor:pointer}
+.page-index .carousel .carousel-nav .dot.active,.page-index #heroGalleryCarousel .carousel-nav .dot.active{background:rgba(45,212,191,.85)!important;border-color:rgba(45,212,191,.95)!important}
+
+/* ========== 10) REELS (NO COLAPSAR / NO “DESAPARECER”) ========== */
+.page-index .reels-home-card{display:flex;flex-direction:column;min-height:0}
+.page-index .reels-home-card .body{display:flex;flex-direction:column;min-height:0}
+.page-index .reels-home-card .reel-title{margin:0 0 6px!important;min-height:18px!important;line-height:1.15!important;font-weight:900;letter-spacing:.1px;color:rgba(232,238,246,.96)}
+.page-index .carousel[id^="carouselReels"]{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.page-index .carousel[id^="carouselReels"] .carousel-track{display:flex;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pinch-zoom;min-height:0!important;height:auto!important;max-height:none!important}
+.page-index .carousel[id^="carouselReels"] .carousel-track::-webkit-scrollbar{height:0}
+.page-index .carousel[id^="carouselReels"] .carousel-slide{flex:0 0 100%;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;padding:12px 12px 10px;overflow:hidden}
+.page-index .reel-embed{position:relative;aspect-ratio:9/16;height:clamp(var(--reel-h-min),var(--reel-h-mid),var(--reel-h-max));width:auto;max-width:100%;border-radius:14px;overflow:hidden;background:#050812;border:1px solid rgba(255,255,255,.10);margin:0 auto}
+.page-index .reel-embed iframe,.page-index .reel-embed .yt-thumb{position:absolute;inset:0;width:100%;height:100%}
+.page-index .reel-embed iframe{border:0;pointer-events:auto;background:#050812}
+@media(max-width:980px){.page-index .carousel[id^="carouselReels"] .arrowCircle{display:grid!important;place-items:center!important;opacity:.96!important;pointer-events:auto!important}}
+.page-index .reel-sys-tabs{display:grid;gap:12px;padding:12px 12px 14px;margin-top:12px;overflow:visible;max-width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}
+.page-index #carouselReels-servicios+.reel-sys-tabs{grid-template-columns:repeat(3,minmax(0,1fr));padding:10px 8px 12px;gap:10px}.page-index #carouselReels-servicios+.reel-sys-tabs>.reel-tab:last-child{grid-column:2;justify-self:stretch}
+@media(max-width:380px){.page-index #carouselReels-servicios+.reel-sys-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}.page-index #carouselReels-servicios+.reel-sys-tabs>.reel-tab:last-child{grid-column:1/-1;justify-self:center;width:min(280px,calc(50% - 5px))}}
+.page-index .reel-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:86px;padding:14px;border-radius:14px;border:1px solid rgba(148,163,184,.24)!important;background:linear-gradient(180deg,rgba(100,116,139,.78),rgba(71,85,105,.68))!important;cursor:pointer;color:rgba(248,250,252,.98)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 12px 24px rgba(2,6,23,.10)!important}
+.page-index .reel-tab img{width:auto;height:52px;max-width:180px;object-fit:contain;background:transparent;border:0;border-radius:0;margin:0 auto}
+.page-index .reel-tab span{margin-top:8px;font-size:.86rem;font-weight:900;color:rgba(232,238,246,.94);line-height:1.1}
+.page-index .reel-tab.active,.page-index .reel-tab[aria-selected="true"],.page-index .reel-tab.is-active{border-color:rgba(148,163,184,.30)!important;background:transparent!important;box-shadow:0 0 0 2px rgba(15,23,42,.06)!important}
+.page-index #reelTitle-servicios:empty{display:none!important}
+
+/* ========== 11) SERVICIOS (CAROUSEL MOBILE / GRID DESKTOP) ========== */
+.page-index .cards-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:420px){.page-index .cards-services{grid-template-columns:1fr}}
+.page-index .svc-icon{width:44px;height:44px;object-fit:contain}
+.page-index .svc-featured{border:1px solid rgba(45,212,191,.35);background:radial-gradient(900px 420px at 0% 0%,rgba(45,212,191,.16),transparent 60%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.12),transparent 60%),linear-gradient(180deg,rgba(17,23,35,.92),rgba(17,23,35,.70));position:relative;overflow:hidden}
+.page-index .svc-featured:before{content:"";position:absolute;inset:-2px;background:linear-gradient(90deg,rgba(45,212,191,.35),rgba(96,165,250,.35));opacity:.12;filter:blur(16px);pointer-events:none}
+.page-index .svc-dots{display:none;gap:10px;justify-content:center;margin-top:12px}
+.page-index .svc-dots .dot{width:14px;height:14px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.10);cursor:pointer}
+.page-index .svc-dots .dot.active{background:rgba(45,212,191,.85);border-color:rgba(45,212,191,.95)}
+@media(max-width:980px){
+  .page-index .cards-services.is-carousel{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:2px 2px 10px;margin:0;overscroll-behavior-x:contain;touch-action:pan-x pinch-zoom}
+  .page-index .cards-services.is-carousel .svc-page{flex:0 0 100%;max-width:100%;scroll-snap-align:start;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .page-index .svc-dots{display:flex}
+}
+@media(min-width:980px){
+  .page-index .cards-services.is-carousel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
+  .page-index .cards-services.is-carousel .svc-page{display:contents}
+  .page-index .svc-dots{display:none}
+}
+
+/* ========== 12) PROMOS ========== */
+.page-index .promo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(min-width:980px){.page-index .promo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:980px){.page-index .promo-grid{grid-template-columns:1fr;gap:14px}}
+.page-index .promo-item{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;border:var(--border);background:rgba(255,255,255,.03)}
+.page-index .promo-grid>img,.page-index .promo-item img{width:100%;display:block;border-radius:var(--radius);border:var(--border);background:rgba(255,255,255,.03);height:auto;aspect-ratio:1/1;object-fit:contain;object-position:center}
+.page-index .promo-filters{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x;overscroll-behavior-x:contain}
+.page-index .promo-filters::-webkit-scrollbar{height:0}
+.page-index .promo-btn{min-height:var(--tap);border-radius:999px;border:var(--border);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));color:rgba(232,238,246,.92);padding:10px 12px;cursor:pointer;flex:0 0 auto;white-space:nowrap;box-shadow:0 8px 18px rgba(0,0,0,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .12s ease,background .12s ease,border-color .12s ease,box-shadow .12s ease}
+.page-index .promo-btn.active{border-color:rgba(45,212,191,.45);background:rgba(45,212,191,.12)}
+@media(min-width:981px){.page-index .promo-filters{overflow:visible!important}}
+
+/* ========== 13) FAQ + FORM ========== */
+.page-index .faq-wrap{display:grid;gap:10px}
+.page-index .faq-item{border-radius:var(--radius);border:var(--border);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));padding:10px 12px;box-shadow:0 10px 24px rgba(0,0,0,.14);backdrop-filter:blur(8px) saturate(1.03);-webkit-backdrop-filter:blur(8px) saturate(1.03);position:relative;overflow:hidden}
+.page-index .faq-item summary{cursor:pointer;font-weight:900;list-style:none}
+.page-index .faq-item summary::-webkit-details-marker{display:none}
+.page-index .faq-item p{color:rgba(232,238,246,.82);margin:10px 0 6px;text-align:justify;text-justify:inter-word;hyphens:auto}
+@media(max-width:520px){.page-index .faq-item p{text-align:left;hyphens:none}}
+.page-index label{display:block;margin:10px 0 6px;color:rgba(232,238,246,.88);font-weight:900}
+.page-index input,.page-index select,.page-index textarea{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);color:rgba(232,238,246,.95);padding:12px;outline:none}
+.page-index textarea{resize:vertical;min-height:120px}
+.page-index input:focus,.page-index select:focus,.page-index textarea:focus{border-color:rgba(96,165,250,.45)}
+
+/* ========== 14) MAPA ========== */
+.page-index .map-embed{position:relative;width:100%;aspect-ratio:16/9;min-height:260px;border-radius:var(--radius-lg);overflow:hidden;border:var(--border);background:linear-gradient(180deg,rgba(96,165,250,.10),rgba(45,212,191,.08))}
+.page-index .map-embed iframe{width:100%;height:100%;border:0;display:block}
+.page-index .map-cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;color:var(--text);padding:14px;background:linear-gradient(180deg,rgba(0,0,0,.30),rgba(0,0,0,.55))}
+.page-index .map-cover-title{font-weight:900;text-align:center}
+.page-index .map-cover-cta{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#020617;font-size:13px;font-weight:900}
+@media(min-width:981px){.page-index .map-embed{aspect-ratio:auto!important;height:320px!important;min-height:0!important}.page-index .map-embed iframe{height:100%!important}}
+
+/* ========== 15) MOBILE SCROLL SAFETY (NO “SE MUERE” EL SCROLL) ========== */
+@media(max-width:980px){
+  .page-index main .sticky,.page-index main [style*="position:sticky"],.page-index main [style*="position: fixed"]{position:static!important}
+  .page-index .carousel,.page-index #heroGalleryCarousel{touch-action:pan-y pinch-zoom!important}
+  .page-index .carousel-track,.page-index .prod-tabs,.page-index .promo-filters,.page-index .hero-gallery-groups{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+}
+
+/* ========== 16) LIGHT MODE: DOTS LEGIBLES (MÍNIMO) ========== */
+html[data-theme="light"] .page-index .carousel .carousel-nav,html[data-theme="light"] .page-index #heroGalleryCarousel .carousel-nav{background:rgba(255,255,255,.70)!important;border:1px solid rgba(2,6,23,.10)!important}
+html[data-theme="light"] .page-index .carousel .carousel-nav .dot,html[data-theme="light"] .page-index #heroGalleryCarousel .carousel-nav .dot{border:1px solid rgba(2,6,23,.18)!important;background:rgba(2,6,23,.16)!important}
+html[data-theme="light"] .page-index .carousel .carousel-nav .dot.active,html[data-theme="light"] .page-index #heroGalleryCarousel .carousel-nav .dot.active{background:rgba(45,212,191,.95)!important;border-color:rgba(45,212,191,.95)!important}
+
+
+
+/* ===== CANON: Tabs de PRODUCTOS legibles en dark/light ===== */
+.page-index #productos-con .prod-tabs .tab{
+  color:var(--ix-pilltxt,rgba(232,238,246,.92))!important;
+  background:var(--ix-pillbg,rgba(7,10,18,.35))!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+}
+.page-index #productos-con .prod-tabs .tab.active{
+  background:var(--ix-pillactbg,rgba(96,165,250,.12))!important;
+  border-color:var(--ix-pillactbd,rgba(96,165,250,.55))!important;
+  box-shadow:0 0 0 2px rgba(96,165,250,.28)!important;
+}
+
+html[data-theme="light"] .page-index #productos-con .prod-tabs .tab{
+  color:var(--ix-pilltxtL,rgba(11,18,32,.90))!important;
+  background:var(--ix-pillbgL,rgba(255,255,255,.78))!important;
+  border:1px solid rgba(2,6,23,.12)!important;
+}
+html[data-theme="light"] .page-index #productos-con .prod-tabs .tab.active{
+  background:var(--ix-pillactbgL,rgba(45,212,191,.14))!important;
+  border-color:var(--ix-pillactbdL,rgba(45,212,191,.55))!important;
+  box-shadow:0 0 0 2px rgba(45,212,191,.22)!important;
+}
+
+/* ===== CANON: FAQ legible en light/dark ===== */
+.page-index #faq .faq-item summary{color:rgba(232,238,246,.96)!important;}
+.page-index #faq .faq-item p{color:rgba(232,238,246,.82)!important;opacity:1!important;}
+
+html[data-theme="light"] .page-index #faq .faq-item summary{color:rgba(11,18,32,.94)!important;}
+html[data-theme="light"] .page-index #faq .faq-item p{color:rgba(11,18,32,.78)!important;opacity:1!important;}
+
+/* ===== CANON: Reel embed (cover + blur confinado) ===== */
+.page-index .reel-embed{position:relative;overflow:hidden!important;isolation:isolate;}
+.page-index .reel-embed img,
+.page-index .reel-embed video{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;}
+.page-index .reel-embed .blur{position:absolute!important;inset:-18px!important;border-radius:inherit!important;overflow:hidden!important;filter:blur(18px)!important;transform:scale(1.08)!important;opacity:.55!important;pointer-events:none!important;z-index:0!important;}
+.page-index .reel-embed>*{position:relative;z-index:1;}
+
+
+/* =========================================================
+   Expiriti — CANON FIX PACK (PRODUCTOS + TABS + FAQ + REELS)
+   Owner único (sin duplicados)
+========================================================= */
+.page-index{
+  --ix-line:rgba(255,255,255,.12);
+  --ix-lineL:rgba(2,6,23,.12);
+  --ix-pillbg:rgba(7,10,18,.35);
+  --ix-pillbgL:rgba(255,255,255,.78);
+  --ix-pilltxt:rgba(232,238,246,.92);
+  --ix-pilltxtL:rgba(11,18,32,.90);
+  --ix-pillactbg:rgba(96,165,250,.12);
+  --ix-pillactbgL:rgba(45,212,191,.14);
+  --ix-pillactbd:rgba(96,165,250,.55);
+  --ix-pillactbdL:rgba(45,212,191,.55);
+}
+
+/* ===== PRODUCTOS: 1 sola línea + título debajo + tabs debajo ===== */
+.page-index #productos-con .productos-inline-bar{
+  display:block!important;
+  margin:0 0 12px!important;
+  padding:12px 0 0!important;
+}
+html[data-theme="light"] .page-index #productos-con .productos-inline-bar{
+  border-top-color:var(--ix-lineL)!important;
+}
+.page-index #productos-con .prod-title:after{content:none!important;display:none!important;}
+.page-index #productos-con .prod-title{margin:10px 0 8px!important;padding:0!important;}
+.page-index #productos-con .prod-tabs{margin:0 0 10px!important;padding:8px 12px!important;border-radius:999px!important;align-self:flex-start!important;}
+.page-index #productos-con .cards-products{margin-top:0!important;}
+
+/* ===== TABS: activos visibles en light/dark (solo PRODUCTOS) ===== */
+.page-index #productos-con .prod-tabs .tab{
+  color:var(--ix-pilltxt)!important;
+  background:var(--ix-pillbg)!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+}
+.page-index #productos-con .prod-tabs .tab.active{
+  background:var(--ix-pillactbg)!important;
+  border-color:var(--ix-pillactbd)!important;
+  box-shadow:0 0 0 2px rgba(96,165,250,.28)!important;
+}
+html[data-theme="light"] .page-index #productos-con .prod-tabs .tab{
+  color:var(--ix-pilltxtL)!important;
+  background:var(--ix-pillbgL)!important;
+  border:1px solid rgba(2,6,23,.12)!important;
+}
+html[data-theme="light"] .page-index #productos-con .prod-tabs .tab.active{
+  background:var(--ix-pillactbgL)!important;
+  border-color:var(--ix-pillactbdL)!important;
+  box-shadow:0 0 0 2px rgba(45,212,191,.22)!important;
+}
+
+/* ===== FAQ: legible en light/dark ===== */
+.page-index #faq .faq-item summary{color:rgba(232,238,246,.96)!important;}
+.page-index #faq .faq-item p{color:rgba(232,238,246,.82)!important;opacity:1!important;}
+html[data-theme="light"] .page-index #faq .faq-item summary{color:rgba(11,18,32,.94)!important;}
+html[data-theme="light"] .page-index #faq .faq-item p{color:rgba(11,18,32,.78)!important;opacity:1!important;}
+
+/* ===== REELS: object-fit cover + blur confinado (si existe .blur) ===== */
+.page-index .reel-embed{position:relative;overflow:hidden!important;isolation:isolate;}
+.page-index .reel-embed img,
+.page-index .reel-embed video{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;}
+.page-index .reel-embed .blur{position:absolute!important;inset:-18px!important;border-radius:inherit!important;overflow:hidden!important;filter:blur(18px)!important;transform:scale(1.08)!important;opacity:.55!important;pointer-events:none!important;z-index:0!important;}
+.page-index .reel-embed>*{position:relative;z-index:1;}
+
+
+/* =========================================================
+ Expiriti — INDEX FIX PACK (CSS) v2026.01.21
+ - Contraste kicker/labels/promos
+ - Arrows reels visibles en modo claro/oscuro
+ - Scroll vertical siempre (sin “amarres”)
+ - Swipe-friendly tracks (overflow + momentum)
+========================================================= */
+:root{--ix-ink:var(--text,#0b1220);--ix-ink2:var(--muted,#334155);--ix-oncard:color-mix(in srgb,var(--ix-ink) 92%,transparent);--ix-oncard2:color-mix(in srgb,var(--ix-ink2) 90%,transparent);--ix-line:color-mix(in srgb,var(--ix-ink) 18%,transparent);--ix-pill:color-mix(in srgb,var(--ix-ink) 8%,transparent);--ix-arrow-bg:color-mix(in srgb,#fff 92%,transparent);--ix-arrow-bd:color-mix(in srgb,var(--ix-ink) 22%,transparent);--ix-arrow-fg:color-mix(in srgb,var(--ix-ink) 88%,transparent)}
+html[data-theme="dark"]{--ix-ink:var(--text,#e8eef6);--ix-ink2:var(--muted,#94a3b8);--ix-line:color-mix(in srgb,var(--ix-ink) 14%,transparent);--ix-pill:color-mix(in srgb,var(--ix-ink) 10%,transparent);--ix-arrow-bg:color-mix(in srgb,#0b0f14 70%,transparent);--ix-arrow-bd:color-mix(in srgb,var(--ix-ink) 18%,transparent);--ix-arrow-fg:color-mix(in srgb,var(--ix-ink) 90%,transparent)}
+
+/* 1) Kicker (Implementación rápida...) visible */
+.page-index .hero .kicker{color:var(--ix-oncard2)!important;font-weight:600;letter-spacing:.2px;text-shadow:none}
+
+
+/* 3) Reels arrows: contraste real (incluye “servicios”) */
+.page-index .carousel .arrowCircle{background:var(--ix-arrow-bg)!important;border:1px solid var(--ix-arrow-bd)!important;color:var(--ix-arrow-fg)!important}
+.page-index .carousel .arrowCircle .chev{color:inherit!important;opacity:1!important}
+.page-index .carousel .arrowCircle.is-disabled{opacity:.45!important;filter:saturate(.6)}
+/* Si tu arrow usa ::before / svg */
+.page-index .carousel .arrowCircle svg,.page-index .carousel .arrowCircle::before{color:inherit!important;fill:currentColor!important}
+
+/* 4) Promos pills/badges (texto visible) */
+.page-index #promociones .promo-filters .promo-btn{color:var(--ix-oncard)!important}
+.page-index #promociones .promo-filters .promo-btn:not(.active){background:color-mix(in srgb,var(--ix-pill) 88%,transparent)!important;border:1px solid var(--ix-line)!important}
+.page-index #promociones .promo-filters .promo-btn.active{color:var(--ix-oncard)!important;border-color:color-mix(in srgb,var(--ix-ink) 28%,transparent)!important}
+
+/* 5) Contacto: tipografía consistente + labels bold + contraste */
+.page-index #contacto .section-h2{color:var(--ix-oncard)!important;font-weight:800;letter-spacing:-.02em}
+.page-index #contacto .lead{color:var(--ix-oncard2)!important}
+.page-index #contactForm label{display:block;margin:.55rem 0 .25rem;color:var(--ix-oncard)!important;font-weight:800!important;letter-spacing:.1px}
+.page-index #contactForm input,.page-index #contactForm select,.page-index #contactForm textarea{color:var(--ix-oncard)!important}
+.page-index #contactForm input::placeholder,.page-index #contactForm textarea::placeholder{color:color-mix(in srgb,var(--ix-oncard2) 85%,transparent)!important;opacity:1}
+
+/* 6) Scroll vertical SIEMPRE: evita locks por contenedores */
+html,body{overflow-x:hidden}
+.page-index{overflow-x:hidden}
+.page-index .prod-tabs,.page-index .hero-gallery-groups,.page-index #promociones .promo-filters{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.page-index .prod-tabs::-webkit-scrollbar,.page-index .hero-gallery-groups::-webkit-scrollbar,.page-index #promociones .promo-filters::-webkit-scrollbar{display:none}
+/* tracks swipe-friendly */
+.page-index .carousel .carousel-track{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;touch-action:pan-y}
+.page-index .carousel .carousel-slide{scroll-snap-align:start}
+
+
+/* Expiriti — INDEX PATCH (ALIGN+CONTRAST) v2026.01.21e */
+@media(min-width:980px){.page-index .section-cq{align-items:start!important}.page-index #productos-con .grid-2,.page-index #productos-con .grid-2.align-center,.page-index #productos-con .grid-2.v-center{align-items:start!important}.page-index #servicios .container.grid-2,.page-index #servicios .container.grid-2.v-center,.page-index #servicios .container.grid-2.align-center{align-items:start!important}}
+.page-index .reels-home-card{margin-top:0!important}.page-index .reels-home-card .body{padding-top:16px}
+.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab span{display:block!important;opacity:1!important;visibility:visible!important}.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab{gap:8px}
+.page-index .reel-tab span{color:rgba(232,238,246,.94)!important}
+
+html[data-theme="light"] .page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab span{color:rgba(11,18,32,.92)!important}
+html[data-theme="light"] .page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab.active,html[data-theme="light"] .page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab[aria-selected="true"],html[data-theme="light"] .page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab.is-active{background:transparent!important;border-color:rgba(148,163,184,.28)!important;box-shadow:0 0 0 2px rgba(15,23,42,.06)!important}
+.page-index #contacto .section-h2{margin:0 0 10px!important;font-size:var(--ttl-fs)!important;line-height:var(--ttl-lh)!important;font-weight:var(--ttl-fw)!important;letter-spacing:.1px!important;display:inline-block;background-image:var(--grad-exp)!important;background-repeat:no-repeat;background-size:100% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+@supports not (-webkit-background-clip:text){.page-index #contacto .section-h2{background:none!important;-webkit-text-fill-color:initial;color:inherit}}
+
+/* Expiriti — INDEX PATCH (SCROLL DOWN ALWAYS + SWIPE WHEN DEBE) v2026.01.21f */
+html,body{overflow-x:hidden!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+.page-index, .page-index main{overflow:visible!important}
+@media(max-width:980px){
+  /* 1) NO “pantalla fija” en HERO (eso bloquea scroll vertical dentro/desde la sección) */
+  .page-index .hero-gallery-card{height:auto!important;min-height:0!important;overflow:visible!important}
+  .page-index .hero-gallery-card .body{min-height:0!important;overflow:visible!important}
+  .page-index #heroGalleryCarousel{touch-action:auto!important}
+
+  /* 2) Pistas horizontales: deja que el navegador decida (vertical siempre disponible) */
+  .page-index .carousel[id^="carouselReels"] .carousel-track,
+  .page-index #heroGalleryCarousel .carousel-track,
+  .page-index .cards-services.is-carousel,
+  .page-index .prod-tabs,
+  .page-index .hero-gallery-groups,
+  .page-index #promociones .promo-filters{
+    touch-action:auto!important;
+    overscroll-behavior-x:contain;
+    overscroll-behavior-y:auto;
+    -webkit-overflow-scrolling:touch
+  }
+
+  /* 3) Evita “locks” por overlays/containers */
+  .page-index .carousel[id^="carouselReels"],
+  .page-index #heroGalleryCarousel{overflow:visible!important}
+  .page-index .carousel[id^="carouselReels"] .carousel-slide{overflow:visible!important}
+}
+
+/* Expiriti — INDEX ALIGN+SCROLL PATCH v2026.01.21f (min) */
+.page-index #productos-con .grid-2,.page-index #servicios .container.grid-2{align-items:stretch!important}.page-index #productos-con .grid-2>* , .page-index #servicios .container.grid-2>*{min-width:0}.page-index #productos-con .card,.page-index #servicios .card{height:100%}.page-index #productos-con .section-title,.page-index #servicios .section-title{margin:0 0 12px!important;padding:0!important}.page-index #productos-con .panel-productos,.page-index #servicios .cards-services-wrap,.page-index #servicios .services-wrap{padding-top:0!important}.page-index .reels-home-card{height:100%;margin-top:0!important}.page-index .reels-home-card .body{padding-top:16px!important}.page-index .reels-home-card .reel-title{margin:0 0 10px!important;line-height:1.12!important}.page-index .section-cq{align-items:stretch!important}.page-index .section-cq>div{display:flex;flex-direction:column}.page-index .section-cq>div>*{min-width:0}.page-index #productos-con .cards-products,.page-index #servicios .cards-services{align-content:start}.page-index #productos-con .productos-inline-bar{margin:0 0 12px!important;padding:0!important}.page-index #productos-con .prod-tabs{margin:0 0 10px!important}
+/* Scroll vertical global (sin locks) */
+html,body{overflow-x:hidden;overscroll-behavior-y:auto}.page-index{overflow-x:hidden;touch-action:pan-y pinch-zoom}
+/* Carruseles: swipe SOLO horizontal en el track; wrapper deja pan-y */
+.page-index .carousel,.page-index #heroGalleryCarousel{touch-action:pan-y pinch-zoom!important}
+.page-index .carousel-track,.page-index #heroGalleryCarousel .carousel-track{touch-action:pan-x pinch-zoom!important;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
+.page-index .carousel-track::-webkit-scrollbar,.page-index #heroGalleryCarousel .carousel-track::-webkit-scrollbar{height:0}
+.page-index .carousel-slide{scroll-snap-align:start}
+/* Evita que reglas viejas “maten” el scroll por fixed/sticky raros */
+@media(max-width:980px){.page-index main [style*="position:fixed"],.page-index main [style*="position: fixed"],.page-index main [style*="position:sticky"],.page-index main [style*="position: sticky"]{position:static!important}}
+
+/* =========================================================
+ Expiriti — PATCH v2026.01.22 (CSS)
+ OBJ: 1) Scroll down SIEMPRE en mobile (aunque empieces gesto sobre tabs/chips/filtros)
+      2) Swipe horizontal NATIVO (sin locks) en overflow-x
+      3) Hero desktop 2 columnas, full-viewport
+========================================================= */
+
+/* [A] Regla base: nunca mates el scroll vertical del documento */
+html,body{overflow-x:hidden!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+
+/* [B] Zonas horizontales: DEJA QUE EL NAVEGADOR DECIDA (auto) */
+.page-index .prod-tabs,
+.page-index .hero-gallery-groups,
+.page-index .promo-filters,
+.page-index .cards-services.is-carousel,
+.page-index .carousel-track,
+.page-index #heroGalleryCarousel .carousel-track{
+  touch-action:auto!important; /* clave: NO pan-x aquí */
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  overscroll-behavior-y:auto;
+}
+
+/* [C] Evita “overlays” que capturen el touch fuera de su caja */
+.page-index .carousel,
+.page-index #heroGalleryCarousel{overflow:visible!important}
+
+/* [D] HERO: móvil NO debe “encerrar” la página (sin height fija ni overflow hidden) */
+@media(max-width:980px){
+  .page-index .hero-gallery-card{height:auto!important;min-height:0!important;overflow:visible!important}
+  .page-index .hero-gallery-card .body{overflow:visible!important}
+}
+
+/* [E] HERO: desktop split 2 columnas, full viewport (sin desparramarse) */
+@media(min-width:981px){
+  .page-index .ix-hero{min-height:calc(100dvh - var(--gh-height,68px));display:grid;grid-template-columns:1fr 1.15fr;gap:16px;align-items:stretch}
+  .page-index .ix-hero>.ix-hero-copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
+  .page-index .ix-hero>.ix-hero-gallery{min-width:0;display:flex}
+  .page-index .ix-hero>.ix-hero-gallery .hero-gallery-card{height:100%!important;overflow:hidden!important} /* aquí sí, para que “quepa” */
+  .page-index .ix-hero>.ix-hero-gallery .hero-gallery-card .body{height:100%!important;overflow:hidden!important}
+  .page-index .ix-hero>.ix-hero-gallery #heroGalleryCarousel .carousel-track{height:100%!important;min-height:340px}
+}
+
+/* NO BORRAR, TIENE HERO EN 2C COLUMNAS Y QUE ELEMENTOS SEAN REDONDEADOS */
+
+@media(min-width:981px){.page-index .hero .container.hero-grid{display:grid!important;grid-template-columns:1fr 1.15fr;gap:16px;align-items:stretch}.page-index .hero .container.hero-grid>:first-child{min-width:0;display:flex;flex-direction:column;justify-content:center}.page-index .hero .container.hero-grid>.hero-gallery-card{min-width:0;height:calc(100dvh - var(--gh-height,68px) - 14px);overflow:hidden}.page-index .hero .container.hero-grid>.hero-gallery-card .body{height:100%;overflow:hidden}}@media(max-width:980px){.page-index .hero .container.hero-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px}.page-index .hero .container.hero-grid>.hero-gallery-card{height:auto!important;overflow:visible!important}.page-index .hero .container.hero-grid>.hero-gallery-card .body{overflow:visible!important;height:auto!important}}.page-index{--r-12:12px;--r-14:14px;--r-18:18px;--r-22:22px}.page-index .card,.page-index .promo-item,.page-index .faq-item,.page-index .map-embed,.page-index .map-cover,.page-index .reel-embed{border-radius:var(--r-18)!important}.page-index .btn,.page-index .prod-tabs .tab,.page-index .promo-btn,.page-index .hero-group-tab,.page-index .hero-tab,.page-index .reel-tab{border-radius:999px!important}.page-index input,.page-index select,.page-index textarea{border-radius:var(--r-14)!important}.page-index #heroGalleryCarousel .carousel-track,.page-index #heroGalleryCarousel .carousel-slide,.page-index .carousel[id^="carouselReels"] .carousel-track,.page-index .carousel[id^="carouselReels"] .carousel-slide{border-radius:var(--r-18)!important}.page-index #heroGalleryCarousel .hero-slide img{border-radius:var(--r-18)!important}.page-index .carousel .arrowCircle,.page-index #heroGalleryCarousel .arrowCircle{border-radius:999px!important}.page-index .carousel .carousel-nav,.page-index #heroGalleryCarousel .carousel-nav{border-radius:999px!important}
+
+
+/* Expiriti — HERO GALLERY: FIT VERT DESKTOP (OWNER) v2026.01.22 */
+@media(min-width:981px){
+  .page-index .hero .container.hero-grid{align-items:stretch!important}
+  .page-index .hero .container.hero-grid>.hero-gallery-card{height:calc(100dvh - var(--gh-height,68px) - 14px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  .page-index .hero .container.hero-grid>.hero-gallery-card .body{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+
+  /* Estas piezas NO deben crecer */
+  .page-index .hero-gallery-header,
+  .page-index .hero-gallery-groups,
+  .page-index .hero-gallery-tabs{flex:0 0 auto!important}
+
+  /* Esto SÍ debe crecer y tomar el resto del alto */
+  .page-index #heroGalleryCarousel{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+
+  /* Track toma el alto disponible */
+  .page-index #heroGalleryCarousel .carousel-track{flex:1 1 auto!important;min-height:0!important;height:auto!important}
+
+  /* Slides e imagen a 100% del alto que exista */
+  .page-index #heroGalleryCarousel .carousel-slide{height:100%!important}
+  .page-index #heroGalleryCarousel .hero-slide{width:100%!important;height:100%!important}
+  .page-index #heroGalleryCarousel .hero-slide img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+}
+
+/* Expiriti — PATCH UI/UX (HERO + 2COL ALIGN) v2026.01.22g
+   OBJ: 1) Hero gallery sin “aire” + pills modernos
+        2) Sistemas/Servicios: 2 columnas alineadas arriba (izq contenido, der reels)
+        3) Panel visual integrado detrás (sin cambiar HTML) */
+.page-index .hero.section-full{padding-top:20px;padding-bottom:22px}
+@media(max-width:980px){.page-index .hero.section-full{padding-top:16px;padding-bottom:18px}}
+
+/* 1) HERO GALLERY: compactar header + chips */
+
+.page-index .hero-gallery-header h2{margin:0!important;line-height:1.12!important;letter-spacing:-.01em!important}
+
+@media(max-width:520px){}
+.page-index .hero-group-tab{min-height:40px!important;padding:9px 14px!important;border-radius:999px!important;border:1px solid rgba(148,163,184,.28)!important;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(226,232,240,.18))!important;color:rgba(15,23,42,.92)!important;font-weight:900!important;letter-spacing:.1px!important;text-shadow:none!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 8px 18px rgba(2,6,23,.05)!important;transition:transform .12s ease,background .12s ease,border-color .12s ease,box-shadow .12s ease}
+.page-index .hero-group-tab:active{transform:translateY(1px)!important}
+@media(hover:hover){.page-index .hero-group-tab:hover{background:color-mix(in srgb,var(--ix-pill,rgba(255,255,255,.06)) 100%,transparent)!important;border-color:color-mix(in srgb,var(--ix-line,rgba(255,255,255,.12)) 120%,transparent)!important}}
+/* Soporta estados activos típicos (JS puede usar .active o aria-selected) */
+.page-index .hero-group-tab.active,.page-index .hero-group-tab[aria-selected="true"]{border-color:rgba(125,211,252,.38)!important;background:linear-gradient(180deg,rgba(186,230,253,.34),rgba(103,232,249,.24))!important;color:rgba(15,23,42,.92)!important;text-shadow:none!important;box-shadow:0 0 0 2px rgba(125,211,252,.14),inset 0 1px 0 rgba(255,255,255,.20),0 10px 22px rgba(2,6,23,.06)!important}
+
+/* 2) PRODUCTOS/SERVICIOS: quita “sensación de estar arriba” (espaciado más cerrado) */
+.page-index #productos-con .section-divider{margin:10px 0 12px!important}
+.page-index #productos-con .productos-inline-bar{margin:0 0 10px!important;padding:6px 0 0!important}
+.page-index #productos-con .prod-title{margin:6px 0 8px!important}
+.page-index #productos-con .prod-tabs{margin:0 0 10px!important}
+
+/* 3) ALIGN TOP REAL en 2 columnas (evita que v-center suba/baje) */
+.page-index #productos-con .grid-2,
+.page-index #servicios .container.grid-2{align-items:start!important}
+
+/* 4) Panel visual integrado detrás de las 2 columnas (sin tocar HTML) */
+.page-index #productos-con .section-cq,
+.page-index #servicios .container.grid-2{position:relative}
+.page-index #productos-con .section-cq>*,
+.page-index #servicios .container.grid-2>*{position:relative;z-index:1}
+.page-index #productos-con .section-cq:before,.page-index #servicios .container.grid-2:before{content:"";position:absolute;inset:0;z-index:0;border-radius:var(--r-18,var(--radius-lg,18px));background:radial-gradient(900px 520px at 0% 0%,rgba(45,212,191,.08),transparent 60%),radial-gradient(900px 520px at 100% 0%,rgba(96,165,250,.07),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid color-mix(in srgb,var(--ix-line,rgba(255,255,255,.12)) 100%,transparent);box-shadow:0 18px 50px rgba(0,0,0,.10)}
+@media(max-width:980px){.page-index #productos-con .section-cq:before,.page-index #servicios .container.grid-2:before{inset:0}}
+@media(max-width:520px){.page-index #productos-con .section-cq:before,.page-index #servicios .container.grid-2:before{inset:0}}
+
+/* 5) Reels card “menos separado” visualmente (sin cambiar tu card base): ajusta respiración interna */
+.page-index #productos-con .reels-home-card .body,
+.page-index #servicios .reels-home-card .body{padding-top:14px!important}
+.page-index #productos-con .reels-home-card .reel-title,
+.page-index #servicios .reels-home-card .reel-title{margin:0 0 8px!important}
+
+/* 6) Light mode: panel integrado no “gris sucio” */
+html[data-theme="light"] .page-index #productos-con .section-cq:before,
+html[data-theme="light"] .page-index #servicios .container.grid-2:before{background:radial-gradient(900px 520px at 0% 0%,rgba(45,212,191,.10),transparent 60%),radial-gradient(900px 520px at 100% 0%,rgba(96,165,250,.08),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.70));border:1px solid rgba(2,6,23,.10);box-shadow:0 18px 50px rgba(2,6,23,.08)}
+
+
+/* =========================================================
+ Expiriti — INDEX PATCH v2026.01.22h
+ OBJ:
+ 1) HERO mobile: menos “aire” + NO cortar tabs 2x2
+ 2) Divider full-width (sin “mordida”)
+ 3) Desktop: alinear arriba Sistemas/Reels + quitar aire bajo CTA
+ 4) Homologar tamaño del título "Sistemas CONTPAQi®"
+ 5) Servicios: sin scroll interno + "Soporte técnico" span 2 columnas
+========================================================= */
+
+/* [0] FIX: el título se veía chico por ESTA regla vieja: .prod-title{font-size:1.1rem} */
+.page-index .prod-title{font-size:var(--ttl-fs)!important;line-height:var(--ttl-lh)!important;font-weight:var(--ttl-fw)!important}
+
+/* [1] Divider: que no se “corte” y respete container */
+.page-index .section-divider{display:block;width:100%;max-width:100%;margin:10px 0 12px!important;height:1px;border-radius:999px;background:color-mix(in srgb,var(--ix-ink,rgba(232,238,246,.92)) 16%,transparent)}
+/* evita que algún wrapper lo recorte */
+.page-index #productos-con .container,.page-index #productos-con{overflow:visible!important}
+
+/* [2] “Aire” arriba/abajo en el header de PRODUCTOS */
+.page-index #productos-con .productos-inline-bar{margin:0 0 10px!important;padding:4px 0 0!important}
+.page-index #productos-con .prod-title{margin:4px 0 8px!important}
+.page-index #productos-con .prod-tabs{margin:0 0 8px!important;padding:8px 12px!important}
+
+/* [3] Desktop: alinear arriba (evita que la izquierda quede “más abajo” que Reels) */
+@media(min-width:981px){
+  .page-index #productos-con .grid-2.align-center.section-cq,
+  .page-index #productos-con .grid-2.section-cq{align-items:start!important}
+  .page-index #productos-con .section-cq>div:first-child{justify-content:flex-start}
+  .page-index .prod-cta-bottom{margin-top:10px!important}
+}
+
+/* [4] HERO mobile: que TODO quepa (incluye tabs 2x2) sin “corte”
+   - La causa típica del corte es: height fija + min-height grande en track + paddings.
+   - Solución: conservar “hero full viewport”, pero hacer flex real y bajar mínimos. */
+@media(max-width:980px){
+  /* mantiene hero al alto de pantalla SIN recortar contenido interno */
+  .page-index .hero .container.hero-grid>.hero-gallery-card{height:calc(100svh - var(--ghh) - env(safe-area-inset-top,0px) - 12px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  .page-index .hero .container.hero-grid>.hero-gallery-card .body{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+
+  /* compacta “Conoce más…” y pills */
+  
+  
+
+  /* tabs 2x2: menos padding para que quepan */
+  .page-index .hero-gallery-tabs{padding:10px 10px 10px!important;gap:10px!important}
+  .page-index .hero-tab{min-height:78px!important;padding:12px!important;border-radius:14px}
+  .page-index .hero-tab img{height:46px!important;max-width:165px!important}
+
+  /* el carrusel debe “tomar el resto” y no exigir mínimos altos */
+  .page-index #heroGalleryCarousel{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  .page-index #heroGalleryCarousel .carousel-track{flex:1 1 auto!important;min-height:0!important;height:auto!important;overflow-x:auto;overflow-y:hidden}
+  .page-index #heroGalleryCarousel .carousel-slide{height:100%!important}
+  /* baja mínimos que estaban empujando y cortando tabs */
+  .page-index #heroGalleryCarousel .carousel-track{min-height:150px!important}
+}
+@media(max-width:520px){
+  .page-index #heroGalleryCarousel .carousel-track{min-height:140px!important}
+  .page-index .hero-group-tab{min-height:40px!important;padding:9px 12px!important}
+}
+
+
+/* =========================================================
+ Expiriti — SERVICIOS PATCH v2026.01.22i
+ OBJ:
+ 1) “Soporte técnico” ocupa 2x1 en desktop (sin depender de orden)
+ 2) Quitar “scroll interno” de servicios (overflow/height accidentales)
+ 3) Evitar que el spacer cree aire raro en desktop
+========================================================= */
+
+/* [1] DESKTOP: grid real 2 columnas + soporte span completo */
+@media(min-width:981px){
+  .page-index #servicios .cards-services{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important}
+  .page-index #servicios .cards-services .svc-page{display:contents!important}
+  .page-index #servicios .cards-services .svc-spacer{display:none!important}
+}
+
+/* [2] MOBILE/TABLET: el carrusel se queda como está, pero sin scroll vertical interno */
+@media(max-width:980px){
+  .page-index #servicios .cards-services.is-carousel{overflow-x:auto!important;overflow-y:hidden!important;max-height:none!important}
+  .page-index #servicios .cards-services.is-carousel .svc-page{overflow:visible!important}
+}
+
+/* [3] “Scroll interno” global: si algún wrapper tenía height/overflow, lo neutralizamos */
+.page-index #servicios,.page-index #servicios .container,.page-index #servicios .cards-services-wrap,.page-index #servicios .services-wrap{overflow:visible!important;max-height:none!important}
+
+
+/* Expiriti — INDEX PATCH (Hero spacing + Reels mobile + Tabs overflow) v2026.01.23 */
+/* (1) reduce “aire” arriba */
+.page-index .hero-gallery-card,.page-index .hero-gallery-card .body{min-height:0!important}/* (1) evita empujes raros por min-heights */
+@media(max-width:980px){.page-index .hero .container.hero-grid>.hero-gallery-card{height:calc(100svh - var(--ghh) - env(safe-area-inset-top,0px) - 12px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}.page-index .hero .container.hero-grid>.hero-gallery-card .body{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}.page-index #heroGalleryCarousel{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}.page-index #heroGalleryCarousel .carousel-track{flex:1 1 auto!important;min-height:140px!important;height:auto!important}}/* (1) en mobile: que quepa TODO (chips + tabs 2x2) sin “corte” */
+
+/* (2) Reels: MÁS ALTOS en mobile (tu --reel-scale=.85 los estaba aplastando) */
+@media(max-width:980px){.page-index{--reel-scale:1;--reel-h-min:260px;--reel-h-mid:52svh;--reel-h-max:560px}}@media(max-width:380px){.page-index{--reel-h-mid:48svh;--reel-h-max:520px}}/* (2) ajustes extra para pantallas chicas */
+
+/* (2)(3) Tabs/íconos de reels: nada “salido” + texto siempre dentro */
+@media(max-width:980px){.page-index .reel-sys-tabs{gap:10px!important;padding:10px 10px 12px!important}.page-index #carouselReels-servicios+.reel-sys-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:10px!important}.page-index #carouselReels-servicios+.reel-sys-tabs>.reel-tab:last-child{grid-column:1/-1;justify-self:center;width:min(280px,calc(50% - 5px))}}/* (3) servicios: 2 cols en mobile evita “apretón” y overflow */
+.page-index .reel-tab{max-width:100%;overflow:hidden!important}/* (2)(3) recorta adentro, no se “sale” */
+.page-index .reel-tab img{max-width:100%!important;height:52px;object-fit:contain}/* (2) ícono nunca excede */
+@media(max-width:520px){.page-index .reel-tab{min-height:82px!important;padding:12px!important}.page-index .reel-tab img{height:46px!important}.page-index .reel-tab span{font-size:.82rem!important;line-height:1.12!important}}/* (2)(3) tipografía/tamaño estable */
+.page-index .reel-tab span{display:block!important;max-width:100%!important;white-space:normal!important;overflow:hidden!important;text-overflow:ellipsis!important}/* (3) texto no revienta el botón */
+
+/* Expiriti — FIX: Soporte 2x1 + Centro icon/título + Amarillo legible v2026.01.23 */
+
+/* (A) SERVICIOS: “Soporte técnico” span 2 columnas (evita hueco derecha) */
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"]{grid-column:1/-1!important}/* 2x1 en grid */
+@media(max-width:980px){.page-index #servicios .cards-services.is-carousel .svc-page>article[data-href*="SERVICIOS/soporte"]{grid-column:1/-1!important}}/* 2x1 también en páginas del carrusel (cuando son 2 cols) */
+
+/* (B) SERVICIOS: centrar icono + título (solo Soporte) sin romper otras cards */
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"],.page-index #servicios .cards-services.is-carousel .svc-page>article[data-href*="SERVICIOS/soporte"]{text-align:center!important}
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"] .svc-icon,.page-index #servicios .cards-services.is-carousel .svc-page>article[data-href*="SERVICIOS/soporte"] .svc-icon{display:block;margin:0 auto 10px!important}
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"] h3,.page-index #servicios .cards-services.is-carousel .svc-page>article[data-href*="SERVICIOS/soporte"] h3{margin-left:auto!important;margin-right:auto!important}
+
+
+
+
+/* OWNER ÚNICO btn amarillo */
+.page-index .btn-grad-yellow{
+  border:1px solid rgba(250,204,21,.55)!important;
+  background:linear-gradient(180deg,rgba(250,204,21,.92),rgba(250,204,21,.62))!important;
+  color:#0b1220!important;
+  font-weight:950!important;
+  box-shadow:0 10px 22px rgba(2,6,23,.10),inset 0 1px 0 rgba(255,255,255,.35)!important;
+  text-shadow:none!important;
+  filter:none!important;
+}
+.page-index .btn-grad-yellow:hover{
+  background:linear-gradient(180deg,rgba(250,204,21,.98),rgba(250,204,21,.70))!important;
+}
+html[data-theme="dark"] .page-index .btn-grad-yellow{color:rgba(232,238,246,.98)!important;}
+
+
+
+/* =========================================================
+   Expiriti — PATCH MIN (solo lo necesario)
+   OBJ:
+   1) btn amarillo: texto blanco (light/dark)
+   2) menos aire: Ubicación -> footer
+   3) hero gallery: +2px título + menos gaps internos + menos espacio hero->gallery
+   4) dark: evitar textos negros invisibles en secciones clave
+========================================================= */
+
+/* (1) Botón amarillo: letras blancas SIEMPRE */
+.page-index .btn-grad-yellow{
+  color:#fff !important;          /* fuerza blanco en light también */
+  text-shadow:none !important;
+}
+
+/* (2) Ubicación -> footer: quitar “aire” al final */
+
+/* (3) Hero: reduce espacio entre header y el inicio del hero (sección) */
+.page-index .hero.section-full{
+  padding-top:14px !important;   /* baja el aire superior */
+  padding-bottom:18px !important;
+}
+
+/* (3) Hero gallery: “Conoce más…” +2px */
+.page-index .hero-gallery-header h2{
+  font-size:calc(clamp(18px,1.6vw,26px) + 2px) !important;
+}
+
+
+/* (4) Dark mode: si algo está heredando negro, fuerza legibilidad en contenido */
+html[data-theme="dark"] .page-index,
+html[data-theme="dark"] .page-index p,
+html[data-theme="dark"] .page-index li,
+html[data-theme="dark"] .page-index h1,
+html[data-theme="dark"] .page-index h2,
+html[data-theme="dark"] .page-index h3,
+html[data-theme="dark"] .page-index h4{
+  color:rgba(232,238,246,.92);
+}
+
+
+/* Expiriti — PATCH CSS (Ubicación+Footer | Servicios 2x1 | Pills active persist) v2026.01.23 */
+.page-index #ubicacion,.page-index #mapa,.page-index .map-card,.page-index .map-embed{margin-bottom:0!important}/* (1) corta margen inferior de “Ubicación” si existe */
+.page-index #contacto{padding-bottom:14px!important}/* (1) si contacto va antes del footer, recorta padding inferior */
+.page-index main>section:last-of-type{padding-bottom:14px!important}/* (1) seguridad: último bloque con menos aire */
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"]{grid-column:1/-1!important}/* (2) Soporte 2x1 */
+@media(min-width:981px){.page-index #servicios .cards-services{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important}.page-index #servicios .cards-services .svc-page{display:contents!important}}/* (2) desktop = grid real */
+.page-index #productos-con .prod-tabs .tab.active,.page-index #productos-con .prod-tabs .tab[aria-selected="true"],.page-index #productos-con .prod-tabs .tab.is-active{border-color:rgba(96,165,250,.55)!important;background:rgba(96,165,250,.12)!important;box-shadow:0 0 0 2px rgba(96,165,250,.28)!important}/* (3) el “owner” de activo NO depende solo de .active */
+html[data-theme="light"] .page-index #productos-con .prod-tabs .tab.active,html[data-theme="light"] .page-index #productos-con .prod-tabs .tab[aria-selected="true"],html[data-theme="light"] .page-index #productos-con .prod-tabs .tab.is-active{border-color:rgba(45,212,191,.55)!important;background:rgba(45,212,191,.14)!important;box-shadow:0 0 0 2px rgba(45,212,191,.22)!important}/* (3) activo visible en light */
+
+
+
+
+/* Expiriti — PATCH: Ubicación -> Footer sin aire v2026.01.24
+   OBJ: 1) quitar padding/margins del último bloque 2) bajar min-height del footer placeholder
+        3) evitar hueco grande bajo el mapa/card (mobile+desktop) */
+.page-index main{padding-bottom:0!important}
+.page-index main>section:last-of-type{padding-bottom:0!important;margin-bottom:0!important}
+.page-index main>.container:last-of-type{margin-bottom:0!important;padding-bottom:0!important}
+/* Card/mapa: no “empujar” hacia abajo */
+.page-index .map-card{margin-bottom:0!important}
+.page-index .map-embed{margin-bottom:0!important}
+/* Placeholder footer: si estaba en 260px, eso crea el hueco gigante */
+.page-index #footer-placeholder{min-height:clamp(110px,12vh,160px)!important;margin-top:0!important;padding-top:0!important}
+/* Seguridad: si algún estilo global metió “aire” al final del layout */
+.page-index body,.page-index{scroll-padding-bottom:0!important}
+
+/* Expiriti — HERO H1: corrido + baseline FIX v2026.01.24
+   OBJ: 1) menos aire entre líneas 2) imágenes alineadas al texto 3) sin “subidas” por transform */
+.page-index .hero-h1 .hero-line{display:flex!important;align-items:baseline!important;gap:10px!important;flex-wrap:wrap}
+.page-index .hero-h1 .hero-mid,.page-index .hero-h1 .hero-bot{margin-top:4px!important} /* antes tenías 6px y 8px */
+@media(max-width:520px){.page-index .hero-h1 .hero-mid,.page-index .hero-h1 .hero-bot{margin-top:3px!important}}
+
+/* IMGs dentro del H1: baseline real (quita “subidita”) */
+.page-index .hero-h1 img,.page-index .hero-h1 .hero-word{display:inline-block!important;vertical-align:baseline!important;transform:none!important}
+
+/* Si quieres un pelín más “centrado” visual sin subirlas: usa esta micro-correción (opcional)
+.page-index .hero-h1 img{position:relative;top:.06em}
+*/
+
+
+/* =========================================================
+   Expiriti — PATCH (SERVICIOS 2x1 DESKTOP + MAP->FOOTER + HERO H1 LOGOS)
+   v2026.01.24
+   Pegar al FINAL del CSS (override).
+========================================================= */
+
+/* =========================================================
+   (1) SERVICIOS: desktop en GRID real + “Soporte” 2x1 (ancho completo)
+   - Robusto aunque tu JS deje .is-carousel puesto en desktop
+   - Selector tolerante: data-href*="soporte"
+========================================================= */
+@media(min-width:981px){
+  /* Fuerza layout de 2 columnas en desktop */
+  .page-index #servicios .cards-services{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:14px!important;
+    overflow:visible!important;
+    max-height:none!important;
+  }
+
+  /* Si tu markup mete páginas (svc-page), lo “aplanamos” para que el grid funcione */
+  .page-index #servicios .cards-services .svc-page{display:contents!important}
+
+  /* Quita “spacer” que a veces crea huecos raros */
+  .page-index #servicios .cards-services .svc-spacer{display:none!important}
+
+  /* Si por alguna razón quedó modo carrusel, lo neutralizamos en desktop */
+  .page-index #servicios .cards-services.is-carousel{
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+  }
+
+  /* Soporte = ancho completo (2x1) */
+  .page-index #servicios .cards-services > article[data-href*="soporte"]{
+    grid-column:1 / -1!important;
+  }
+}
+
+/* En mobile/tablet déjalo como ya lo tienes, pero asegurando que el “span” no estorbe */
+@media(max-width:980px){
+  .page-index #servicios .cards-services.is-carousel .svc-page > article[data-href*="soporte"]{
+    grid-column:1 / -1!important;
+  }
+}
+
+/* =========================================================
+   (2) UBICACIÓN -> FOOTER: quitar “aire” al final
+   - Recorta padding/margins del bloque final
+   - Baja min-height de placeholder si existe
+========================================================= */
+.page-index main{padding-bottom:0!important}
+
+/* El bloque de ubicación (según tus ids/clases típicas) */
+.page-index #ubicacion,
+.page-index #mapa,
+.page-index .map-card,
+.page-index .map-embed{
+  margin-bottom:0!important;
+  padding-bottom:0!important;
+}
+
+/* Si tu última sección venía con padding grande, lo apagamos */
+.page-index main > section:last-of-type{
+  margin-bottom:0!important;
+  padding-bottom:0!important;
+}
+
+/* Placeholder de footer: suele ser el culpable del hueco */
+.page-index #footer-placeholder{
+  min-height:0!important;              /* clave */
+  height:auto!important;
+  margin-top:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+}
+
+/* Por si algún wrapper extra mete aire */
+.page-index footer,
+.page-index #footer,
+.page-index #footer .container{
+  margin-top:0!important;
+  padding-top:0!important;
+}
+
+/* =========================================================
+   (3) HERO H1: logos como texto (baseline + tamaño “tipográfico”)
+   - Hace que CONTPAQi / ExpIRI TI dentro del H1 se vean integrados
+   - Si algún logo debe ser más grande, ajustas el --h1-logo-em
+========================================================= */
+.page-index{
+  --h1-logo-em:1.05em;                 /* altura del logo relativa al tamaño del texto */
+  --h1-logo-max:76px;                  /* tope para desktop grande */
+}
+
+/* Línea del H1 más compacta (evita “aire” vertical por imágenes) */
+.page-index .hero-h1{
+  line-height:1.02!important;
+}
+
+/* Las líneas del H1 alineadas a baseline */
+.page-index .hero-h1 .hero-line{
+  display:flex!important;
+  align-items:baseline!important;
+  gap:10px!important;
+  flex-wrap:wrap!important;
+}
+
+/* IMGs dentro del H1: comportamiento “como texto” */
+.page-index .hero-h1 img{
+  height:var(--h1-logo-em)!important;
+  width:auto!important;
+  max-height:var(--h1-logo-max)!important;
+  display:inline-block!important;
+  vertical-align:baseline!important;
+  transform:none!important;
+}
+
+/* En pantallas chicas, baja ligeramente para que no “invada” */
+@media(max-width:520px){
+  .page-index{--h1-logo-em:1.00em;--h1-logo-max:64px}
+  .page-index .hero-h1{line-height:1.04!important}
+}
+
+
+/* =========================================================
+ Expiriti — PATCH FINAL MIN (Servicios 2x1 + Ubicación sin aire + H1 logos texto)
+ v2026.01.24f — PEGAR AL FINAL (owner final)
+========================================================= */
+
+/* ========== [A] SERVICIOS DESKTOP: grid real + Soporte 2x1 ========== */
+@media(min-width:981px){
+.page-index #servicios .cards-services{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--gap,14px)!important;overflow:visible!important;max-height:none!important}
+.page-index #servicios .cards-services .svc-page{display:contents!important}
+.page-index #servicios .cards-services .svc-spacer{display:none!important}
+.page-index #servicios .cards-services>article[data-href*="SERVICIOS/soporte"]{grid-column:1/-1!important;width:100%!important}
+.page-index #servicios .cards-services .svc-page>article[data-href*="SERVICIOS/soporte"]{grid-column:1/-1!important;width:100%!important}
+}
+
+/* ========== [B] UBICACIÓN → FOOTER: quitar aire fantasma ========== */
+.page-index main{padding-bottom:0!important}
+.page-index #ubicacion,.page-index #ubicacion .container,.page-index #ubicacion .map-card,.page-index #ubicacion .map-embed{margin-bottom:0!important;padding-bottom:0!important}
+.page-index #contacto{padding-bottom:12px!important}
+.page-index #footer-placeholder{min-height:0!important;margin:0!important;padding:0!important}
+.page-index footer{margin-top:0!important}
+
+/* ========== [C] HERO H1: logos como texto + wrap fluido ========== */
+.page-index .hero-h1{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(8px,1.2vw,12px);line-height:1.02!important}
+.page-index .hero-h1 img{height:.92em!important;width:auto!important;max-width:none!important;display:inline-block!important;vertical-align:baseline!important;transform:none!important;object-fit:contain}
+.page-index .hero-h1 .hero-piece{display:inline-flex;align-items:baseline;min-width:0}
+.page-index .hero-h1 .hero-con{font-weight:900}
+@media(max-width:520px){.page-index .hero-h1 img{height:.88em!important}}
+
+
+/* =========================================================
+ Expiriti — HERO H1 WRAP OWNER (fluido + responsive) v2026.01.24g
+ PEGAR AL FINAL (solo H1)
+========================================================= */
+
+/* H1 como “frase” que envuelve por piezas */
+.page-index .hero-h1{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(8px,1.1vw,12px);line-height:1.04!important}
+
+/* Cada pieza = palabra/bloque pequeño */
+.page-index .hero-h1 .hero-piece{display:inline-flex;align-items:baseline;min-width:0}
+
+/* Logo como texto: escala relativa y baseline real */
+.page-index .hero-h1 .hero-logo img.hero-word{height:.92em!important;width:auto!important;max-width:none!important;display:inline-block!important;vertical-align:baseline!important;transform:none!important;object-fit:contain}
+
+/* “con” más firme y con espacio controlado */
+.page-index .hero-h1 .hero-con{font-weight:900;white-space:nowrap}
+
+/* Texto largo: deja wrap natural sin desbordar */
+.page-index .hero-h1 .gradient-word{min-width:0;max-width:100%;overflow-wrap:anywhere}
+
+/* Evita que el último logo se quede “solito” si puede acompañar a “con” */
+.page-index .hero-h1 .hero-con+.hero-logo{white-space:nowrap}
+
+/* Mobile: ligera reducción del logo */
+@media(max-width:520px){.page-index .hero-h1{line-height:1.06!important;gap:clamp(7px,1.2vw,10px)}.page-index .hero-h1 .hero-logo img.hero-word{height:.88em!important}}
+
+
+.page-index .hero-h1{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(8px,1.1vw,12px);line-height:1.04!important}.page-index .hero-h1 .hero-piece{display:inline-flex;align-items:baseline;min-width:0}.page-index .hero-h1 .gradient-word{min-width:0;max-width:100%;overflow-wrap:anywhere}.page-index .hero-h1 .hero-lock{display:inline-flex;align-items:baseline;gap:.35em;white-space:nowrap}.page-index .hero-h1 .hero-logo img.hero-word{height:.92em!important;width:auto!important;max-width:none!important;display:inline-block!important;vertical-align:baseline!important;transform:none!important;object-fit:contain}.page-index .hero-h1 .hero-con{font-weight:900}@media(max-width:520px){.page-index .hero-h1{line-height:1.06!important}.page-index .hero-h1 .hero-logo img.hero-word{height:.88em!important}}
+
+/* Expiriti — HERO H1 FIX (no space-between + align con/ExpIRI TI) v2026.01.24i */
+.page-index .hero-h1{justify-content:flex-start!important;text-align:left!important}
+.page-index .hero-h1 .gradient-word{display:inline!important} /* evita que el bloque “estire” y mande 'con' al otro lado */
+.page-index .hero-h1 .hero-lock{display:inline-flex;align-items:center;gap:.35em;white-space:nowrap}
+.page-index .hero-h1 .hero-lock .hero-logo img.hero-word{height:.92em!important;vertical-align:middle!important;position:relative;top:.06em} /* baja micro para que quede a la altura de 'con' */
+@media(max-width:520px){.page-index .hero-h1 .hero-lock .hero-logo img.hero-word{height:.88em!important;top:.05em}}
+
+
+.page-index .hero-gallery-header{padding:12px 14px 4px!important;border-bottom:0!important}
+.page-index .hero-gallery-groups{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;margin:0 0 8px!important;padding:2px 12px 4px!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;overscroll-behavior-y:auto;touch-action:auto!important}
+.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab{border:1px solid rgba(148,163,184,.18)!important;background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(241,245,249,.68))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 8px 18px rgba(2,6,23,.05)!important;color:rgba(15,23,42,.92)!important}
+.page-index .hero-tab.active,.page-index .hero-tab[aria-selected="true"],.page-index .reels-home-card .reel-sys-tabs .reel-tab.active,.page-index .reels-home-card .reel-sys-tabs .reel-tab[aria-selected="true"],.page-index .reels-home-card .reel-sys-tabs .reel-tab.is-active{border-color:#ff9a1f!important;background:linear-gradient(180deg,#ffab2f 0%,#ff8d12 58%,#f97316 100%)!important;box-shadow:0 0 0 3px rgba(249,115,22,.18),inset 0 1px 0 rgba(255,255,255,.22),0 12px 26px rgba(249,115,22,.22)!important;color:#fff!important}.page-index .hero-tab.active,.page-index .hero-tab[aria-selected="true"],.page-index .reels-home-card .reel-sys-tabs .reel-tab.active,.page-index .reels-home-card .reel-sys-tabs .reel-tab[aria-selected="true"],.page-index .reels-home-card .reel-sys-tabs .reel-tab.is-active{border-color:#ff9a1f!important;background:linear-gradient(180deg,#ffab2f 0%,#ff8d12 58%,#f97316 100%)!important;box-shadow:0 0 0 3px rgba(249,115,22,.18),inset 0 1px 0 rgba(255,255,255,.22),0 12px 26px rgba(249,115,22,.22)!important;color:#fff!important}
+.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab{border:1px solid rgba(148,163,184,.18)!important;background:transparent!important;box-shadow:none!important;color:rgba(15,23,42,.92)!important}.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab.active,.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab[aria-selected="true"],.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab.is-active{border:1px solid rgba(56,189,248,.34)!important;background:transparent!important;box-shadow:0 0 0 2px rgba(56,189,248,.10)!important}.page-index #carouselReels-servicios+.reel-sys-tabs .reel-tab span{color:rgba(15,23,42,.92)!important}
+.page-index .hero-tab,.page-index .reels-home-card .reel-sys-tabs .reel-tab{display:flex;align-items:center;justify-content:center;min-height:86px;padding:14px;border-radius:999px!important;border:1px solid rgba(74,92,158,.52)!important;background:linear-gradient(180deg,#3a4a86 0%,#313f75 52%,#2a3564 100%)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -10px 18px rgba(0,0,0,.12),0 10px 24px rgba(49,63,117,.18)!important;color:#f8fafc!important}
+.page-index .card{border:var(--border);background:linear-gradient(180deg,rgba(17,23,35,.94),rgba(17,23,35,.76));border-radius:var(--radius);box-shadow:0 12px 32px rgba(0,0,0,.22),var(--shadow);backdrop-filter:blur(10px) saturate(1.04);-webkit-backdrop-filter:blur(10px) saturate(1.04);position:relative;overflow:hidden}html[data-theme="light"] .page-index .card{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.94));box-shadow:0 12px 30px rgba(2,6,23,.06),0 2px 10px rgba(2,6,23,.03);border:1px solid rgba(2,6,23,.08)}
+
+
+/* Expiriti — PATCH FINAL limpio servicios/sectores */
+.page-index #servicios .container.grid-2:before{inset:0!important}
+@media(max-width:980px){.page-index #servicios .container.grid-2:before{inset:0!important}}
+@media(max-width:520px){.page-index #servicios .container.grid-2:before{inset:0!important}}
+.page-index .container,.page-index .ix-wrap,.page-index #servicios .container,.page-index #sectores .container{box-sizing:border-box!important;min-width:0}
+html,body{overflow-x:hidden!important}
+
+/* Baja sat cerca de mapa */
+.page-index{--sat-bottom:calc(var(--map-bottom) + var(--map-fab-h) + 12px)}.page-index #sat-fab{bottom:var(--sat-bottom)!important}.page-index #sat-global-panel{bottom:calc(var(--sat-bottom) - 4px)!important}
+@media(max-width:768px){.hero-gallery-groups{margin:16px 0 22px!important;padding:6px 0!important;gap:12px!important}.hero-group-tab{min-height:52px!important;padding:13px 20px!important}.hero-gallery-card .hero-gallery-header{margin-bottom:12px!important}}
+.hero-word{display:block;max-width:100%;height:auto}
+
+html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"]{color:#fff!important;-webkit-text-fill-color:#fff!important}html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"] span{display:block!important;color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].active,html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"][aria-selected="true"],html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].is-active{color:#fff!important;-webkit-text-fill-color:#fff!important}html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].active span,html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"][aria-selected="true"] span,html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].is-active span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"]{background:linear-gradient(180deg,rgba(100,116,139,.24),rgba(51,65,85,.18))!important;border-color:rgba(148,163,184,.22)!important}html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].active,html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"][aria-selected="true"],html[data-theme="dark"] .page-index .reel-sys-tabs .reel-tab[data-panel="servicios"].is-active{background:linear-gradient(180deg,rgba(34,211,238,.12),rgba(59,130,246,.10))!important;border-color:rgba(125,211,252,.30)!important;box-shadow:0 0 0 2px rgba(125,211,252,.12)!important}
+
+
+.page-index #contacto .interest-ui{display:grid;gap:12px;margin:10px 0 14px}.page-index #contacto .interest-switch,.page-index #contacto .interest-cats{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.page-index #contacto .interest-mode,.page-index #contacto .interest-cat{appearance:none;border:1px solid rgba(148,163,184,.22);background:rgba(255,255,255,.06);color:rgba(232,238,246,.94);border-radius:999px;min-height:40px;padding:9px 13px;font-weight:950;line-height:1;cursor:pointer}.page-index #contacto .interest-mode.is-active,.page-index #contacto .interest-mode[aria-pressed="true"],.page-index #contacto .interest-cat.is-active,.page-index #contacto .interest-cat[aria-pressed="true"]{background:linear-gradient(90deg,rgba(45,212,191,.22),rgba(96,165,250,.18));border-color:rgba(45,212,191,.44);box-shadow:0 0 0 2px rgba(45,212,191,.12)}.page-index #contacto .interest-grid,.page-index #contacto .interest-sysgroup,.page-index #contacto .interest-services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.page-index #contacto .interest-system,.page-index #contacto .interest-service{appearance:none;position:relative;display:flex;align-items:center;justify-content:center;min-height:82px;padding:12px;border-radius:18px;border:1px solid rgba(148,163,184,.18);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035));box-shadow:0 12px 28px rgba(2,6,23,.12);cursor:pointer;transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease,background .14s ease}.page-index #contacto .interest-system img{display:block;width:auto;height:46px;max-width:100%;object-fit:contain}.page-index #contacto .interest-service{flex-direction:column;gap:8px;text-align:center;font-weight:950;color:rgba(232,238,246,.94);line-height:1.12}.page-index #contacto .interest-service img,.page-index #contacto .interest-service .svc-icon{width:34px;height:34px;object-fit:contain}.page-index #contacto .interest-system.is-active,.page-index #contacto .interest-system[aria-pressed="true"],.page-index #contacto .interest-service.is-active,.page-index #contacto .interest-service[aria-pressed="true"]{border-color:rgba(45,212,191,.52);background:linear-gradient(180deg,rgba(45,212,191,.18),rgba(96,165,250,.12));box-shadow:0 0 0 2px rgba(45,212,191,.14),0 14px 32px rgba(2,6,23,.16)}.page-index #contacto .interest-current{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:42px;padding:10px 12px;border-radius:14px;border:1px solid rgba(148,163,184,.18);background:rgba(255,255,255,.045);color:rgba(232,238,246,.88);font-weight:850}.page-index #contacto .interest-current.is-error{color:#ffb4b4;border-color:rgba(255,180,180,.35)}.page-index #contacto select#interes.is-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}html[data-theme="light"] .page-index #contacto .interest-mode,html[data-theme="light"] .page-index #contacto .interest-cat{background:rgba(255,255,255,.82);color:rgba(11,18,32,.92);border-color:rgba(2,6,23,.12)}html[data-theme="light"] .page-index #contacto .interest-system,html[data-theme="light"] .page-index #contacto .interest-service{background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(248,250,252,.86));border-color:rgba(2,6,23,.10);box-shadow:0 12px 26px rgba(2,6,23,.08);color:rgba(11,18,32,.92)}html[data-theme="light"] .page-index #contacto .interest-current{background:rgba(255,255,255,.82);border-color:rgba(2,6,23,.10);color:rgba(11,18,32,.76)}@media(max-width:980px){.page-index #contacto .interest-grid,.page-index #contacto .interest-sysgroup,.page-index #contacto .interest-services{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:720px){.page-index #contacto .interest-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.page-index #contacto .interest-grid,.page-index #contacto .interest-sysgroup,.page-index #contacto .interest-services{grid-template-columns:repeat(2,minmax(0,1fr))}.page-index #contacto .interest-system,.page-index #contacto .interest-service{min-height:78px}.page-index #contacto .interest-system img{height:42px}}@media(max-width:380px){.page-index #contacto .interest-grid,.page-index #contacto .interest-sysgroup,.page-index #contacto .interest-services{gap:8px}.page-index #contacto .interest-system,.page-index #contacto .interest-service{min-height:74px;padding:10px}.page-index #contacto .interest-system img{height:38px}}
+
+/* INDEX — REELS MOBILE ARROWS ON */
+@media(max-width:980px){
+  .page-index .carousel[id^="carouselReels"]{position:relative!important;overflow:hidden!important}
+  .page-index .carousel[id^="carouselReels"] .arrowCircle{display:grid!important;place-items:center!important;position:absolute!important;top:50%!important;z-index:8!important;width:40px!important;height:40px!important;transform:translateY(-50%)!important}
+  .page-index .carousel[id^="carouselReels"] .arrowCircle:hover,.page-index .carousel[id^="carouselReels"] .arrowCircle:active{transform:translateY(-50%)!important}
+  .page-index .carousel[id^="carouselReels"] .arrowCircle.prev{left:8px!important}
+  .page-index .carousel[id^="carouselReels"] .arrowCircle.next{right:8px!important}
+}
+
+/* INDEX — HERO GALLERY ARROWS STABLE */
+.page-index #heroGalleryCarousel .arrowCircle{display:grid!important;place-items:center!important;transform:translateY(-50%)!important}
+.page-index #heroGalleryCarousel .arrowCircle:hover,.page-index #heroGalleryCarousel .arrowCircle:active{transform:translateY(-50%)!important}
+@media(max-width:980px){.page-index #heroGalleryCarousel .arrowCircle{width:40px!important;height:40px!important;opacity:.96!important;pointer-events:auto!important}.page-index #heroGalleryCarousel .arrowCircle.prev{left:8px!important}.page-index #heroGalleryCarousel .arrowCircle.next{right:8px!important}}
+
+/* EXPIRITI FAB/MAPA FIX INDEX */
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions){right:12px!important;bottom:82px!important;z-index:10031!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel{right:60px!important;bottom:-2px!important;width:min(420px,calc(100vw - 92px))!important;min-width:min(420px,calc(100vw - 92px))!important;max-width:min(420px,calc(100vw - 92px))!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;padding:16px!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel>*{min-width:0!important}
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel a{min-width:0!important;word-break:normal!important;overflow-wrap:break-word!important;hyphens:none!important;white-space:normal!important}
+body:not(.page-sistemas):not(.page-servicios) #toc:not(.collapsed){right:92px!important;bottom:12px!important;width:286px!important;max-width:calc(100vw - 104px)!important}
+body:not(.page-sistemas):not(.page-servicios) #sat-fab,body:not(.page-sistemas):not(.page-servicios) #sat-global-panel,body:not(.page-sistemas):not(.page-servicios) #sat-fab-trigger,body:not(.page-sistemas):not(.page-servicios) .sat-fab-trigger{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+@media(max-width:680px){body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel{width:min(340px,calc(100vw - 84px))!important;min-width:min(340px,calc(100vw - 84px))!important;max-width:min(340px,calc(100vw - 84px))!important;right:60px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+
+/* RESUELTO MAININDEX: remoto + local conservados */
+/* RESUELTO: bloque remoto + local conservados */
+
+/* EXPIRITI FORCE HIDDEN INDEX */
+body:not(.page-sistemas):not(.page-servicios) :is(#svc-actions,#toc-actions) .toc-panel[hidden]{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+
+/* EXPIRITI CONTACT INTEREST UI REFINEMENT V3 */
+.page-index #contacto .interest-ui{display:grid!important;gap:10px!important;margin:6px 0 14px!important}
+.page-index #contacto #contactForm>label{font-size:13px!important;font-weight:760!important;letter-spacing:.01em!important;margin:12px 0 8px!important;color:#1f2937!important}
+html:not([data-theme="light"]) .page-index #contacto #contactForm>label{color:rgba(248,250,252,.90)!important}
+
+/* pills superiores */
+.page-index #contacto .interest-switch,.page-index #contacto .interest-cats{display:flex!important;flex-wrap:nowrap!important;gap:8px!important;align-items:center!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+.page-index #contacto .interest-switch::-webkit-scrollbar,.page-index #contacto .interest-cats::-webkit-scrollbar{display:none!important}
+.page-index #contacto .interest-mode,.page-index #contacto .interest-cat{appearance:none!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:40px!important;padding:0 16px!important;border-radius:999px!important;border:1px solid rgba(2,6,23,.12)!important;background:rgba(255,255,255,.86)!important;color:#202632!important;font-weight:720!important;font-size:clamp(12px,1.2vw,15px)!important;letter-spacing:.01em!important;box-shadow:0 6px 16px rgba(2,6,23,.045)!important;cursor:pointer!important;white-space:nowrap!important}
+.page-index #contacto .interest-mode.is-active,.page-index #contacto .interest-cat.is-active{background:linear-gradient(180deg,#fffef8,#fff7d6)!important;border-color:rgba(234,179,8,.48)!important;color:#111827!important;box-shadow:0 0 0 2px rgba(234,179,8,.12),0 8px 18px rgba(2,6,23,.055)!important}
+
+/* grid sistemas */
+.page-index #contacto .interest-panel{display:grid!important;gap:12px!important}
+.page-index #contacto .interest-panel[hidden],.page-index #contacto .interest-sysgroup[hidden]{display:none!important}
+.page-index #contacto .interest-sysgroup{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+.page-index #contacto .interest-system{appearance:none!important;display:flex!important;align-items:center!important;justify-content:center!important;min-height:102px!important;padding:14px!important;border-radius:22px!important;border:1px solid rgba(2,6,23,.10)!important;background:#fff!important;box-shadow:0 10px 22px rgba(2,6,23,.05)!important;cursor:pointer!important}
+.page-index #contacto .interest-system.is-active,.page-index #contacto .interest-system[aria-pressed="true"]{border-color:rgba(20,184,166,.42)!important;box-shadow:0 0 0 2px rgba(20,184,166,.12),0 10px 22px rgba(2,6,23,.06)!important}
+.page-index #contacto .interest-system img{filter:none!important}
+
+/* SOLO estos sistemas llevan fondo amarillo */
+.page-index #contacto .interest-system:has(img[src*="contabiliza"]),
+.page-index #contacto .interest-system:has(img[src*="personia"]),
+.page-index #contacto .interest-system:has(img[src*="vende"]),
+.page-index #contacto .interest-system:has(img[src*="colabora"]),
+.page-index #contacto .interest-system:has(img[src*="comercialstart"]),
+.page-index #contacto .interest-system:has(img[src*="comercial-start"]),
+.page-index #contacto .interest-system:has(img[src*="comercialpro"]),
+.page-index #contacto .interest-system:has(img[src*="comercial-pro"]),
+.page-index #contacto .interest-system:has(img[src*="facturaelectronica"]),
+.page-index #contacto .interest-system:has(img[src*="factura-electronica"]),
+.page-index #contacto .interest-system:has(img[src*="comercialpremium"]),
+.page-index #contacto .interest-system:has(img[src*="comercial-premium"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
+
+/* servicios: transparentes */
+.page-index #contacto .interest-services{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.page-index #contacto .interest-service{appearance:none!important;display:flex!important;align-items:center!important;gap:10px!important;min-height:46px!important;padding:4px 2px!important;border:0!important;background:transparent!important;color:#202632!important;box-shadow:none!important;font-weight:680!important;font-size:13px!important;text-align:left!important;cursor:pointer!important}
+.page-index #contacto .interest-service img{width:30px!important;height:30px!important;flex:0 0 30px!important;padding:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;object-fit:contain!important}
+.page-index #contacto .interest-service.is-active,.page-index #contacto .interest-service[aria-pressed="true"]{color:#0f766e!important;background:transparent!important;box-shadow:none!important}
+
+/* seleccionado */
+.page-index #contacto .interest-current{min-height:52px!important;display:flex!important;align-items:center!important;padding:12px 16px!important;margin:8px 0 0!important;border-radius:18px!important;border:1px solid rgba(2,6,23,.10)!important;background:rgba(255,255,255,.80)!important;color:#4b5563!important;font-size:clamp(14px,1.45vw,17px)!important;font-weight:680!important;letter-spacing:.01em!important;box-shadow:0 8px 18px rgba(2,6,23,.045)!important}
+
+/* responsive */
+@media(max-width:920px){
+.page-index #contacto .interest-sysgroup{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:640px){
+.page-index #contacto .interest-mode,.page-index #contacto .interest-cat{min-height:38px!important;padding:0 14px!important;font-size:12px!important}
+.page-index #contacto .interest-sysgroup{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+.page-index #contacto .interest-services{grid-template-columns:1fr!important}
+.page-index #contacto .interest-current{font-size:14px!important}
+}
+
+/* EXPIRITI CONTACT FACTURA YELLOW FIX */
+.page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
+
+/* EXPIRITI CONTACT FACTURA YELLOW FIX */
+.page-index #contacto .interest-system:has(img[src*="factura"]){background:linear-gradient(180deg,#f8e27a,#efc93d)!important;border-color:rgba(202,138,4,.26)!important;box-shadow:0 12px 24px rgba(234,179,8,.18)!important}
+
+
+/* EXPIRITI INDEX MOBILE SCROLL NATIVO v2026.05.12 */
+@media(max-width:980px){
+html,body{overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:auto!important;-webkit-overflow-scrolling:touch!important}
+body.page-index,.page-index,.page-index main{overflow-x:hidden!important;overflow-y:visible!important;touch-action:auto!important}
+.page-index :is(.carousel,.carousel-track,#heroGalleryCarousel,#heroGalleryCarousel .carousel-track,.prod-tabs,.hero-gallery-groups,.promo-filters,.cards-services.is-carousel,.reel-sys-tabs,.hero-gallery-tabs){touch-action:auto!important;overscroll-behavior-y:auto!important}
+.page-index :is(.carousel-track,#heroGalleryCarousel .carousel-track,.prod-tabs,.hero-gallery-groups,.promo-filters,.cards-services.is-carousel){overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior-x:contain!important}
+.page-index :is(.carousel,.hero-gallery-card,#heroGalleryCarousel){overscroll-behavior:contain auto!important}
+}
+
+/* EXPIRITI INDEX PILLS SCROLL NATIVO v2026.05.12 */
+@media(max-width:980px){
+body.page-index #heroGalleryGroups,
+body.page-index #productos-con .prod-tabs{
+  touch-action:auto!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  -webkit-overflow-scrolling:touch!important;
+  overscroll-behavior-x:contain!important;
+  overscroll-behavior-y:auto!important;
+  scrollbar-width:none!important;
+}
+body.page-index #heroGalleryGroups::-webkit-scrollbar,
+body.page-index #productos-con .prod-tabs::-webkit-scrollbar{display:none!important}
+body.page-index #heroGalleryGroups>.hero-group-tab,
+body.page-index #productos-con .prod-tabs>.tab{
+  touch-action:auto!important;
+  -webkit-user-select:none!important;
+  user-select:none!important;
+}
+body.page-index #heroGalleryCarousel,
+body.page-index #productos-con,
+body.page-index #productos-con .prod-tabs-shell{
+  touch-action:auto!important;
+  overscroll-behavior-y:auto!important;
+}
+}
+
+/* EXPIRITI INDEX UI REFINES v2026.05.12 */
+@media(max-width:980px){
+body.page-index .hero-gallery-header{padding:10px 16px 4px!important}
+body.page-index .hero-gallery-header h2{font-size:clamp(19px,6vw,30px)!important;line-height:1.08!important;margin:0!important}
+body.page-index #heroGalleryGroups{padding:8px 14px 12px!important;margin:0 0 8px!important;gap:12px!important;overflow-y:visible!important}
+body.page-index #heroGalleryGroups>.hero-group-tab{min-height:46px!important;padding:10px 18px!important;line-height:1.1!important;box-shadow:0 8px 18px rgba(2,6,23,.08)!important}
+body.page-index #productos-con .prod-tabs{padding:8px 12px 12px!important;margin:0 0 12px!important;gap:12px!important;overflow-y:visible!important}
+body.page-index #productos-con .prod-tabs>.tab{min-height:44px!important;padding:10px 18px!important;line-height:1.1!important}
+body.page-index .hero-copy .badges:empty{display:none!important;margin:0!important;padding:0!important;height:0!important}
+body.page-index .hero-copy .hero-h1{margin-bottom:8px!important}
+body.page-index .hero-copy .hero-btn{margin-top:4px!important}
+body.page-index .toc{font-weight:400!important}
+body.page-index .toc .toc-toggle,body.page-index .toc .toc-close,body.page-index .toc .toc-title,body.page-index .toc a{font-weight:400!important}
+body.page-index .toc .toc-title{display:block!important;margin:0 0 10px!important;font-size:18px!important;line-height:1.2!important;color:var(--text)!important}
+}
+body.page-index .toc{font-weight:400!important}
+body.page-index .toc .toc-toggle,body.page-index .toc .toc-close,body.page-index .toc .toc-title,body.page-index .toc a{font-weight:400!important}
+body.page-index .toc:not(.collapsed) .toc-toggle{display:none!important}
+body.page-index .toc .toc-title{font-weight:400!important}
+
+/* EXPIRITI INDEX UI REFINES v2026.05.12 */
+@media(max-width:980px){
+body.page-index .hero-gallery-header{padding:10px 16px 4px!important}
+body.page-index .hero-gallery-header h2{font-size:clamp(19px,6vw,30px)!important;line-height:1.08!important;margin:0!important}
+body.page-index #heroGalleryGroups{padding:8px 14px 12px!important;margin:0 0 8px!important;gap:12px!important;overflow-y:visible!important}
+body.page-index #heroGalleryGroups>.hero-group-tab{min-height:46px!important;padding:10px 18px!important;line-height:1.1!important;box-shadow:0 8px 18px rgba(2,6,23,.08)!important}
+body.page-index #productos-con .prod-tabs{padding:8px 12px 12px!important;margin:0 0 12px!important;gap:12px!important;overflow-y:visible!important}
+body.page-index #productos-con .prod-tabs>.tab{min-height:44px!important;padding:10px 18px!important;line-height:1.1!important}
+body.page-index .hero-copy .badges:empty{display:none!important;margin:0!important;padding:0!important;height:0!important}
+body.page-index .hero-copy .hero-h1{margin-bottom:8px!important}
+body.page-index .hero-copy .hero-btn{margin-top:4px!important}
+body.page-index .toc{font-weight:400!important}
+body.page-index .toc .toc-toggle,body.page-index .toc .toc-close,body.page-index .toc .toc-title,body.page-index .toc a{font-weight:400!important}
+body.page-index .toc .toc-title{display:block!important;margin:0 0 10px!important;font-size:18px!important;line-height:1.2!important;color:var(--text)!important}
+}
+body.page-index .toc{font-weight:400!important}
+body.page-index .toc .toc-toggle,body.page-index .toc .toc-close,body.page-index .toc .toc-title,body.page-index .toc a{font-weight:400!important}
+body.page-index .toc:not(.collapsed) .toc-toggle{display:none!important}
+body.page-index .toc .toc-title{font-weight:400!important}
