@@ -433,14 +433,11 @@
         <input type="hidden" id="page" name="page">
         <input type="hidden" id="ua" name="ua">
 
-        <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" placeholder="Tu nombre" required>
-
-        <label for="correo">Correo</label>
-        <input id="correo" name="correo" type="email" placeholder="tucorreo@empresa.com" required>
-
-        <label for="telefono">Teléfono / WhatsApp (opcional)</label>
-        <input id="telefono" name="telefono" placeholder="55 0000 0000">
+        <div class="contact-top-grid">
+          <div class="contact-field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Tu nombre" required></div>
+          <div class="contact-field contact-field-icon"><label for="correo" class="contact-icon-label" aria-label="Correo"><svg class="contact-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></label><input id="correo" name="correo" type="email" placeholder="tu@empresa.com" required></div>
+          <div class="contact-field contact-field-icon"><label for="telefono" class="contact-icon-label contact-icons-duo" aria-label="Teléfono o WhatsApp"><svg class="contact-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.4 22 2 13.6 2 3.4 2 2.7 2.5 2.2 3.2 2.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-1.6 2.2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="contact-ico-sep" aria-hidden="true">/</span><img class="contact-ico contact-ico-wa" src="/IMG/whatsapp.svg" alt="" loading="lazy" decoding="async"></label><input id="telefono" name="telefono" placeholder="55 0000 0000"></div>
+        </div>
 
 <label for="interes">Estoy interesado en</label>
 <select id="interes" name="interes" required hidden>
@@ -467,13 +464,13 @@
   <option>Cursos / Soporte</option>
 </select>
 
-<div class="interest-ui" id="interestUi" data-mode="sistemas" data-syscat="contables">
+<div class="interest-ui" id="interestUi" data-mode="servicios" data-syscat="contables">
   <div class="interest-switch" role="tablist" aria-label="Tipo de interés">
-    <button class="interest-mode is-active" type="button" data-mode="sistemas" aria-selected="true">Sistemas</button>
-    <button class="interest-mode" type="button" data-mode="servicios" aria-selected="false">Servicios</button>
+    <button class="interest-mode is-active" type="button" data-mode="servicios" aria-selected="true">Servicios</button>
+    <button class="interest-mode" type="button" data-mode="sistemas" aria-selected="false">Sistemas</button>
   </div>
 
-  <div class="interest-panel" data-mode-panel="sistemas">
+  <div class="interest-panel" data-mode-panel="sistemas" hidden>
     <div class="interest-cats" role="tablist" aria-label="Categorías de sistemas">
       <button class="interest-cat is-active" type="button" data-syscat="contables" aria-selected="true">Contables</button>
       <button class="interest-cat" type="button" data-syscat="comerciales" aria-selected="false">Comerciales</button>
@@ -510,7 +507,7 @@
     </div>
   </div>
 
-  <div class="interest-panel" data-mode-panel="servicios" hidden>
+  <div class="interest-panel" data-mode-panel="servicios">
     <div class="interest-services">
       <button class="interest-service" type="button" data-value="Póliza de soporte" aria-label="Póliza de soporte">
         <img src="/IMG/021-maintenance.webp" alt="" width="44" height="44" loading="lazy" decoding="async">

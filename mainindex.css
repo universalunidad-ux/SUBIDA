@@ -1185,3 +1185,66 @@ body.page-index #toc.toc .toc-title::after{content:" 🗺️";font-size:.78em!im
 body.page-index #toc.toc .toc-close{position:absolute!important;top:18px!important;right:18px!important;width:38px!important;height:38px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font-weight:400!important}
 body.page-index #toc.toc a{font-weight:400!important}
 @media(max-width:520px){body.page-index #toc.toc{right:10px!important}body.page-index #toc.toc:not(.collapsed){right:10px!important;width:min(360px,calc(100vw - 20px))!important;max-width:min(360px,calc(100vw - 20px))!important;padding:20px!important}}
+
+/* EXPIRITI CONTACT CANON FINAL v2026.05.12 */
+body.page-index #contacto{overflow-x:hidden!important}
+body.page-index #contacto>.container.grid-2{width:min(84vw,1280px)!important;max-width:1280px!important;margin-inline:auto!important;padding-inline:max(16px,env(safe-area-inset-left,0px))!important;grid-template-columns:.86fr 1.14fr!important;gap:28px!important;align-items:center!important}
+body.page-index #contacto>.container.grid-2>div:first-child{min-width:0!important;transform:none!important}
+body.page-index #contacto>.container.grid-2>.card{min-width:0!important;width:100%!important;max-width:100%!important;overflow:hidden!important;padding:18px!important}
+body.page-index #contacto .lead{max-width:620px!important}
+body.page-index #contacto .contact-badges{display:flex!important;flex-wrap:wrap!important;gap:10px 12px!important;align-items:center!important;margin-top:18px!important}
+body.page-index #contacto .contact-badge{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:9px 14px!important}
+body.page-index #contacto .contact-badge svg,body.page-index #contacto .contact-badge img{width:18px!important;height:18px!important;flex:0 0 18px!important;fill:currentColor!important;opacity:.88!important}
+body.page-index #contacto .contact-badge a{color:inherit!important;text-decoration:none!important}
+body.page-index #contactForm{width:100%!important;max-width:100%!important;min-width:0!important;overflow:hidden!important}
+body.page-index #contactForm *{box-sizing:border-box!important}
+body.page-index #contactForm .contact-top-grid{display:grid!important;grid-template-columns:minmax(150px,.78fr) minmax(230px,1fr) minmax(190px,.86fr)!important;gap:14px!important;align-items:start!important;width:100%!important;min-width:0!important;margin:0 0 14px!important}
+body.page-index #contactForm .contact-field{position:relative!important;min-width:0!important;max-width:100%!important;overflow:hidden!important}
+body.page-index #contactForm .contact-field>label:not(.contact-icon-label){display:block!important;margin:0 0 7px!important;font-weight:850!important}
+body.page-index #contactForm .contact-field input{width:100%!important;max-width:100%!important;min-width:0!important;height:46px!important;padding:11px 13px!important;font-size:15px!important;line-height:1.2!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important}
+body.page-index #contactForm .contact-field-icon{display:block!important}
+body.page-index #contactForm .contact-field-icon .contact-icon-label{position:absolute!important;left:12px!important;top:27px!important;height:46px!important;min-height:46px!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:5px!important;z-index:2!important;color:rgba(31,41,55,.86)!important;pointer-events:none!important}
+body.page-index #contactForm .contact-field-icon input{padding-left:42px!important}
+body.page-index #contactForm .contact-icons-duo{gap:5px!important}
+body.page-index #contactForm .contact-icons-duo+input{padding-left:72px!important}
+body.page-index #contactForm .contact-ico{width:17px!important;height:17px!important;display:block!important;flex:0 0 17px!important;color:currentColor!important;fill:none!important;stroke:currentColor!important;opacity:.9!important}
+body.page-index #contactForm .contact-ico-wa{object-fit:contain!important;fill:initial!important;stroke:initial!important}
+body.page-index #contactForm .contact-ico-sep{font-weight:850!important;line-height:1!important;opacity:.55!important}
+body.page-index #contactForm input:focus,body.page-index #contactForm textarea:focus{outline:none!important;box-shadow:0 0 0 3px rgba(96,165,250,.18)!important}
+body.page-index #contactForm label[for="interes"]{display:block!important;text-align:center!important;margin:14px 0 8px!important;font-weight:850!important}
+body.page-index #contactForm .interest-ui{display:grid!important;justify-items:stretch!important;width:100%!important}
+body.page-index #contactForm .interest-switch{display:flex!important;justify-content:center!important;align-items:center!important;gap:12px!important;width:100%!important;margin:0 auto 14px!important}
+body.page-index #contactForm .interest-panel{width:100%!important;max-width:100%!important}
+body.page-index #contactForm .interest-services{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px 20px!important;width:min(620px,100%)!important;margin:0 auto!important}
+body.page-index #contactForm .interest-service{min-width:0!important;width:100%!important;background:transparent!important;border-color:transparent!important;box-shadow:none!important}
+body.page-index #contactForm .interest-current{width:100%!important;max-width:100%!important;min-height:38px!important;margin:14px 0 14px!important;padding:8px 14px!important;text-align:left!important;border-radius:12px!important;font-size:12.5px!important;line-height:1.15!important;font-weight:500!important;box-shadow:none!important}
+body.page-index #contactForm textarea{width:100%!important;max-width:100%!important;min-height:170px!important;overflow:auto!important}
+@media(min-width:981px) and (max-width:1280px){body.page-index #contacto>.container.grid-2{width:min(90vw,1180px)!important;grid-template-columns:.82fr 1.18fr!important;gap:22px!important}body.page-index #contactForm .contact-top-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}body.page-index #contactForm .contact-field:nth-child(3){grid-column:1/3!important}}
+@media(max-width:980px){body.page-index #contacto>.container.grid-2{width:100%!important;grid-template-columns:1fr!important;gap:18px!important;padding-inline:max(12px,env(safe-area-inset-left,0px))!important}body.page-index #contactForm .contact-top-grid{grid-template-columns:1fr!important}body.page-index #contactForm .contact-field:nth-child(3){grid-column:auto!important}body.page-index #contactForm .interest-services{grid-template-columns:repeat(2,minmax(0,1fr))!important;width:100%!important}}
+@media(max-width:520px){body.page-index #contactForm .interest-services{grid-template-columns:1fr!important}}
+
+/* EXPIRITI CONTACT MICROFIX ICONS+CATS v2026.05.12 */
+body.page-index #contactForm .contact-field-icon{position:relative!important;padding-top:28px!important}
+body.page-index #contactForm .contact-field-icon .contact-icon-label{position:absolute!important;left:12px!important;top:28px!important;height:46px!important;min-height:46px!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:5px!important;z-index:2!important;pointer-events:none!important;color:rgba(31,41,55,.78)!important}
+body.page-index #contactForm .contact-field-icon input{height:46px!important;padding-left:42px!important}
+body.page-index #contactForm .contact-icons-duo+input{padding-left:72px!important}
+body.page-index #contactForm .contact-ico{width:17px!important;height:17px!important;flex:0 0 17px!important;color:currentColor!important;opacity:.9!important}
+body.page-index #contactForm .contact-ico svg,body.page-index #contactForm svg.contact-ico{stroke:currentColor!important;fill:none!important}
+body.page-index #contactForm img.contact-ico-wa{width:17px!important;height:17px!important;object-fit:contain!important}
+body.page-index #contactForm .interest-cats{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:10px!important;width:100%!important;margin:0 auto 16px!important}
+body.page-index #contactForm .interest-cat{flex:0 0 auto!important}
+body.page-index #contactForm .interest-switch{justify-content:center!important}
+
+/* EXPIRITI CONTACT HIDE NAME LABEL + ORDER v2026.05.12 */
+body.page-index #contactForm .contact-top-grid>.contact-field:first-child>label{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+body.page-index #contactForm .contact-top-grid>.contact-field:first-child{padding-top:28px!important}
+
+/* EXPIRITI CONTACT MICROFIX AIR v2026.05.12 */
+body.page-index #contactForm{padding-top:0!important}
+body.page-index #contactForm .contact-top-grid{margin-top:-10px!important}
+body.page-index #contactForm .contact-field:first-child{padding-top:18px!important}
+body.page-index #contactForm .contact-field-icon{padding-top:18px!important}
+body.page-index #contactForm .contact-field-icon .contact-icon-label{top:18px!important}
+body.page-index #contactForm label[for="interes"]{margin:18px 0 9px!important}
+body.page-index #contactForm .interest-switch{margin:0 auto 18px!important;padding:4px 0!important}
+body.page-index #contactForm .interest-mode{min-height:46px!important;padding:11px 22px!important;line-height:1.1!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
